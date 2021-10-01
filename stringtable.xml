@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="sct_wmod">
+  <Package name="interaction">
+    <Key ID="STR_sct_wmod_Components">
+      <Original>Components</Original>
+      <English>Components</English>
+    </Key>
+    <Key ID="STR_sct_wmod_Attach">
+      <Original>Attach %1</Original>
+      <English>Attach %1</English>
+      <Russian>Установить %1</Russian>
+      <Japanese>%1 を取り付け</Japanese>
+      <Spanish>Acoplar %1</Spanish>
+      <French>Fixer %1</French>
+    </Key>
+    <Key ID="STR_sct_wmod_Detach">
+      <Original>Detach %1</Original>
+      <English>Detach %1</English>
+      <Russian>Снять %1</Russian>
+      <Japanese>%1 を外す</Japanese>
+      <Spanish>Desacoplar %1</Spanish>
+      <French>Retirer %1</French>
+    </Key>
+    <Key ID="STR_sct_wmod_Attaching">
+      <Original>Attaching...</Original>
+      <English>Attaching...</English>
+    </Key>
+    <Key ID="STR_sct_wmod_Detaching">
+      <Original>Detaching...</Original>
+      <English>Detaching...</English>
+    </Key>
+  </Package>
+  <Package name="components">
+    <Key ID="STR_sct_wmod_c_b13">
+      <Original>B-13</Original>
+      <English>B-13</English>
+      <Russian>Б-13</Russian>
+    </Key>
+    <Key ID="STR_sct_wmod_c_b33">
+      <Original>B-33</Original>
+      <English>B-33</English>
+      <Russian>Б-33</Russian>
+    </Key>
+    <Key ID="STR_sct_wmod_c_carryhandle">
+      <Original>M4/M16 Carryhandle</Original>
+      <English>M4/M16 Carryhandle</English>
+      <Spanish>M4/M16 Asa de transporte</Spanish>
+      <Italian>M4/M16 Manico</Italian>
+      <Polish>M4/M16 Rączka</Polish>
+      <Russian>М4/М16 р</Russian>
+      <German>M4/M16 Handgriff</German>
+    </Key>
+    <Key ID="STR_sct_wmod_c_gp25">
+      <Original>GP-25</Original>
+      <English>GP-25</English>
+      <Russian>ГП-25</Russian>
+    </Key>
+    <Key ID="STR_sct_wmod_c_m14_rail">
+      <Original>M14 Rail</Original>
+      <English>M14 Rail</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_m14_ris">
+      <Original>M14 RIS Unit</Original>
+      <English>M14 RIS Unit</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_m203">
+      <Original>M203</Original>
+      <English>M203</English>
+      <Russian>М203</Russian>
+    </Key>
+    <Key ID="STR_sct_wmod_c_m320">
+      <Original>M320</Original>
+      <English>M320</English>
+      <Russian>М320</Russian>
+    </Key>
+    <Key ID="STR_sct_wmod_c_npz">
+      <Original>NPZ</Original>
+      <English>NPZ</English>
+      <Russian>НПЗ</Russian>
+    </Key>
+    <Key ID="STR_sct_wmod_c_zenit">
+      <Original>Zenit</Original>
+      <English>Zenit</English>
+      <Russian>Зенит</Russian>
+    </Key>
+  </Package>
+</Project>
