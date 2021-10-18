@@ -139,5 +139,8 @@ class CfgWeapons {
 
 class sct_wmod_defines {
   #include "WeaponComponents.hpp"
-  #include "WeaponGroups.hpp"
+
+  class WeaponGroups {
+    #include "WeaponGroupsRHS.hpp"
+  };
 };
