@@ -29,6 +29,10 @@
       <Original>Detaching...</Original>
       <English>Detaching...</English>
     </Key>
+    <Key ID="STR_sct_wmod_ActionLengthSetting">
+      <Original>Action Length</Original>
+      <English>Action Length</English>
+    </Key>
   </Package>
   <Package name="components">
     <Key ID="STR_sct_wmod_c_b13">

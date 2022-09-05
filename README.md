@@ -1,6 +1,17 @@
 # Scotty's ACE Weapon Modification
 
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2594641774">
+  <img src="https://img.shields.io/endpoint?color=%232a475e%20&url=https%3A%2F%2Fshieldsio-steam-workshop.jross.me%2F2594641774%2Fsubscriptions-text">
+</a>
+
 This mod allows more integral weapon components like grenade launchers, optic rails, etc. to be detached or attached to weapons in the field.
+
+## Support
+All content mods are completely optional for this, the only required mods are ACE and CBA_A3.
+
+Currently supported mods:
+- RHSUSAF
+- RHSAFRF
 
 ## Adding new components or recipes
 If you want to add new components or recipes, you can either contribute to the project directly, make a mod that defines new components/recipes, or define the components/recipes in a `description.ext` for a mission.
@@ -11,6 +22,8 @@ You can either place this in your `Config.cpp` (if making a patch/compat mod) or
 ```cpp
 class sct_wmod_defines {
   class WeaponComponents {
+    // Defining this does not create an item, it just allows it to be referenced from
+    // the `components` entry in a weapon group and allows it to be attached/detached.
     class kac_grip {
       displayName = "KAC Grip";
       // The classname of the item for this component.
@@ -33,7 +46,7 @@ class sct_wmod_defines {
   class WeaponGroups {
     // This class describes a group of weapon that can be modified (in this case the RHSUSAF M27 IAR).
     // It has two variants, one with the KAC Grip and one without.
-    class m27iar {
+    class rhs_m27iar {
       displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M27IAR";
       // The weapon classes contained within this group and the
       // components that should be considered as attached.
@@ -47,3 +60,8 @@ class sct_wmod_defines {
   };
 };
 ```
+
+## Known/Potential Issues
+- Magazines might get moved around when detaching/attaching components
+- Empty magazines might randomly show up in weapons when detaching/attaching without a magazine present
+- Weapons with incorrectly defined `baseWeapon` entries may cause bugged attach/detach actions

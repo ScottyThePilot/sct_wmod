@@ -1,3 +1,5 @@
+// Weapon Groups for RHS USAF, AFRF, GREF and SAF
+
 class rhs_ak103 {
   displayName = "$STR_RHS_WEAP_AK103";
   class rhs_weap_ak103 {

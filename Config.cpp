@@ -5,10 +5,14 @@ class CfgPatches {
     authorUrl = "https://steamcommunity.com/id/scottythepilot/";
     url = "";
     requiredAddons[] = {
+      "cba_main",
+      "ace_common",
       "ace_interact_menu",
       "ace_interaction"
     };
-    version = "1.0.0";
+    version = 1.1;
+    versionStr = "1.1.0";
+    versionAr[] = { 1, 1, 0 };
     units[] = {};
     weapons[] = {};
   };
@@ -23,7 +27,15 @@ class CfgFunctions {
       class createInteraction {};
       class getComponentActions {};
       class initActions {};
+      class initSettings {};
+      class weaponsItems {};
     };
+  };
+};
+
+class Extended_PreInit_EventHandlers {
+  class sct_wmod_init_settings {
+    init = "call sct_wmod_fnc_initSettings";
   };
 };
 
@@ -107,7 +119,7 @@ class CfgWeapons {
   class sct_wmod_component_m203: sct_wmod_ccore {
     scope = 2;
     author = "ScottyThePilot";
-    displayName = "M203";
+    displayName = "$STR_sct_wmod_c_m203";
     picture = "\sct_wmod\data\components\m203.paa";
     descriptionShort = "A 40mm underbarrel grenade launcher for the AR-15 family of rifles";
   };

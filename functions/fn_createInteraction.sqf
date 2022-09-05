@@ -20,7 +20,7 @@ private _attachmentsRemove = getArray (_c >> "attachmentSlots");
     };
 
     // TODO: add CBA setting for changing the progress bar time
-    [10, _args, {
+    [SCT_wmod_actionLength, _args, {
       (_this select 0) call sct_wmod_fnc_action
     }, {}, _barText, {
       (_this select 0) call sct_wmod_fnc_actionCondition
