@@ -7,11 +7,12 @@
 This mod allows more integral weapon components like grenade launchers, optic rails, etc. to be detached or attached to weapons in the field.
 
 ## Support
-All content mods are completely optional for this, the only required mods are ACE and CBA_A3.
-
-Currently supported mods:
+Current support:
+- Vanilla Arma 3
 - RHSUSAF
 - RHSAFRF
+- RHSGREF
+- RHSSAF
 
 ## Adding new components or recipes
 If you want to add new components or recipes, you can either contribute to the project directly, make a mod that defines new components/recipes, or define the components/recipes in a `description.ext` for a mission.

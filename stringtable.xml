@@ -35,6 +35,10 @@
     </Key>
   </Package>
   <Package name="components">
+    <Key ID="STR_sct_wmod_c_3gl">
+      <Original>3GL</Original>
+      <English>3GL</English>
+    </Key>
     <Key ID="STR_sct_wmod_c_b13">
       <Original>B-13</Original>
       <English>B-13</English>
@@ -67,6 +71,10 @@
       <Original>M14 RIS Unit</Original>
       <English>M14 RIS Unit</English>
     </Key>
+    <Key ID="STR_sct_wmod_c_m21_rail">
+      <Original>M21 Rail</Original>
+      <English>M21 Rail</English>
+    </Key>
     <Key ID="STR_sct_wmod_c_m203">
       <Original>M203</Original>
       <English>M203</English>
@@ -81,6 +89,11 @@
       <Original>NPZ</Original>
       <English>NPZ</English>
       <Russian>НПЗ</Russian>
+    </Key>
+    <Key ID="STR_sct_wmod_c_pbg40">
+      <Original>PBG-40 (GP-25)</Original>
+      <English>PBG-40 (GP-25)</English>
+      <Russian>ПБГ-40 (ГП-25)</Russian>
     </Key>
     <Key ID="STR_sct_wmod_c_zenit">
       <Original>Zenit</Original>

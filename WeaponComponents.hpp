@@ -6,6 +6,18 @@ class WeaponComponents {
   // 4: Secondary Mag
   // 5: Bipod/Grip
 
+  class 3gl {
+    displayName = "$STR_sct_wmod_c_3gl";
+    className = "sct_wmod_component_3gl";
+    attachmentSlots[] = { 5 };
+  };
+
+  class ak12_gl {
+    displayName = "$STR_sct_wmod_c_gp25";
+    className = "sct_wmod_component_gp25";
+    attachmentSlots[] = { 4, 5 };
+  };
+
   class b13 {
     displayName = "$STR_sct_wmod_c_b13";
     className = "sct_wmod_component_b13";
@@ -42,6 +54,12 @@ class WeaponComponents {
     attachmentSlots[] = { 1, 2 };
   };
 
+  class m21_rail {
+    displayName = "$STR_sct_wmod_c_m21_rail";
+    className = "sct_wmod_component_m21_rail";
+    attachmentSlots[] = { 2 };
+  };
+
   class m203 {
     displayName = "$STR_sct_wmod_c_m203";
     className = "sct_wmod_component_m203";
@@ -52,6 +70,12 @@ class WeaponComponents {
     displayName = "$STR_sct_wmod_c_m320";
     className = "sct_wmod_component_m320";
     attachmentSlots[] = { 4, 5 };
+  };
+
+  class pbg40 {
+    displayName = "$STR_sct_wmod_c_pbg40";
+    className = "sct_wmod_component_gp25";
+    attachmentSlots[] = { 1, 4, 5 };
   };
 
   class npz {

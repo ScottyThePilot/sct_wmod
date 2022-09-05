@@ -68,6 +68,14 @@ class CfgWeapons {
     };
   };
 
+  class sct_wmod_component_3gl: sct_wmod_ccore {
+    scope = 2;
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_3gl";
+    picture = "\sct_wmod\data\components\3gl.paa";
+    descriptionShort = "A 40mm underbarrel grenade launcher for the MX";
+  };
+
   class sct_wmod_component_b13: sct_wmod_ccore {
     scope = 2;
     author = "ScottyThePilot";
@@ -116,6 +124,14 @@ class CfgWeapons {
     descriptionShort = "A top-mounted picatinny rail system for the M14";
   };
 
+  class sct_wmod_component_m21_rail: sct_wmod_ccore {
+    scope = 2;
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_m21_rail";
+    picture = "\sct_wmod\data\components\m21_rail.paa";
+    descriptionShort = "A side-mounted picatinny rail adaptor for the M21 Zastava";
+  };
+
   class sct_wmod_component_m203: sct_wmod_ccore {
     scope = 2;
     author = "ScottyThePilot";
@@ -153,6 +169,7 @@ class sct_wmod_defines {
   #include "WeaponComponents.hpp"
 
   class WeaponGroups {
+    #include "WeaponGroupsA3.hpp"
     #include "WeaponGroupsRHS.hpp"
   };
 };

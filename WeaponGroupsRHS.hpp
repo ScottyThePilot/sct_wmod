@@ -371,6 +371,30 @@ class rhs_m16a4_imod {
   };
 };
 
+class rhs_m21a {
+  class rhs_weap_m21a {
+    components[] = {};
+  };
+  class rhs_weap_m21a_pbg40 {
+    components[] = { "pbg40" };
+  };
+  class rhs_weap_m21a_pr {
+    components[] = { "m21_rail" };
+  };
+  class rhs_weap_m21a_pr_pbg40 {
+    components[] = { "m21_rail", "pbg40" };
+  };
+};
+
+class rhs_m21s {
+  class rhs_weap_m21s {
+    components[] = {};
+  };
+  class rhs_weap_m21s_pr {
+    components[] = { "m21_rail"};
+  };
+};
+
 class rhs_m4 {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4";
   class rhs_weap_m4 {
