@@ -9,10 +9,8 @@ This mod allows more integral weapon components like grenade launchers, optic ra
 ## Support
 Current support:
 - Vanilla Arma 3
-- RHSUSAF
-- RHSAFRF
-- RHSGREF
-- RHSSAF
+- RHS USAF/AFRF/GREF/SAF
+- NIArms
 
 ## Adding new components or recipes
 If you want to add new components or recipes, you can either contribute to the project directly, make a mod that defines new components/recipes, or define the components/recipes in a `description.ext` for a mission.

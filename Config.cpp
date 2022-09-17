@@ -50,6 +50,8 @@ class CfgVehicles {
           exceptions[] = { "isNotInside", "isNotSwimming", "isNotSitting" };
           insertChildren = "call sct_wmod_fnc_getComponentActions";
           modifierFunction = "_this select 3 set [2, getText (configFile >> 'CfgWeapons' >> currentWeapon (_this select 0) >> 'picture')];";
+          // Parentheses required because of an ACE (?) bug
+          condition = "(isNil 'SCT_wmod_modificationEnabled' || { SCT_wmod_modificationEnabled })";
         };
       };
     };
@@ -69,107 +71,180 @@ class CfgWeapons {
   };
 
   class sct_wmod_component_3gl: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_3gl";
     picture = "\sct_wmod\data\components\3gl.paa";
     descriptionShort = "A 40mm underbarrel grenade launcher for the MX";
+    scope = 2;
   };
 
   class sct_wmod_component_b13: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_b13";
     picture = "\sct_wmod\data\components\b13.paa";
     descriptionShort = "A side-mounted picatinny rail adaptor for the AK family of rifles";
+    scope = 2;
   };
 
   class sct_wmod_component_b33: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_b33";
     picture = "\sct_wmod\data\components\b33.paa";
     descriptionShort = "A reciever cover with integrated picatinny rail for the AK family of rifles";
+    scope = 2;
   };
 
   class sct_wmod_component_carryhandle: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_carryhandle";
     picture = "\sct_wmod\data\components\carryhandle.paa";
     descriptionShort = "A carryhandle unit with integrated sight designed for the M4 and M16 series of rifles";
+    scope = 2;
   };
 
   class sct_wmod_component_gp25: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_gp25";
     picture = "\sct_wmod\data\components\gp25.paa";
     descriptionShort = "A 40mm under-barrel grenade launcher for the AK family of rifles";
+    scope = 2;
   };
 
   class sct_wmod_component_m14_rail: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_m14_rail";
     picture = "\sct_wmod\data\components\m14_rail.paa";
     descriptionShort = "A side-mounted picatinny rail adaptor for the M14";
+    scope = 2;
   };
 
   class sct_wmod_component_m14_ris: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_m14_ris";
     picture = "\sct_wmod\data\components\m14_ris.paa";
     descriptionShort = "A top-mounted picatinny rail system for the M14";
+    scope = 2;
   };
 
   class sct_wmod_component_m21_rail: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_m21_rail";
     picture = "\sct_wmod\data\components\m21_rail.paa";
     descriptionShort = "A side-mounted picatinny rail adaptor for the M21 Zastava";
+    scope = 2;
   };
 
   class sct_wmod_component_m203: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_m203";
     picture = "\sct_wmod\data\components\m203.paa";
     descriptionShort = "A 40mm underbarrel grenade launcher for the AR-15 family of rifles";
+    scope = 2;
   };
 
   class sct_wmod_component_m320: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_m320";
     picture = "\sct_wmod\data\components\m320.paa";
     descriptionShort = "A 40mm underbarrel grenade launcher for the AR-15 family of rifles";
+    scope = 2;
   };
 
   class sct_wmod_component_npz: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_npz";
     picture = "\sct_wmod\data\components\npz.paa";
     descriptionShort = "A side-mounted picatinny rail adaptor for the AK family of rifles";
+    scope = 2;
   };
 
   class sct_wmod_component_zenit: sct_wmod_ccore {
-    scope = 2;
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_zenit";
     picture = "\sct_wmod\data\components\zenit.paa";
     descriptionShort = "A picatinny rail adaptor handguard for the AK family of rifles";
+    scope = 2;
+  };
+
+  class sct_wmod_component_mtk: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_mtk";
+    picture = "\sct_wmod\data\components\mtk.paa";
+    descriptionShort = "A side-mounted picatinny rail adaptor for the AK family of rifles";
+    scope = 2;
+  };
+
+  class sct_wmod_component_fal_rail: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_fal_rail";
+    picture = "\sct_wmod\data\components\fal_rail.paa";
+    descriptionShort = "A picatinny optic rail mount for the FN FAL";
+    scope = 2;
+  };
+
+  class sct_wmod_component_hk_ris1: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_hk_ris1";
+    picture = "\sct_wmod\data\components\hk_ris1.paa";
+    descriptionShort = "A picatinny optic rail mount for the HK G3 family of rifles";
+    scope = 2;
+  };
+
+  class sct_wmod_component_hk_ris2: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_hk_ris2";
+    picture = "\sct_wmod\data\components\hk_ris2.paa";
+    descriptionShort = "A picatinny optic rail mount for the HK G3 family of rifles";
+    scope = 2;
+  };
+
+  class sct_wmod_component_hk_tac: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_hk_tac";
+    picture = "\sct_wmod\data\components\hk_tac.paa";
+    descriptionShort = "A picatinny rail adaptor handguard for the HK MP5 rifles";
+    scope = 2;
+  };
+
+  class sct_wmod_component_ag_c: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_agc_full";
+    picture = "\sct_wmod\data\components\ag_c.paa";
+    descriptionShort = "A 40mm underbarrel grenade launcher, from which the M320 is derived";
+    scope = 2;
+  };
+
+  class sct_wmod_component_sig_ris: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_sig_ris";
+    picture = "\sct_wmod\data\components\sig_ris.paa";
+    descriptionShort = "A picatinny optic rail mount for the SIG SG 550 family of rifles";
+    scope = 2;
+  };
+
+  class sct_wmod_component_sig_tac: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_sig_tac";
+    picture = "\sct_wmod\data\components\sig_tac.paa";
+    descriptionShort = "A picatinny rail adaptor handguard for the SIG SG 550 family of rifles";
+    scope = 2;
   };
 };
 
 class sct_wmod_defines {
-  #include "WeaponComponents.hpp"
+  #define MEMBER0(ID) class ID { components[] = {}; };
+  #define MEMBER1(ID, M1) class ID { components[] = { #M1 }; };
+  #define MEMBER2(ID, M1, M2) class ID { components[] = { #M1, #M2 }; };
+  #define MEMBER3(ID, M1, M2, M3) class ID { components[] = { #M1, #M2, #M3 }; };
+  #define MEMBER4(ID, M1, M2, M3, M4) class ID { components[] = { #M1, #M2, #M3, #M4 }; };
+
+  class WeaponComponents {
+    #include "WeaponComponents.hpp"
+  };
 
   class WeaponGroups {
     #include "WeaponGroupsA3.hpp"
+    #include "WeaponGroupsNIArms.hpp"
     #include "WeaponGroupsRHS.hpp"
   };
 };

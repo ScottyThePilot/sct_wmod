@@ -2,573 +2,315 @@
 
 class rhs_ak103 {
   displayName = "$STR_RHS_WEAP_AK103";
-  class rhs_weap_ak103 {
-    components[] = {};
-  };
-  class rhs_weap_ak103_gp25 {
-    components[] = { "gp25" };
-  };
-  class rhs_weap_ak103_gp25_npz {
-    components[] = { "b13", "gp25" };
-  };
-  class rhs_weap_ak103_npz {
-    components[] = { "b13" };
-  };
-  class rhs_weap_ak103_zenitco01 {
-    components[] = { "zenit" };
-  };
-  class rhs_weap_ak103_zenitco01_b33 {
-    components[] = { "zenit", "b33" };
-  };
+  MEMBER0(rhs_weap_ak103);
+  MEMBER1(rhs_weap_ak103_gp25,gp25);
+  MEMBER2(rhs_weap_ak103_gp25_npz,b13,gp25);
+  MEMBER1(rhs_weap_ak103_npz,b13);
+  MEMBER1(rhs_weap_ak103_zenitco01,zenit);
+  MEMBER2(rhs_weap_ak103_zenitco01_b33,zenit,b33);
 };
 
 class rhs_ak103_1 {
   displayName = "$STR_RHS_WEAP_AK1031";
-  class rhs_weap_ak103_1 {
-    components[] = {};
-  };
-  class rhs_weap_ak103_1_npz {
-    components[] = { "b13" };
-  };
+  MEMBER0(rhs_weap_ak103_1);
+  MEMBER1(rhs_weap_ak103_1_npz,b13);
 };
 
 class rhs_ak103_2 {
   displayName = "$STR_RHS_WEAP_AK1032";
-  class rhs_weap_ak103_2 {
-    components[] = {};
-  };
-  class rhs_weap_ak103_2_npz {
-    components[] = { "b13" };
-  };
+  MEMBER0(rhs_weap_ak103_2);
+  MEMBER1(rhs_weap_ak103_2_npz,b13);
 };
 
 class rhs_ak104 {
   displayName = "$STR_RHS_WEAP_AK104";
-  class rhs_weap_ak104 {
-    components[] = {};
-  };
-  class rhs_weap_ak104_npz {
-    components[] = { "b13" };
-  };
-  class rhs_weap_ak104_zenitco01 {
-    components[] = { "zenit" };
-  };
-  class rhs_weap_ak104_zenitco01_b33 {
-    components[] = { "zenit", "b33" };
-  };
+  MEMBER0(rhs_weap_ak104);
+  MEMBER1(rhs_weap_ak104_npz,b13);
+  MEMBER1(rhs_weap_ak104_zenitco01,zenit);
+  MEMBER2(rhs_weap_ak104_zenitco01_b33,zenit,b33);
 };
 
 class rhs_ak105 {
   displayName = "$STR_RHS_WEAP_AK105";
-  class rhs_weap_ak105 {
-    components[] = {};
-  };
-  class rhs_weap_ak105_npz {
-    components[] = { "b13" };
-  };
-  class rhs_weap_ak105_zenitco01 {
-    components[] = { "zenit" };
-  };
-  class rhs_weap_ak105_zenitco01_b33 {
-    components[] = { "zenit", "b33" };
-  };
+  MEMBER0(rhs_weap_ak105);
+  MEMBER1(rhs_weap_ak105_npz,b13);
+  MEMBER1(rhs_weap_ak105_zenitco01,zenit);
+  MEMBER2(rhs_weap_ak105_zenitco01_b33,zenit,b33);
 };
 
 class rhs_ak74 {
   displayName = "$STR_RHS_WEAP_AK74";
-  class rhs_weap_ak74 {
-    components[] = {};
-  };
-  class rhs_weap_ak74_gp25 {
-    components[] = { "gp25" };
-  };
+  MEMBER0(rhs_weap_ak74);
+  MEMBER1(rhs_weap_ak74_gp25,gp25);
 };
 
 class rhs_ak74m {
   displayName = "$STR_RHS_WEAP_AK74M";
-  class rhs_weap_ak74m {
-    components[] = {};
-  };
-  class rhs_weap_ak74m_gp25 {
-    components[] = { "gp25" };
-  };
-  class rhs_weap_ak74m_gp25_npz {
-    components[] = { "gp25", "b13" };
-  };
-  class rhs_weap_ak74m_npz {
-    components[] = { "b13" };
-  };
-  class rhs_weap_ak74m_zenitco01 {
-    components[] = { "zenit" };
-  };
-  class rhs_weap_ak74m_zenitco01_b33 {
-    components[] = { "zenit", "b33" };
-  };
+  MEMBER0(rhs_weap_ak74m);
+  MEMBER1(rhs_weap_ak74m_gp25,gp25);
+  MEMBER2(rhs_weap_ak74m_gp25_npz,gp25,b13);
+  MEMBER1(rhs_weap_ak74m_npz,b13);
+  MEMBER1(rhs_weap_ak74m_zenitco01,zenit);
+  MEMBER2(rhs_weap_ak74m_zenitco01_b33,zenit,b33);
 };
 
 class rhs_ak74m_camo {
   displayName = "$STR_RHS_WEAP_AK74M_CAMO";
-  class rhs_weap_ak74m_camo {
-    components[] = {};
-  };
-  class rhs_weap_ak74m_camo_npz {
-    components[] = { "b13" };
-  };
+  MEMBER0(rhs_weap_ak74m_camo);
+  MEMBER1(rhs_weap_ak74m_camo_npz,b13);
 };
 
 class rhs_ak74m_desert {
   displayName = "$STR_RHS_WEAP_AK74M_DES";
-  class rhs_weap_ak74m_desert {
-    components[] = {};
-  };
-  class rhs_weap_ak74m_desert_npz {
-    components[] = { "b13" };
-  };
+  MEMBER0(rhs_weap_ak74m_desert);
+  MEMBER1(rhs_weap_ak74m_desert_npz,b13);
 };
 
 class rhs_ak74m_plum {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_AK74M0_PLUM0";
-  class rhs_weap_ak74m_fullplum {
-    components[] = {};
-  };
-  class rhs_weap_ak74m_fullplum_gp25 {
-    components[] = { "gp25" };
-  };
-  class rhs_weap_ak74m_fullplum_gp25_npz {
-    components[] = { "gp25", "b13" };
-  };
-  class rhs_weap_ak74m_fullplum_npz {
-    components[] = { "b13" };
-  };
+  MEMBER0(rhs_weap_ak74m_fullplum);
+  MEMBER1(rhs_weap_ak74m_fullplum_gp25,gp25);
+  MEMBER2(rhs_weap_ak74m_fullplum_gp25_npz,gp25,b13);
+  MEMBER1(rhs_weap_ak74m_fullplum_npz,b13);
 };
 
 class rhs_ak74mr {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_AK74MR";
-  class rhs_weap_ak74mr {
-    components[] = {};
-  };
-  class rhs_weap_ak74mr_gp25 {
-    components[] = { "gp25" };
-  };
+  MEMBER0(rhs_weap_ak74mr);
+  MEMBER1(rhs_weap_ak74mr_gp25,gp25);
 };
 
 class rhs_ak74n {
   displayName = "$STR_RHS_WEAP_AK74N";
-  class rhs_weap_ak74n {
-    components[] = {};
-  };
-  class rhs_weap_ak74n_gp25 {
-    components[] = { "gp25" };
-  };
-  class rhs_weap_ak74n_gp25_npz {
-    components[] = { "gp25", "npz" };
-  };
-  class rhs_weap_ak74n_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_ak74n);
+  MEMBER1(rhs_weap_ak74n_gp25,gp25);
+  MEMBER2(rhs_weap_ak74n_gp25_npz,gp25,npz);
+  MEMBER1(rhs_weap_ak74n_npz,npz);
 };
 
 class rhs_ak74n_plum {
   displayName = "$STR_RHS_WEAP_AK74N_2";
-  class rhs_weap_ak74n_2 {
-    components[] = {};
-  };
-  class rhs_weap_ak74n_2_gp25 {
-    components[] = { "gp25" };
-  };
-  class rhs_weap_ak74n_2_gp25_npz {
-    components[] = { "gp25", "b13" };
-  };
-  class rhs_weap_ak74n_2_npz {
-    components[] = { "b13" };
-  };
+  MEMBER0(rhs_weap_ak74n_2);
+  MEMBER1(rhs_weap_ak74n_2_gp25,gp25);
+  MEMBER2(rhs_weap_ak74n_2_gp25_npz,gp25,b13);
+  MEMBER1(rhs_weap_ak74n_2_npz,b13);
 };
 
 class rhs_akm {
   displayName = "$STR_RHS_WEAP_AKM";
-  class rhs_weap_akm {
-    components[] = {};
-  };
-  class rhs_weap_akm_gp25 {
-    components[] = { "gp25" };
-  };
+  MEMBER0(rhs_weap_akm);
+  MEMBER1(rhs_weap_akm_gp25,gp25);
 };
 
 class rhs_akmn {
   displayName = "$STR_RHS_WEAP_AKMN";
-  class rhs_weap_akmn {
-    components[] = {};
-  };
-  class rhs_weap_akmn_gp25 {
-    components[] = { "gp25" };
-  };
-  class rhs_weap_akmn_gp25_npz {
-    components[] = { "gp25", "npz" };
-  };
-  class rhs_weap_akmn_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_akmn);
+  MEMBER1(rhs_weap_akmn_gp25,gp25);
+  MEMBER2(rhs_weap_akmn_gp25_npz,gp25,npz);
+  MEMBER1(rhs_weap_akmn_npz,npz);
 };
 
 class rhs_akms {
   displayName = "$STR_RHS_WEAP_AKMS";
-  class rhs_weap_akms {
-    components[] = {};
-  };
-  class rhs_weap_akms_gp25 {
-    components[] = { "gp25" };
-  };
+  MEMBER0(rhs_weap_akms);
+  MEMBER1(rhs_weap_akms_gp25,gp25);
 };
 
 class rhs_aks74 {
   displayName = "$STR_RHS_WEAP_AKS74";
-  class rhs_weap_aks74 {
-    components[] = {};
-  };
-  class rhs_weap_aks74_gp25 {
-    components[] = { "gp25" };
-  };
+  MEMBER0(rhs_weap_aks74);
+  MEMBER1(rhs_weap_aks74_gp25,gp25);
 };
 
 class rhs_aks74n {
   displayName = "$STR_RHS_WEAP_AKS74N";
-  class rhs_weap_aks74n {
-    components[] = {};
-  };
-  class rhs_weap_aks74n_gp25 {
-    components[] = { "gp25" };
-  };
-  class rhs_weap_aks74n_gp25_npz {
-    components[] = { "gp25", "npz" };
-  };
-  class rhs_weap_aks74n_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_aks74n);
+  MEMBER1(rhs_weap_aks74n_gp25,gp25);
+  MEMBER2(rhs_weap_aks74n_gp25_npz,gp25,npz);
+  MEMBER1(rhs_weap_aks74n_npz,npz);
 };
 
 class rhs_aks74n_plum {
   displayName = "$STR_RHS_WEAP_AKS74N_2";
-  class rhs_weap_aks74n_2 {
-    components[] = {};
-  };
-  class rhs_weap_aks74n_2_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_aks74n_2);
+  MEMBER1(rhs_weap_aks74n_2_npz,npz);
 };
 
 class rhs_asval {
   displayName = "$STR_RHS_WEAP_ASVAL";
-  class rhs_weap_asval {
-    components[] = {};
-  };
-  class rhs_weap_asval_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_asval);
+  MEMBER1(rhs_weap_asval_npz,npz);
 };
 
 class rhs_asval_grip {
   displayName = "$STR_RHS_WEAP_ASVAL_GRIP";
-  class rhs_weap_asval_grip {
-    components[] = {};
-  };
-  class rhs_weap_asval_grip_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_asval_grip);
+  MEMBER1(rhs_weap_asval_grip_npz,npz);
 };
 
 class rhs_hk416_d10 {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_HK416D10";
-  class rhs_weap_hk416d10 {
-    components[] = {};
-  };
-  class rhs_weap_hk416d10_m320 {
-    components[] = { "m320" };
-  };
+  MEMBER0(rhs_weap_hk416d10);
+  MEMBER1(rhs_weap_hk416d10_m320,m320);
 };
 
 class rhs_hk416_d145 {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_HK416D145";
-  class rhs_weap_hk416d145 {
-    components[] = {};
-  };
-  class rhs_weap_hk416d145_m320 {
-    components[] = { "m320" };
-  };
+  MEMBER0(rhs_weap_hk416d145);
+  MEMBER1(rhs_weap_hk416d145_m320,m320);
 };
 
 class rhs_m14 {
   displayName = "M14";
-  class rhs_weap_m14 {
-    components[] = {};
-  };
-  class rhs_weap_m14_rail {
-    components[] = { "m14_rail" };
-  };
-  class rhs_weap_m14_ris {
-    components[] = { "m14_ris" };
-  };
+  MEMBER0(rhs_weap_m14);
+  MEMBER1(rhs_weap_m14_rail,m14_rail);
+  MEMBER1(rhs_weap_m14_ris,m14_ris);
 };
 
 class rhs_m14_desert {
   displayName = "M14 (Desert)";
-  class rhs_weap_m14_d {
-    components[] = {};
-  };
-  class rhs_weap_m14_rail_d {
-    components[] = { "m14_rail" };
-  };
-  class rhs_weap_m14_ris_d {
-    components[] = { "m14_ris" };
-  };
+  MEMBER0(rhs_weap_m14_d);
+  MEMBER1(rhs_weap_m14_rail_d,m14_rail);
+  MEMBER1(rhs_weap_m14_ris_d,m14_ris);
 };
 
 class rhs_m14_fiberglass {
   displayName = "M14 (Fiberglass)";
-  class rhs_weap_m14_fiberglass {
-    components[] = {};
-  };
-  class rhs_weap_m14_rail_fiberglass {
-    components[] = { "m14_rail" };
-  };
-  class rhs_weap_m14_ris_fiberglass {
-    components[] = { "m14_ris" };
-  };
+  MEMBER0(rhs_weap_m14_fiberglass);
+  MEMBER1(rhs_weap_m14_rail_fiberglass,m14_rail);
+  MEMBER1(rhs_weap_m14_ris_fiberglass,m14_ris);
 };
 
 class rhs_m14_woodland {
   displayName = "M14 (Woodland)";
-  class rhs_weap_m14_wd {
-    components[] = {};
-  };
-  class rhs_weap_m14_rail_wd {
-    components[] = { "m14_rail" };
-  };
-  class rhs_weap_m14_ris_wd {
-    components[] = { "m14_ris" };
-  };
+  MEMBER0(rhs_weap_m14_wd);
+  MEMBER1(rhs_weap_m14_rail_wd,m14_rail);
+  MEMBER1(rhs_weap_m14_ris_wd,m14_ris);
 };
 
 class rhs_m16a4_carryhandle {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M16A4_carry";
-  class rhs_weap_m16a4 {
-    components[] = {};
-  };
-  class rhs_weap_m16a4_carryhandle {
-    components[] = { "carryhandle" };
-  };
-  class rhs_weap_m16a4_carryhandle_M203 {
-    components[] = { "carryhandle", "m203" };
-  };
+  MEMBER0(rhs_weap_m16a4);
+  MEMBER1(rhs_weap_m16a4_carryhandle,carryhandle);
+  MEMBER2(rhs_weap_m16a4_carryhandle_M203,carryhandle,m203);
 };
 
 class rhs_m16a4_imod {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M16A4_IMOD";
-  class rhs_weap_m16a4_imod {
-    components[] = {};
-  };
-  class rhs_weap_m16a4_imod_M203 {
-    components[] = { "m203" };
-  };
+  MEMBER0(rhs_weap_m16a4_imod);
+  MEMBER1(rhs_weap_m16a4_imod_M203,m203);
 };
 
 class rhs_m21a {
-  class rhs_weap_m21a {
-    components[] = {};
-  };
-  class rhs_weap_m21a_pbg40 {
-    components[] = { "pbg40" };
-  };
-  class rhs_weap_m21a_pr {
-    components[] = { "m21_rail" };
-  };
-  class rhs_weap_m21a_pr_pbg40 {
-    components[] = { "m21_rail", "pbg40" };
-  };
+  MEMBER0(rhs_weap_m21a);
+  MEMBER1(rhs_weap_m21a_pbg40,pbg40);
+  MEMBER1(rhs_weap_m21a_pr,m21_rail);
+  MEMBER2(rhs_weap_m21a_pr_pbg40,m21_rail,pbg40);
 };
 
 class rhs_m21s {
-  class rhs_weap_m21s {
-    components[] = {};
-  };
-  class rhs_weap_m21s_pr {
-    components[] = { "m21_rail"};
-  };
+  MEMBER0(rhs_weap_m21s);
+  MEMBER1(rhs_weap_m21s_pr,m21_rail);
 };
 
 class rhs_m4 {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4";
-  class rhs_weap_m4 {
-    components[] = {};
-  };
-  class rhs_weap_m4_m203s {
-    components[] = { "m203" };
-  };
-  class rhs_weap_m4_m320 {
-    components[] = { "m320" };
-  };
-  class rhs_weap_m4_carryhandle {
-    components[] = { "carryhandle" };
-  };
-  class rhs_weap_m4_carryhandle_m203 {
-    components[] = { "carryhandle", "m203" };
-  };
+  MEMBER0(rhs_weap_m4);
+  MEMBER1(rhs_weap_m4_m203s,m203);
+  MEMBER1(rhs_weap_m4_m320,m320);
+  MEMBER1(rhs_weap_m4_carryhandle,carryhandle);
+  MEMBER2(rhs_weap_m4_carryhandle_m203,carryhandle,m203);
 };
 
 class rhs_m4a1 {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4A1_carryhandle";
-  class rhs_weap_m4a1 {
-    components[] = {};
-  };
-  class rhs_weap_m4a1_m203s {
-    components[] = { "m203" };
-  };
-  class rhs_weap_m4a1_m320 {
-    components[] = { "m320" };
-  };
-  class rhs_weap_m4a1_carryhandle {
-    components[] = { "carryhandle" };
-  };
-  class rhs_weap_m4a1_carryhandle_m203 {
-    components[] = { "carryhandle", "m203" };
-  };
+  MEMBER0(rhs_weap_m4a1);
+  MEMBER1(rhs_weap_m4a1_m203s,m203);
+  MEMBER1(rhs_weap_m4a1_m320,m320);
+  MEMBER1(rhs_weap_m4a1_carryhandle,carryhandle);
+  MEMBER2(rhs_weap_m4a1_carryhandle_m203,carryhandle,m203);
 };
 
 class rhs_m4a1_pip_desert {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4A1_D";
-  class rhs_weap_m4a1_d {
-    components[] = {};
-  };
-  class rhs_weap_m4a1_m203s_d {
-    components[] = { "m203" };
-  };
+  MEMBER0(rhs_weap_m4a1_d);
+  MEMBER1(rhs_weap_m4a1_m203s_d,m203);
 };
 
 class rhs_m4a1_pip_woodland {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4A1_WD";
-  class rhs_weap_m4a1_wd {
-    components[] = {};
-  };
-  class rhs_weap_m4a1_m203s_wd {
-    components[] = { "m203" };
-  };
+  MEMBER0(rhs_weap_m4a1_wd);
+  MEMBER1(rhs_weap_m4a1_m203s_wd,m203);
 };
 
 class rhs_m4a1_blockii {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4A1BLII";
-  class rhs_weap_m4a1_blockII {
-    components[] = {};
-  };
-  class rhs_weap_m4a1_blockII_M203 {
-    components[] = { "m203" };
-  };
+  MEMBER0(rhs_weap_m4a1_blockII);
+  MEMBER1(rhs_weap_m4a1_blockII_M203,m203);
 };
 
 class rhs_m4a1_blockii_black {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4A1BLII_bk";
-  class rhs_weap_m4a1_blockII_bk {
-    components[] = {};
-  };
-  class rhs_weap_m4a1_blockII_M203_bk {
-    components[] = { "m203" };
-  };
+  MEMBER0(rhs_weap_m4a1_blockII_bk);
+  MEMBER1(rhs_weap_m4a1_blockII_M203_bk,m203);
 };
 
 class rhs_m4a1_blockii_desert {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4A1BLII_d";
-  class rhs_weap_m4a1_blockII_d {
-    components[] = {};
-  };
-  class rhs_weap_m4a1_blockII_M203_d {
-    components[] = { "m203" };
-  };
+  MEMBER0(rhs_weap_m4a1_blockII_d);
+  MEMBER1(rhs_weap_m4a1_blockII_M203_d,m203);
 };
 
 class rhs_m4a1_blockii_woodland {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4A1BLII_wd";
-  class rhs_weap_m4a1_blockII_wd {
-    components[] = {};
-  };
-  class rhs_weap_m4a1_blockII_M203_wd {
-    components[] = { "m203" };
-  };
+  MEMBER0(rhs_weap_m4a1_blockII_wd);
+  MEMBER1(rhs_weap_m4a1_blockII_M203_wd,m203);
 };
 
 class rhs_m4a1_magpull {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_M4A1_carrymstock";
-  class rhs_weap_m4a1_mstock {
-    components[] = {};
-  };
-  class rhs_weap_m4a1_carryhandle_mstock {
-    components[] = { "carryhandle" };
-  };
+  MEMBER0(rhs_weap_m4a1_mstock);
+  MEMBER1(rhs_weap_m4a1_carryhandle_mstock,carryhandle);
 };
 
 class rhs_mk_18 {
   displayName = "$STR_RHS_CFGWEAPONS_RIFLE_MK18";
-  class rhs_weap_mk18 {
-    components[] = {};
-  };
-  class rhs_weap_mk18_m320 {
-    components[] = { "m320" };
-  };
+  MEMBER0(rhs_weap_mk18);
+  MEMBER1(rhs_weap_mk18_m320,m320);
 };
 
 class rhs_socom16 {
   displayName = "SOCOM 16";
-  class rhs_weap_m14_socom {
-    components[] = {};
-  };
-  class rhs_weap_m14_socom_rail {
-    components[] = { "m14_rail" };
-  };
+  MEMBER0(rhs_weap_m14_socom);
+  MEMBER1(rhs_weap_m14_socom_rail,m14_rail);
 };
 
 class rhs_svdm {
   displayName = "$STR_RHS_WEAP_SVDM";
-  class rhs_weap_svdp {
-    components[] = {};
-  };
-  class rhs_weap_svdp_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_svdp);
+  MEMBER1(rhs_weap_svdp_npz,npz);
 };
 
 class rhs_svdm_camo {
   displayName = "$STR_RHS_WEAP_SVDM_CAMO";
-  class rhs_weap_svdp_wd {
-    components[] = {};
-  };
-  class rhs_weap_svdp_wd_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_svdp_wd);
+  MEMBER1(rhs_weap_svdp_wd_npz,npz);
 };
 
 class rhs_svds {
   displayName = "$STR_RHS_WEAP_SVDS";
-  class rhs_weap_svds {
-    components[] = {};
-  };
-  class rhs_weap_svds_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_svds);
+  MEMBER1(rhs_weap_svds_npz,npz);
 };
 
 class rhs_vss {
   displayName = "$STR_RHS_WEAP_VSS";
-  class rhs_weap_vss {
-    components[] = {};
-  };
-  class rhs_weap_vss_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_vss);
+  MEMBER1(rhs_weap_vss_npz,npz);
 };
 
 class rhs_vss_grip {
   displayName = "$STR_RHS_WEAP_VSS_GRIP";
-  class rhs_weap_vss_grip {
-    components[] = {};
-  };
-  class rhs_weap_vss_grip_npz {
-    components[] = { "npz" };
-  };
+  MEMBER0(rhs_weap_vss_grip);
+  MEMBER1(rhs_weap_vss_grip_npz,npz);
 };

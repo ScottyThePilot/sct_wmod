@@ -29,6 +29,10 @@
       <Original>Detaching...</Original>
       <English>Detaching...</English>
     </Key>
+    <Key ID="STR_sct_wmod_EnableModificationSetting">
+      <Original>Enable Weapon Modification</Original>
+      <English>Enable Weapon Modification</English>
+    </Key>
     <Key ID="STR_sct_wmod_ActionLengthSetting">
       <Original>Action Length</Original>
       <English>Action Length</English>
@@ -55,7 +59,7 @@
       <Spanish>M4/M16 Asa de transporte</Spanish>
       <Italian>M4/M16 Manico</Italian>
       <Polish>M4/M16 Rączka</Polish>
-      <Russian>М4/М16 р</Russian>
+      <!--<Russian>М4/М16 р</Russian>-->
       <German>M4/M16 Handgriff</German>
     </Key>
     <Key ID="STR_sct_wmod_c_gp25">
@@ -72,8 +76,8 @@
       <English>M14 RIS Unit</English>
     </Key>
     <Key ID="STR_sct_wmod_c_m21_rail">
-      <Original>M21 Rail</Original>
-      <English>M21 Rail</English>
+      <Original>M21 Zastava Rail</Original>
+      <English>M21 Zastava Rail</English>
     </Key>
     <Key ID="STR_sct_wmod_c_m203">
       <Original>M203</Original>
@@ -99,6 +103,42 @@
       <Original>Zenit</Original>
       <English>Zenit</English>
       <Russian>Зенит</Russian>
+    </Key>
+    <Key ID="STR_sct_wmod_c_mtk">
+      <Original>MTK</Original>
+      <English>MTK</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_fal_rail">
+      <Original>FN FAL Rail</Original>
+      <English>FN FAL Rail</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_hk_ris1">
+      <Original>HK G3 RIS Unit 1</Original>
+      <English>HK G3 RIS Unit 1</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_hk_ris2">
+      <Original>HK G3 RIS Unit 2</Original>
+      <English>HK G3 RIS Unit 2</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_hk_tac">
+      <Original>HK MP5 TAC Handguard</Original>
+      <English>HK MP5 TAC Handguard</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_ag_c">
+      <Original>AG-C</Original>
+      <English>AG-C</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_agc_full">
+      <Original>AG-C/EGLM</Original>
+      <English>AG-C/EGLM</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_sig_ris">
+      <Original>SIG SG 550 RIS Unit</Original>
+      <English>SIG SG 550 RIS Unit</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_sig_tac">
+      <Original>SIG SG 550 TAC Handguard</Original>
+      <English>SIG SG 550 TAC Handguard</English>
     </Key>
   </Package>
 </Project>
