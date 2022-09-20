@@ -14,8 +14,12 @@ private _itemsToInventory = _attachmentsRemove apply {
 
 // add or remove the component from the player's inventory
 switch (_mode) do {
-  case "attach": { _player removeItem _component };
-  case "detach": { _player addItem _component };
+  case "attach": {
+    _player removeItem _component;
+  };
+  case "detach": {
+    [_player, _component] call ace_common_fnc_addToInventory;
+  };
 };
 
 // swap the player's weapon
