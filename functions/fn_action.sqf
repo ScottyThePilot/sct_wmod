@@ -1,52 +1,49 @@
-params ["_player", "_mode", "_weaponFrom", "_weaponTo", "_component", "_attachmentsRemove"];
-
-// TODO: deprecate the current attachments removal method,
-// and determine which attachments to put in the player's inventory by which ones fail
-// when attempting to add them to the weapon.
-
-// get a list of attachments on the weapon
-private _attachmentsFrom = _player call sct_wmod_fnc_weaponsItems;
-private _itemsToInventory = _attachmentsRemove apply {
-  private _attachment = _attachmentsFrom select _x;
-  _attachmentsFrom set [_x, ""];
-  _attachment
+// Performs the action of attaching/detaching a component from a player's weapon
+params ["_player", "_mode", "", "_weaponTo", "_component", "_componentName"];
+private _loadout = getUnitLoadout _player;
+private _weaponSlot = (_loadout select [0, 3]) findIf {
+  _x select 0 == currentWeapon _player
 };
 
-// add or remove the component from the player's inventory
+if (_weaponSlot == -1) then { throw "player is not holding a weapon" };
+(_loadout select _weaponSlot) set [0, _weaponTo];
+
+// TODO: figure out if replaced attachments or empty attachment slots get filled with
+// weapons' default attachments (attachments shouldn't get created out of thin air)
+_player setUnitLoadout _loadout;
+
+private _itemsToInventory = [];
 switch (_mode) do {
   case "attach": {
     _player removeItem _component;
   };
   case "detach": {
-    [_player, _component] call ace_common_fnc_addToInventory;
+    _itemsToInventory pushBack _component;
   };
 };
 
-// swap the player's weapon
-_player removeWeaponGlobal (primaryWeapon _player);
-_player addWeaponGlobal _weaponTo;
+// compare the player's previous weapon attachments with their current ones to
+// figure out which ones fell off in the process and need to go back into the inventory
+private _previousWeaponItems = _loadout select _weaponSlot;
+private _currentWeaponItems = (weaponsItems _player) select _weaponSlot;
+for "_i" from 1 to 6 do {
+  private _previousItem = _previousWeaponItems select _i;
+  if ((_currentWeaponItems select _i) isNotEqualTo _previousItem) then {
+    //if (_previousItem isEqualTo "") then { throw "error" };
+    _itemsToInventory pushBack _previousItem;
+  };
+};
 
-// remove any attachments that may come by default with this weapon class
-removeAllPrimaryWeaponItems _player;
-
-// `addWeapon` loads magazines into the weapon from the player's inventory.
-// manually remove those magazines from the weapon and put them in the player's inventory
 {
-  _x params ["_item", "_count"];
-  _player removePrimaryWeaponItem _item;
-  [_player, _item, "", _count] call ace_common_fnc_addToInventory;
-} forEach (_player call sct_wmod_fnc_weaponsItems) select [3, 2];
-
-// select the new weapon
-_player selectWeapon _weaponTo;
-
-// add all the weapon attachments back
-{
-  _player addWeaponItem [_weaponTo, _x, true];
-} forEach _attachmentsFrom;
-
-// add the rest of the items to the player's inventory
-{
-  _x params ["_item", ["_count", -1]];
-  [_player, _item, "", _count] call ace_common_fnc_addToInventory;
+  _x params ["_item", ["_ammo", -1]];
+  [_player, _item, "", _ammo] call ace_common_fnc_addToInventory;
 } forEach _itemsToInventory;
+
+
+
+private _text = switch (_mode) do {
+  case "attach": { format [localize "STR_sct_wmod_AttachSuccess", _componentName] };
+  case "detach": { format [localize "STR_sct_wmod_DetachSuccess", _componentName] };
+};
+
+_text call CBA_fnc_notify;

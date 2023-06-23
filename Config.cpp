@@ -10,9 +10,9 @@ class CfgPatches {
       "ace_interact_menu",
       "ace_interaction"
     };
-    version = 1.2;
-    versionStr = "1.2.0";
-    versionAr[] = { 1, 2, 0 };
+    version = 1.3;
+    versionStr = "1.3.0";
+    versionAr[] = { 1, 3, 0 };
     units[] = {};
     weapons[] = {};
   };
@@ -24,11 +24,12 @@ class CfgFunctions {
       file = "\sct_wmod\functions";
       class action {};
       class actionCondition {};
+      class actionConditionUse {};
+      class actionFail {};
       class createInteraction {};
       class getComponentActions {};
       class initActions {};
       class initSettings {};
-      class weaponsItems {};
     };
   };
 };
@@ -49,7 +50,7 @@ class CfgVehicles {
           displayName = "$STR_sct_wmod_Components";
           exceptions[] = { "isNotInside", "isNotSwimming", "isNotSitting" };
           insertChildren = "call sct_wmod_fnc_getComponentActions";
-          modifierFunction = "_this select 3 set [2, getText (configFile >> 'CfgWeapons' >> currentWeapon (_this select 0) >> 'picture')];";
+          modifierFunction = "(_this select 3) set [2, getText (configFile >> 'CfgWeapons' >> currentWeapon (_this select 0) >> 'picture')];";
           // Parentheses required because of an ACE (?) bug
           condition = "(isNil 'SCT_wmod_modificationEnabled' || { SCT_wmod_modificationEnabled })";
         };
@@ -232,15 +233,18 @@ class CfgWeapons {
 };
 
 class sct_wmod_defines {
-  #define MEMBER0(ID) class ID { components[] = {}; };
-  #define MEMBER1(ID, M1) class ID { components[] = { #M1 }; };
-  #define MEMBER2(ID, M1, M2) class ID { components[] = { #M1, #M2 }; };
-  #define MEMBER3(ID, M1, M2, M3) class ID { components[] = { #M1, #M2, #M3 }; };
-  #define MEMBER4(ID, M1, M2, M3, M4) class ID { components[] = { #M1, #M2, #M3, #M4 }; };
+  #define COMPONENT(ID,CLASSNAME) class ID { className = #CLASSNAME; }
+  #define COMPONENT_NAMED(ID,CLASSNAME,NAME) class ID { className = #CLASSNAME; displayName = NAME; }
 
   class WeaponComponents {
     #include "WeaponComponents.hpp"
   };
+
+  #define MEMBER0(ID) class ID { components[] = {}; }
+  #define MEMBER1(ID,M1) class ID { components[] = { #M1 }; }
+  #define MEMBER2(ID,M1,M2) class ID { components[] = { #M1, #M2 }; }
+  #define MEMBER3(ID,M1,M2,M3) class ID { components[] = { #M1, #M2, #M3 }; }
+  #define MEMBER4(ID,M1,M2,M3,M4) class ID { components[] = { #M1, #M2, #M3, #M4 }; }
 
   class WeaponGroups {
     #include "WeaponGroupsA3.hpp"

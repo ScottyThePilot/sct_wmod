@@ -2,7 +2,7 @@
 
 class niarms_ak12 {
   MEMBER0(hlc_rifle_ak12);
-  MEMBER1(hlc_rifle_ak12GL,gp25_fl);
+  MEMBER1(hlc_rifle_ak12GL,gp25);
 };
 
 class niarms_ak74 {
@@ -12,19 +12,19 @@ class niarms_ak74 {
 
 class niarms_ak74m {
   MEMBER0(hlc_rifle_ak74m);
-  MEMBER1(hlc_rifle_ak74m_gl,gp25_fl);
+  MEMBER1(hlc_rifle_ak74m_gl,gp25);
   MEMBER1(hlc_rifle_ak74m_MTK,mtk);
 };
 
 class niarms_akm {
   MEMBER0(hlc_rifle_akm);
-  MEMBER1(hlc_rifle_akmgl,gp25_fl);
+  MEMBER1(hlc_rifle_akmgl,gp25);
   MEMBER1(hlc_rifle_akm_MTK,mtk);
 };
 
 class niarms_aks74 {
   MEMBER0(hlc_rifle_aks74);
-  MEMBER1(hlc_rifle_aks74_GL,gp25_fl);
+  MEMBER1(hlc_rifle_aks74_GL,gp25);
   MEMBER1(hlc_rifle_aks74_MTK,mtk);
 };
 

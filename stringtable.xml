@@ -29,13 +29,33 @@
       <Original>Detaching...</Original>
       <English>Detaching...</English>
     </Key>
+    <Key ID="STR_sct_wmod_NotInInventory">
+      <Original>%1 is not in inventory</Original>
+      <English>%1 is not in inventory</English>
+    </Key>
+    <Key ID="STR_sct_wmod_AttachFailure">
+      <Original>Failed to attach %1</Original>
+      <English>Failed to attach %1</English>
+    </Key>
+    <Key ID="STR_sct_wmod_DetachFailure">
+      <Original>Failed to detach %1</Original>
+      <English>Failed to detach %1</English>
+    </Key>
+    <Key ID="STR_sct_wmod_AttachSuccess">
+      <Original>Attached %1</Original>
+      <English>Attached %1</English>
+    </Key>
+    <Key ID="STR_sct_wmod_DetachSuccess">
+      <Original>Detached %1</Original>
+      <English>Detached %1</English>
+    </Key>
     <Key ID="STR_sct_wmod_EnableModificationSetting">
       <Original>Enable Weapon Modification</Original>
       <English>Enable Weapon Modification</English>
     </Key>
     <Key ID="STR_sct_wmod_ActionLengthSetting">
-      <Original>Action Length</Original>
-      <English>Action Length</English>
+      <Original>Action Duration</Original>
+      <English>Action Duration</English>
     </Key>
   </Package>
   <Package name="components">

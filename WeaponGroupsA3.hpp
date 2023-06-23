@@ -2,17 +2,17 @@
 
 class a3_ak12 {
   MEMBER0(arifle_AK12_F);
-  MEMBER1(arifle_AK12_GL_F,gp25_fl);
+  MEMBER1(arifle_AK12_GL_F,gp25);
 };
 
 class a3_ak12_arid {
   MEMBER0(arifle_AK12_arid_F);
-  MEMBER1(arifle_AK12_GL_arid_F,gp25_fl);
+  MEMBER1(arifle_AK12_GL_arid_F,gp25);
 };
 
 class a3_ak12_lush {
   MEMBER0(arifle_AK12_lush_F);
-  MEMBER1(arifle_AK12_GL_lush_F,gp25_fl);
+  MEMBER1(arifle_AK12_GL_lush_F,gp25);
 };
 
 class a3_mx {

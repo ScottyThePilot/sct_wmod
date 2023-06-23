@@ -1,9 +1,21 @@
 // Creates a new ACE Interaction for attaching or detaching a component
 params ["_mode", "_id", "_weaponFrom", "_weaponTo", "_c"];
-private _c = configFile >> "sct_wmod_defines" >> "WeaponComponents" >> _c;
-private _component = getTextRaw (_c >> "className");
-private _componentName = getText (_c >> "displayName");
-private _attachmentsRemove = getArray (_c >> "attachmentSlots");
+private _componentClass = configFile >> "sct_wmod_defines" >> "WeaponComponents" >> _c;
+private _findConfig = { _this select (_this findIf { _x != configNull }) };
+
+private _component = getTextRaw (_componentClass >> "className");
+
+private _componentName = getText ([
+  _componentClass >> "displayName",
+  configFile >> "CfgWeapons" >> _component >> "displayName",
+  configFile >> "CfgMagazines" >> _component >> "displayName"
+] call _findConfig);
+
+private _componentPicture = getTextRaw ([
+  _componentClass >> "picture",
+  configFile >> "CfgWeapons" >> _component >> "picture",
+  configFile >> "CfgMagazines" >> _component >> "picture"
+] call _findConfig);
 
 [
   _id,
@@ -11,7 +23,7 @@ private _attachmentsRemove = getArray (_c >> "attachmentSlots");
     case "attach": { format [localize "STR_sct_wmod_Attach", _componentName] };
     case "detach": { format [localize "STR_sct_wmod_Detach", _componentName] };
   },
-  getTextRaw (configFile >> "CfgWeapons" >> _component >> "picture"),
+  _componentPicture,
   {
     private _args = [_this select 1] + (_this select 2);
     private _barText = switch (_args select 1) do {
@@ -19,14 +31,15 @@ private _attachmentsRemove = getArray (_c >> "attachmentSlots");
       case "detach": { localize "STR_sct_wmod_Detaching" };
     };
 
-    // TODO: add CBA setting for changing the progress bar time
     [SCT_wmod_actionLength, _args, {
       (_this select 0) call sct_wmod_fnc_action
-    }, {}, _barText, {
-      (_this select 0) call sct_wmod_fnc_actionCondition
+    }, {
+      (_this select 0) call sct_wmod_fnc_actionFail
+    }, _barText, {
+      (_this select 0) call sct_wmod_fnc_actionConditionUse
     }] call ace_common_fnc_progressBar;
   },
   { ([_this select 1] + (_this select 2)) call sct_wmod_fnc_actionCondition },
   {},
-  [_mode, _weaponFrom, _weaponTo, _component, _attachmentsRemove]
+  [_mode, _weaponFrom, _weaponTo, _component, _componentName]
 ] call ace_interact_menu_fnc_createAction
