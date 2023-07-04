@@ -160,5 +160,50 @@
       <Original>SIG SG 550 TAC Handguard</Original>
       <English>SIG SG 550 TAC Handguard</English>
     </Key>
+    <Key ID="STR_sct_wmod_c_dovetail_rail">
+      <Original>Dovetail Rail</Original>
+      <English>Dovetail Rail</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_dovetail_rail_full">
+      <Original>Dovetail Rail Kit</Original>
+      <English>Dovetail Rail Kit</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_picatinny_rail">
+      <Original>Picatinny Rail</Original>
+      <English>Picatinny Rail</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_picatinny_rail_full">
+      <Original>Picatinny Rail Kit</Original>
+      <English>Picatinny Rail Kit</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_eglm">
+      <Original>EGLM</Original>
+      <English>EGLM</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_eglm_full">
+      <Original>FN40GL</Original>
+      <English>FN40GL</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_kv04">
+      <Original>KV-04 S</Original>
+      <English>KV-04 S</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_gp34">
+      <Original>GP-34</Original>
+      <English>GP-34</English>
+      <Russian>ГП-34</Russian>
+    </Key>
+    <Key ID="STR_sct_wmod_c_ag36">
+      <Original>AG36</Original>
+      <English>AG36</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_pk_ris">
+      <Original>PK RIS Mount</Original>
+      <English>PK RIS Mount</English>
+    </Key>
+    <Key ID="STR_sct_wmod_c_pk_ris_full">
+      <Original>PKM/PKP RIS Mount</Original>
+      <English>PKM/PKP RIS Mount</English>
+    </Key>
   </Package>
 </Project>

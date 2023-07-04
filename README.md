@@ -10,8 +10,12 @@ rails, etc. to be detached or attached to weapons in the field.
 ## Support
 Current support:
 - Vanilla Arma 3
+- CUP Weapons (partial)
 - RHS USAF/AFRF/GREF/SAF
 - NIArms
+
+Note: Some weapon/component combos might not be supported. You can check the
+`WeaponGroupsX.hpp` files to check what weapon/component combos are included.
 
 ## Adding new components or recipes
 If you want to add new components or recipes, you can either contribute to the
@@ -44,6 +48,7 @@ class sct_wmod_defines {
     class rhs_m27iar {
       // The weapon classes contained within this group and the
       // components that should be considered as attached.
+      // The mod will automatically calculate all applicable detach/attach actions.
       class rhs_weap_m27iar {
         components[] = {};
       };

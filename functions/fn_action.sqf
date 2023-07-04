@@ -41,9 +41,7 @@ for "_i" from 1 to 6 do {
 
 
 
-private _text = switch (_mode) do {
-  case "attach": { format [localize "STR_sct_wmod_AttachSuccess", _componentName] };
-  case "detach": { format [localize "STR_sct_wmod_DetachSuccess", _componentName] };
-};
-
-_text call CBA_fnc_notify;
+(format [localize (switch (_mode) do {
+  case "attach": { "STR_sct_wmod_AttachSuccess" };
+  case "detach": { "STR_sct_wmod_DetachSuccess" };
+}), _componentName]) call CBA_fnc_notify;

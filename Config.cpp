@@ -10,9 +10,9 @@ class CfgPatches {
       "ace_interact_menu",
       "ace_interaction"
     };
-    version = 1.3;
-    versionStr = "1.3.0";
-    versionAr[] = { 1, 3, 0 };
+    version = 1.4;
+    versionStr = "1.4.0";
+    versionAr[] = { 1, 4, 0 };
     units[] = {};
     weapons[] = {};
   };
@@ -83,7 +83,7 @@ class CfgWeapons {
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_b13";
     picture = "\sct_wmod\data\components\b13.paa";
-    descriptionShort = "A side-mounted picatinny rail adaptor for the AK family of rifles";
+    descriptionShort = "A side-mounted picatinny rail adapter for the AK family of rifles";
     scope = 2;
   };
 
@@ -115,7 +115,7 @@ class CfgWeapons {
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_m14_rail";
     picture = "\sct_wmod\data\components\m14_rail.paa";
-    descriptionShort = "A side-mounted picatinny rail adaptor for the M14";
+    descriptionShort = "A side-mounted picatinny rail adapter for the M14";
     scope = 2;
   };
 
@@ -131,7 +131,7 @@ class CfgWeapons {
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_m21_rail";
     picture = "\sct_wmod\data\components\m21_rail.paa";
-    descriptionShort = "A side-mounted picatinny rail adaptor for the M21 Zastava";
+    descriptionShort = "A side-mounted picatinny rail adapter for the M21 Zastava";
     scope = 2;
   };
 
@@ -155,7 +155,7 @@ class CfgWeapons {
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_npz";
     picture = "\sct_wmod\data\components\npz.paa";
-    descriptionShort = "A side-mounted picatinny rail adaptor for the AK family of rifles";
+    descriptionShort = "A side-mounted picatinny rail adapter for the AK family of rifles";
     scope = 2;
   };
 
@@ -163,7 +163,7 @@ class CfgWeapons {
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_zenit";
     picture = "\sct_wmod\data\components\zenit.paa";
-    descriptionShort = "A picatinny rail adaptor handguard for the AK family of rifles";
+    descriptionShort = "A picatinny rail adapter handguard for the AK family of rifles";
     scope = 2;
   };
 
@@ -171,7 +171,7 @@ class CfgWeapons {
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_mtk";
     picture = "\sct_wmod\data\components\mtk.paa";
-    descriptionShort = "A side-mounted picatinny rail adaptor for the AK family of rifles";
+    descriptionShort = "A side-mounted picatinny rail adapter for the AK family of rifles";
     scope = 2;
   };
 
@@ -203,7 +203,7 @@ class CfgWeapons {
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_hk_tac";
     picture = "\sct_wmod\data\components\hk_tac.paa";
-    descriptionShort = "A picatinny rail adaptor handguard for the HK MP5 rifles";
+    descriptionShort = "A picatinny rail adapter handguard for the HK MP5 rifles";
     scope = 2;
   };
 
@@ -227,14 +227,60 @@ class CfgWeapons {
     author = "ScottyThePilot";
     displayName = "$STR_sct_wmod_c_sig_tac";
     picture = "\sct_wmod\data\components\sig_tac.paa";
-    descriptionShort = "A picatinny rail adaptor handguard for the SIG SG 550 family of rifles";
+    descriptionShort = "A picatinny rail adapter handguard for the SIG SG 550 family of rifles";
+    scope = 2;
+  };
+
+  class sct_wmod_component_dovetail_rail: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_dovetail_rail_full";
+    picture = "\sct_wmod\data\components\dovetail_rail.paa";
+    descriptionShort = "An optic mounting rail kit for the AK family of rifles (non-removable)";
+    scope = 2;
+  };
+
+  //class sct_wmod_component_picatinny_rail: sct_wmod_ccore {
+  //  author = "ScottyThePilot";
+  //  displayName = "$STR_sct_wmod_c_picatinny_rail_full";
+  //  picture = "\sct_wmod\data\components\picatinny_rail.paa";
+  //  descriptionShort = "A picatinny rail kit for many kinds of weapons (non-removable)";
+  //  scope = 2;
+  //};
+
+  class sct_wmod_component_eglm: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_eglm_full";
+    picture = "\sct_wmod\data\components\eglm.paa";
+    descriptionShort = "A 40mm underbarrel grenade launcher for the FN SCAR, Remington ACR, and similar rifles";
+    scope = 2;
+  };
+
+  class sct_wmod_component_kv04: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_kv04";
+    picture = "\sct_wmod\data\components\kv04.paa";
+    descriptionShort = "A side-mounted picatinny rail adapter for the AK family of rifles";
+    scope = 2;
+  };
+
+  class sct_wmod_component_pk_ris: sct_wmod_ccore {
+    author = "ScottyThePilot";
+    displayName = "$STR_sct_wmod_c_pk_ris_full";
+    picture = "\sct_wmod\data\components\pk_ris.paa";
+    descriptionShort = "A picatinny optic rail mount for the PKM, PKP, and other Klashnikov machine guns";
     scope = 2;
   };
 };
 
 class sct_wmod_defines {
-  #define COMPONENT(ID,CLASSNAME) class ID { className = #CLASSNAME; }
-  #define COMPONENT_NAMED(ID,CLASSNAME,NAME) class ID { className = #CLASSNAME; displayName = NAME; }
+  #define COMPONENT(ID,CLASSNAME) \
+    class ID { className = #CLASSNAME; }
+  #define COMPONENT_NAMED(ID,CLASSNAME,NAME) \
+    class ID { className = #CLASSNAME; displayName = NAME; }
+  #define COMPONENT_NAMED_NOATTACH(ID,CLASSNAME,NAME) \
+    class ID { className = #CLASSNAME; displayName = NAME; disableAttach = 1; }
+  #define COMPONENT_NAMED_NODETACH(ID,CLASSNAME,NAME) \
+    class ID { className = #CLASSNAME; displayName = NAME; disableDetach = 1; }
 
   class WeaponComponents {
     #include "WeaponComponents.hpp"
@@ -248,6 +294,7 @@ class sct_wmod_defines {
 
   class WeaponGroups {
     #include "WeaponGroupsA3.hpp"
+    #include "WeaponGroupsCUP.hpp"
     #include "WeaponGroupsNIArms.hpp"
     #include "WeaponGroupsRHS.hpp"
   };

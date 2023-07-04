@@ -19,17 +19,17 @@ private _componentPicture = getTextRaw ([
 
 [
   _id,
-  switch (_mode) do {
-    case "attach": { format [localize "STR_sct_wmod_Attach", _componentName] };
-    case "detach": { format [localize "STR_sct_wmod_Detach", _componentName] };
-  },
+  format [localize (switch (_mode) do {
+    case "attach": { "STR_sct_wmod_Attach" };
+    case "detach": { "STR_sct_wmod_Detach" };
+  }), _componentName],
   _componentPicture,
   {
     private _args = [_this select 1] + (_this select 2);
-    private _barText = switch (_args select 1) do {
-      case "attach": { localize "STR_sct_wmod_Attaching" };
-      case "detach": { localize "STR_sct_wmod_Detaching" };
-    };
+    private _barText = localize (switch (_args select 1) do {
+      case "attach": { "STR_sct_wmod_Attaching" };
+      case "detach": { "STR_sct_wmod_Detaching" };
+    });
 
     [SCT_wmod_actionLength, _args, {
       (_this select 0) call sct_wmod_fnc_action
