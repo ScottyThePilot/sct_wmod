@@ -3,16 +3,16 @@ class CfgPatches {
     name = "Scotty's ACE Weapon Modification";
     author = "ScottyThePilot";
     authorUrl = "https://steamcommunity.com/id/scottythepilot/";
-    url = "";
+    url = "https://github.com/ScottyThePilot/sct_wmod";
     requiredAddons[] = {
       "cba_main",
       "ace_common",
       "ace_interact_menu",
       "ace_interaction"
     };
-    version = 1.4;
-    versionStr = "1.4.0";
-    versionAr[] = { 1, 4, 0 };
+    version = 1.5;
+    versionStr = "1.5.0";
+    versionAr[] = { 1, 5, 0 };
     units[] = {};
     weapons[] = {};
   };
@@ -294,7 +294,9 @@ class sct_wmod_defines {
 
   class WeaponGroups {
     #include "WeaponGroupsA3.hpp"
+    #include "WeaponGroupsAegis.hpp"
     #include "WeaponGroupsCUP.hpp"
+    #include "WeaponGroupsLXWS.hpp"
     #include "WeaponGroupsNIArms.hpp"
     #include "WeaponGroupsRHS.hpp"
   };

@@ -1,5 +1,9 @@
 // Weapon Groups for NIArms
 
+// TODO: MK17/SCAR
+
+// TODO: Rifles with Ghillies
+
 class niarms_ak12 {
   MEMBER0(hlc_rifle_ak12);
   MEMBER1(hlc_rifle_ak12GL,gp25);
