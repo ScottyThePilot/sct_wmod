@@ -10,7 +10,9 @@ rails, etc. to be detached or attached to weapons in the field.
 ## Support
 Current support:
 - Vanilla Arma 3
+- Western Sahara Creator DLC
 - CUP Weapons (partial)
+- Arma 3: Aegis & Atlas
 - RHS USAF/AFRF/GREF/SAF
 - NIArms
 
