@@ -5,6 +5,14 @@
       <Original>Components</Original>
       <English>Components</English>
     </Key>
+    <Key ID="STR_sct_wmod_CompatibleWeapons">
+      <Original>Compatible Weapon Systems</Original>
+      <English>Compatible Weapon Systems</English>
+    </Key>
+    <Key ID="STR_sct_wmod_None">
+      <Original>(None)</Original>
+      <English>(None)</English>
+    </Key>
     <Key ID="STR_sct_wmod_Attach">
       <Original>Attach %1</Original>
       <English>Attach %1</English>

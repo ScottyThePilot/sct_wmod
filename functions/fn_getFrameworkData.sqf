@@ -1,8 +1,3 @@
-// Action: [mode: "attach"|"detach", id, fromWeapon, toWeapon, componentId]
-
-private _actionsCached = missionNamespace getVariable "sct_wmod_actions";
-if (!isNil "_actionsCached") exitWith { _actionsCached };
-
 // Assembles a hashmap of configs and their config names by looking at the
 // classes under the given path in the game config, campaign config, and mission config.
 // Entries take precedence in the following order: `missionConfigFile`, `campaignConfigFile`, configFile`
@@ -25,31 +20,47 @@ private _collectConfigs = {
   _map
 };
 
-private _groups = ["sct_wmod_defines", "WeaponGroups"] call _collectConfigs;
+// Components: HashMap<String, Config>
 private _components = ["sct_wmod_defines", "WeaponComponents"] call _collectConfigs;
+private _components = createHashMapFromArray (_components apply { [_x, _y] } select {
+  _x params ["_componentKey", "_componentConfig"];
+  isText (_componentConfig >> "className") && {
+    private _componentClassName = getTextRaw (_componentConfig >> "className");
+    isClass (configFile >> "CfgWeapons" >> _componentClassName) ||
+    isClass (configFile >> "CfgMagazines" >> _componentClassName)
+  }
+});
 
-private _getGroupChildren = {
-  ("true" configClasses _this) select {
-    // Filter out group weapons that do not have a valid class with them
-    // (maybe the mod for that item is not loaded?)
+// Groups: HashMap<String, Group>
+// Group: [GroupEntryKey: String, GroupEntryComponents: Array<String>]
+private _groups = ["sct_wmod_defines", "WeaponGroups"] call _collectConfigs;
+private _groups = createHashMapFromArray (_groups apply {
+  private _groupKey = _x;
+  [_groupKey, ("true" configClasses _y) select {
     isClass (configFile >> "CfgWeapons" >> configName _x)
   } apply {
-    // TODO: don't filter components
-    [configName _x, (getArray (_x >> "components")) select {
-      // Filter out components that do not have a valid class with them
-      // (maybe the mod for that item is not loaded?)
-      private _c = getTextRaw ((_components get _x) >> "className");
-      isClass (configFile >> "CfgWeapons" >> _c) ||
-      isClass (configFile >> "CfgMagazines" >> _c)
-    }]
-  }
-};
+    private _groupEntryKey = configName _x;
+    private _groupEntryComponents = getArray (_x >> "components");
+    private _unknownComponent = _groupEntryComponents findIf { !(_x in _components) };
+    if (_unknownComponent isNotEqualTo -1) then {
+      diag_log format [
+        "sct_wmod: unknown component '%1' found in weapon group entry '%2' on weapon group '%3'",
+        _groupEntryComponents select _unknownComponent, _groupEntryKey, _groupKey
+      ];
+      _groupEntryComponents = nil;
+    };
+
+    [_groupEntryKey, _groupEntryComponents]
+  } select {
+    !isNil { _x select 1 }
+  }]
+});
 
 private _actions = [];
 private _idCounter = 0;
 
 {
-  private _children = _y call _getGroupChildren;
+  private _children = _y;
   {
     _x params ["_classA", "_componentsA"];
     {
@@ -76,5 +87,4 @@ private _idCounter = 0;
   } forEach _children;
 } forEach _groups;
 
-missionNamespace setVariable ["sct_wmod_actions", _actions];
-_actions
+[_actions, _groups, _components]

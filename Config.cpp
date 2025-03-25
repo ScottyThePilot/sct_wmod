@@ -7,12 +7,13 @@ class CfgPatches {
     requiredAddons[] = {
       "cba_main",
       "ace_common",
+      "ace_arsenal",
       "ace_interact_menu",
       "ace_interaction"
     };
-    version = 1.5;
-    versionStr = "1.5.0";
-    versionAr[] = { 1, 5, 0 };
+    version = 1.6;
+    versionStr = "1.6.0";
+    versionAr[] = { 1, 6, 0 };
     units[] = {};
     weapons[] = {};
   };
@@ -27,8 +28,12 @@ class CfgFunctions {
       class actionConditionUse {};
       class actionFail {};
       class createInteraction {};
+      class getCached {};
+      class getCompatibleWeaponsNames {};
       class getComponentActions {};
-      class initActions {};
+      class getFrameworkData {};
+      class getFrameworkDataCached {};
+      class getWeaponComponentsNames {};
       class initSettings {};
     };
   };
@@ -37,6 +42,28 @@ class CfgFunctions {
 class Extended_PreInit_EventHandlers {
   class sct_wmod_init_settings {
     init = "call sct_wmod_fnc_initSettings";
+  };
+};
+
+class ace_arsenal_stats {
+  class statBase;
+
+  class sct_wmod_weapon_components: statBase {
+    scope = 2;
+    displayName = "$STR_sct_wmod_Components";
+    priority = 1.15;
+    showText = 1;
+    textStatement = "(configName (_this select 1) call sct_wmod_fnc_getWeaponComponentsNames)";
+    tabs[] = { { 0, 1, 2 }, {} };
+  };
+
+  class sct_wmod_compatible_weapons: statBase {
+    scope = 2;
+    displayName = "$STR_sct_wmod_CompatibleWeapons";
+    priority = 1.16;
+    showText = 1;
+    textStatement = "(configName (_this select 1) call sct_wmod_fnc_getCompatibleWeaponsNames)";
+    tabs[] = { { 0, 1, 2 }, {} };
   };
 };
 
