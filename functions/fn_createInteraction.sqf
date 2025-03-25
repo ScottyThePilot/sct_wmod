@@ -1,7 +1,7 @@
 // Creates a new ACE Interaction for attaching or detaching a component
 params ["_mode", "_id", "_weaponFrom", "_weaponTo", "_c"];
 private _componentClass = configFile >> "sct_wmod_defines" >> "WeaponComponents" >> _c;
-private _findConfig = { _this select (_this findIf { _x != configNull }) };
+private _findConfig = { _this select (_this findIf { !isNull _x }) };
 
 private _component = getTextRaw (_componentClass >> "className");
 

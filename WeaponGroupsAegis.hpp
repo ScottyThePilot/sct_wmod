@@ -64,17 +64,17 @@ class aegis_g36_sand {
 
 class aegis_l85a3_blk {
   MEMBER0(arifle_SA80_blk_F);
-  MEMBER1(arifle_SA80_GL_blk_Fag36);
+  MEMBER1(arifle_SA80_GL_blk_F,ag36);
 };
 
 class aegis_l85a3_khk {
   MEMBER0(arifle_SA80_khk_F);
-  MEMBER1(arifle_SA80_GL_khk_Fag36);
+  MEMBER1(arifle_SA80_GL_khk_F,ag36);
 };
 
 class aegis_l85a3_snd {
   MEMBER0(arifle_SA80_snd_F);
-  MEMBER1(arifle_SA80_GL_snd_Fag36);
+  MEMBER1(arifle_SA80_GL_snd_F,ag36);
 };
 
 class aegis_m4a1 {

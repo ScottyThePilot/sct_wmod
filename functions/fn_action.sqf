@@ -1,6 +1,7 @@
 // Performs the action of attaching/detaching a component from a player's weapon
 params ["_player", "_mode", "", "_weaponTo", "_component", "_componentName"];
-private _loadout = getUnitLoadout _player;
+private _extendedLoadout = [_player] call CBA_fnc_getLoadout;
+private _loadout = _extendedLoadout select 0;
 private _weaponSlot = (_loadout select [0, 3]) findIf {
   _x select 0 == currentWeapon _player
 };
@@ -8,9 +9,7 @@ private _weaponSlot = (_loadout select [0, 3]) findIf {
 if (_weaponSlot == -1) then { throw "player is not holding a weapon" };
 (_loadout select _weaponSlot) set [0, _weaponTo];
 
-// TODO: figure out if replaced attachments or empty attachment slots get filled with
-// weapons' default attachments (attachments shouldn't get created out of thin air)
-_player setUnitLoadout _loadout;
+[_player, _extendedLoadout, true] call CBA_fnc_setLoadout;
 
 private _itemsToInventory = [];
 switch (_mode) do {
