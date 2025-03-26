@@ -1,0 +1,15 @@
+name = "Scotty's ACE Weapon Modification"
+author = "ScottyThePilot"
+prefix = "sct_wmod"
+mainprefix = "x"
+
+[version]
+git_hash = 0
+
+[files]
+exclude = [
+  "**/WeaponComponents*.hpp",
+  "**/WeaponGroups*.hpp",
+  "**/CfgVehicles.hpp",
+  "**/CfgWeapons.hpp"
+]

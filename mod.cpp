@@ -1,0 +1,11 @@
+name = "Scotty's ACE Weapon Modification";
+author = "ScottyThePilot";
+logoSmall = "\sct_wmod\main\data\logo_small.paa";
+logo = "\sct_wmod\main\data\logo.paa";
+logoOver = "\sct_wmod\main\data\logo.paa";
+actionName = "GitHub";
+action = "https://github.com/ScottyThePilot/sct_wmod";
+dlcColor[] = { 0.88, 0.88, 0.88, 1 };
+overview = "Attaching/detaching of components like rails, grenade launchers, as items.";
+hideName = 0;
+hidePicture = 0;

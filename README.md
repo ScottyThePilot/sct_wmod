@@ -16,8 +16,8 @@ Current support:
 - RHS USAF/AFRF/GREF/SAF
 - NIArms
 
-Note: Some weapon/component combos might not be supported. You can check the
-`WeaponGroupsX.hpp` files to check what weapon/component combos are included.
+Note: Some weapon/component combos might not be supported.
+You can check the second page of a weapons' stats in the ACE arsenal to check compatibility.
 
 ## Adding new components or recipes
 If you want to add new components or recipes, you can either contribute to the
@@ -27,6 +27,11 @@ components/recipes in a `description.ext` for a mission.
 The following code is an example of how to define a new component and a weapon group.
 You can either place this in your `Config.cpp` (if making a patch/compat mod) or
 in your `description.ext` (for missions or campaigns).
+
+If weapon components or weapon groups are defined in a mission config with the
+same ID as one defined in an addon config, the weapon component or weapon group
+defined in the addon config will be completely replaced by the one defined in the
+mission config.
 
 ```cpp
 class sct_wmod_defines {

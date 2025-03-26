@@ -1,0 +1,17 @@
+[default]
+workshop = [
+  # CBA_A3
+  "450814997",
+  # ACE
+  "463939057",
+  # 3den Enhanced
+  "623475643",
+  # RHSUSAF
+  "843577117",
+  # RHSAFRF
+  "843425103",
+  # RHSGREF
+  "843593391",
+  # RHSSAF
+  "843632231"
+]
