@@ -2,7 +2,8 @@
 
 // Creates a new ACE Interaction for attaching or detaching a component
 params ["_mode", "_id", "_weaponFrom", "_weaponTo", "_c"];
-private _componentClass = configFile >> QCLASS_DEFINES >> "WeaponComponents" >> _c;
+([] call PFUNC(getFrameworkDataCached)) params ["", "", "_components", "_tools"];
+private _componentClass = _components get _c;
 private _findConfig = { _this select (_this findIf { !isNull _x }) };
 
 private _component = getTextRaw (_componentClass >> "className");
@@ -19,6 +20,8 @@ private _componentPicture = getTextRaw ([
   configFile >> "CfgMagazines" >> _component >> "picture"
 ] call _findConfig);
 
+private _toolsRequired = getArray (_componentClass >> "toolsRequired");
+
 [
   _id,
   format [localize (switch (_mode) do {
@@ -28,20 +31,25 @@ private _componentPicture = getTextRaw ([
   _componentPicture,
   {
     private _args = [_this select 1] + (_this select 2);
-    private _barText = localize (switch (_args select 1) do {
-      case "attach": { PLSTRING(Attaching) };
-      case "detach": { PLSTRING(Detaching) };
-    });
 
-    [VAR_ACTION_LENGTH, _args, {
-      (_this select 0) call PFUNC(action)
-    }, {
-      (_this select 0) call PFUNC(actionFail)
-    }, _barText, {
-      (_this select 0) call PFUNC(actionConditionUse)
-    }] call ace_common_fnc_progressBar;
+    if (_args call PFUNC(actionConditionUse)) then {
+      private _barText = localize (switch (_args select 1) do {
+        case "attach": { PLSTRING(Attaching) };
+        case "detach": { PLSTRING(Detaching) };
+      });
+
+      [VAR_ACTION_LENGTH, _args, {
+        (_this select 0) call PFUNC(action)
+      }, {
+        (_this select 0) call PFUNC(actionFail)
+      }, _barText, {
+        (_this select 0) call PFUNC(actionConditionUse)
+      }] call ace_common_fnc_progressBar;
+    } else {
+      _args call PFUNC(actionFail);
+    };
   },
   { ([_this select 1] + (_this select 2)) call PFUNC(actionCondition) },
   {},
-  [_mode, _weaponFrom, _weaponTo, _component, _componentName]
+  [_mode, _weaponFrom, _weaponTo, _component, _componentName, _toolsRequired]
 ] call ace_interact_menu_fnc_createAction

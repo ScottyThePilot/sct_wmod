@@ -14,12 +14,14 @@ if (_weaponSlot == -1) then { throw "player is not holding a weapon" };
 [_player, _extendedLoadout, true] call CBA_fnc_setLoadout;
 
 private _itemsToInventory = [];
-switch (_mode) do {
-  case "attach": {
-    _player removeItem _component;
-  };
-  case "detach": {
-    _itemsToInventory pushBack _component;
+if (_component isNotEqualTo QCLASS_COMPONENT_ITEM_FAKE) then {
+  switch (_mode) do {
+    case "attach": {
+      _player removeItem _component;
+    };
+    case "detach": {
+      _itemsToInventory pushBack _component;
+    };
   };
 };
 

@@ -1,6 +1,21 @@
 class CBA_MiscItem;
 class CBA_MiscItem_ItemInfo;
 
+class PGVAR(tool_hacksaw): CBA_MiscItem {
+  author = "ScottyThePilot";
+  displayName = PCSTRING(tool_hacksaw);
+  picture = QPATHTO(data\tools\hacksaw.paa);
+  descriptionShort = PCSTRING(tool_description_hacksaw);
+
+  ACE_isTool = 1;
+
+  class ItemInfo: CBA_MiscItem_ItemInfo {
+    mass = 2;
+  };
+
+  scope = 2;
+};
+
 class PGVAR(ccore): CBA_MiscItem {
   class ItemInfo: CBA_MiscItem_ItemInfo {
     mass = 2;
@@ -212,5 +227,21 @@ class PGVAR(component_fal_gl): PGVAR(ccore) {
   displayName = PCSTRING(component_fal_gl);
   picture = QPATHTO(data\components\fal_gl.paa);
   descriptionShort = PCSTRING(component_description_fal_gl);
+  scope = 2;
+};
+
+class PGVAR(component_six12): PGVAR(ccore) {
+  uthor = "ScottyThePilot";
+  displayName = PCSTRING(component_six12);
+  picture = QPATHTO(data\components\six12.paa);
+  descriptionShort = PCSTRING(component_description_six12);
+  scope = 2;
+};
+
+class PGVAR(component_msbs_gp): PGVAR(ccore) {
+  uthor = "ScottyThePilot";
+  displayName = PCSTRING(component_msbs_gp);
+  picture = QPATHTO(data\components\msbs_gp.paa);
+  descriptionShort = PCSTRING(component_description_msbs_gp);
   scope = 2;
 };

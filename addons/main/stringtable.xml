@@ -51,9 +51,13 @@
       <Original>Detaching...</Original>
       <English>Detaching...</English>
     </Key>
-    <Key ID="STR_sct_wmod_NotInInventory">
+    <Key ID="STR_sct_wmod_ComponentNotInInventory">
       <Original>%1 is not in inventory</Original>
       <English>%1 is not in inventory</English>
+    </Key>
+    <Key ID="STR_sct_wmod_ToolsNotInInventory">
+      <Original>Missing tool(s): %1</Original>
+      <English>Missing tool(s): %1</English>
     </Key>
     <Key ID="STR_sct_wmod_AttachFailure">
       <Original>Failed to attach %1</Original>
@@ -223,6 +227,18 @@
       <Original>FN FAL Grenade Launcher Adapter</Original>
       <English>FN FAL Grenade Launcher Adapter</English>
     </Key>
+    <Key ID="STR_sct_wmod_component_shotgun_barrel">
+      <Original>Shotgun Barrel</Original>
+      <English>Shotgun Barrel</English>
+    </Key>
+    <Key ID="STR_sct_wmod_component_six12">
+      <Original>SIX12</Original>
+      <English>SIX12</English>
+    </Key>
+    <Key ID="STR_sct_wmod_component_msbs_gp">
+      <Original>MSBS GP</Original>
+      <English>MSBS GP</English>
+    </Key>
   </Package>
   <Package name="components_descriptions">
     <Key ID="STR_sct_wmod_component_description_3gl">
@@ -246,8 +262,8 @@
       <English>A carryhandle unit with integrated sight designed for the M4 and M16 series of rifles</English>
     </Key>
     <Key ID="STR_sct_wmod_component_description_gp25">
-      <Original>A 40mm under-barrel grenade launcher for the AK family of rifles</Original>
-      <English>A 40mm under-barrel grenade launcher for the AK family of rifles</English>
+      <Original>A 40mm underbarrel grenade launcher for the AK family of rifles</Original>
+      <English>A 40mm underbarrel grenade launcher for the AK family of rifles</English>
     </Key>
     <Key ID="STR_sct_wmod_component_description_m14_rail">
       <Original>A side-mounted picatinny rail adapter for the M14</Original>
@@ -308,6 +324,27 @@
     <Key ID="STR_sct_wmod_component_description_fal_gl">
       <Original>An adapter for the barrel of the FN FAL rifle allowing the firing of rifle grenades</Original>
       <English>An adapter for the barrel of the FN FAL rifle allowing the firing of rifle grenades</English>
+    </Key>
+    <Key ID="STR_sct_wmod_component_description_six12">
+      <Original>A six-round double-action revolving underbarrel shotgun</Original>
+      <English>A six-round double-action revolving underbarrel shotgun</English>
+    </Key>
+    <Key ID="STR_sct_wmod_component_description_msbs_gp">
+      <Original>A 40mm underbarrel grenade launcher for the MSBS series of rifles</Original>
+      <English>A 40mm underbarrel grenade launcher for the MSBS series of rifles</English>
+    </Key>
+  </Package>
+  <Package name="tools">
+    <Key ID="STR_sct_wmod_tool_saw">
+      <Original>Saw</Original>
+    </Key>
+    <Key ID="STR_sct_wmod_tool_hacksaw">
+      <Original>Hacksaw</Original>
+    </Key>
+  </Package>
+  <Package name="tools_descriptions">
+    <Key ID="STR_sct_wmod_tool_description_hacksaw">
+      <Original>A handheld saw for cutting metal. Can be used to shorten the barrels of shotguns.</Original>
     </Key>
   </Package>
 </Project>

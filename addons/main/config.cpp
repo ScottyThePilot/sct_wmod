@@ -77,6 +77,7 @@ class CfgFunctions {
       class getComponentActions {};
       class getFrameworkData {};
       class getFrameworkDataCached {};
+      class getMissingToolsRequired {};
       class getWeaponComponentsNames {};
       class initSettings {};
     };
@@ -128,8 +129,13 @@ class CLASS_DEFINES {
     #include "./defines/WeaponGroupsA3.hpp"
     #include "./defines/WeaponGroupsAegis.hpp"
     #include "./defines/WeaponGroupsCUP.hpp"
+    #include "./defines/WeaponGroupsJCA.hpp"
     #include "./defines/WeaponGroupsLXWS.hpp"
     #include "./defines/WeaponGroupsNIArms.hpp"
     #include "./defines/WeaponGroupsRHS.hpp"
+  };
+
+  class WeaponTools {
+    #include "./defines/WeaponTools.hpp"
   };
 };

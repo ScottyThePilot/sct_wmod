@@ -22,12 +22,25 @@ private _collectConfigs = {
   _map
 };
 
+// Tools: HashMap<String, [ToolItems: Array<String>, DisplayName: String]>
+private _tools = [QCLASS_DEFINES, "WeaponTools"] call _collectConfigs;
+private _tools = createHashMapFromArray (_tools apply {
+  [_x, [
+    getArray (_y >> "items") select {
+      isClass (configFile >> "CfgWeapons" >> _x) ||
+      isClass (configFile >> "CfgMagazines" >> _x)
+    },
+    getText (_y >> "displayName")
+  ]]
+});
+
 // Components: HashMap<String, Config>
 private _components = [QCLASS_DEFINES, "WeaponComponents"] call _collectConfigs;
 private _components = createHashMapFromArray (_components apply { [_x, _y] } select {
   _x params ["_componentKey", "_componentConfig"];
   isText (_componentConfig >> "className") && {
     private _componentClassName = getTextRaw (_componentConfig >> "className");
+    _componentClassName isEqualTo QCLASS_COMPONENT_ITEM_FAKE ||
     isClass (configFile >> "CfgWeapons" >> _componentClassName) ||
     isClass (configFile >> "CfgMagazines" >> _componentClassName)
   }
@@ -89,4 +102,4 @@ private _idCounter = 0;
   } forEach _children;
 } forEach _groups;
 
-[_actions, _groups, _components]
+[_actions, _groups, _components, _tools]

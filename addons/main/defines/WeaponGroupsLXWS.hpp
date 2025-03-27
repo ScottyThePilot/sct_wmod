@@ -13,26 +13,31 @@ class lxws_vektor_r5_snake {
 class lxws_xms {
   WEAPON_MEMBER_0(arifle_XMS_lxWS);
   WEAPON_MEMBER_1(arifle_XMS_GL_lxWS,ag36);
+  WEAPON_MEMBER_1(arifle_XMS_Shot_lxWS,six12);
 };
 
 class lxws_gray {
   WEAPON_MEMBER_0(arifle_XMS_Gray_lxWS);
   WEAPON_MEMBER_1(arifle_XMS_GL_Gray_lxWS,ag36);
+  WEAPON_MEMBER_1(arifle_XMS_Shot_Gray_lxWS,six12);
 };
 
 class lxws_xms_khk {
   WEAPON_MEMBER_0(arifle_XMS_khk_lxWS);
   WEAPON_MEMBER_1(arifle_XMS_GL_khk_lxWS,ag36);
+  WEAPON_MEMBER_1(arifle_XMS_Shot_khk_lxWS,six12);
 };
 
 class lxws_xms_sand {
   WEAPON_MEMBER_0(arifle_XMS_Sand_lxWS);
   WEAPON_MEMBER_1(arifle_XMS_GL_Sand_lxWS,ag36);
+  WEAPON_MEMBER_1(arifle_XMS_Shot_Sand_lxWS,six12);
 };
 
 class lxws_xms_snake {
   WEAPON_MEMBER_0(arifle_XMS_Camo_lxWS);
   WEAPON_MEMBER_1(arifle_XMS_GL_Camo_lxWS,ag36);
+  WEAPON_MEMBER_1(arifle_XMS_Shot_Camo_lxWS,six12);
 };
 
 class lxws_slr_wood {

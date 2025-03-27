@@ -45,4 +45,33 @@ class a3_spar_sand {
   WEAPON_MEMBER_1(arifle_SPAR_01_GL_snd_F,m320);
 };
 
-// TODO: add support for the QBZ-95-1/CTAR and MSBS Grot/Promet
+// TODO: add support for the QBZ-95-1/CTAR
+
+class a3_hunter_shotgun {
+  WEAPON_MEMBER_1(sgun_HunterShotgun_01_F,shotgun_barrel);
+  WEAPON_MEMBER_0(sgun_HunterShotgun_01_sawedoff_F);
+};
+
+class a3_msbs_grot {
+  WEAPON_MEMBER_0(arifle_MSBS65_F);
+  WEAPON_MEMBER_1(arifle_MSBS65_GL_F,msbs_gp);
+  WEAPON_MEMBER_1(arifle_MSBS65_UBS_F,six12);
+};
+
+class a3_msbs_grot_black {
+  WEAPON_MEMBER_0(arifle_MSBS65_black_F);
+  WEAPON_MEMBER_1(arifle_MSBS65_GL_black_F,msbs_gp);
+  WEAPON_MEMBER_1(arifle_MSBS65_UBS_black_F,six12);
+};
+
+class a3_msbs_grot_camo {
+  WEAPON_MEMBER_0(arifle_MSBS65_camo_F);
+  WEAPON_MEMBER_1(arifle_MSBS65_GL_camo_F,msbs_gp);
+  WEAPON_MEMBER_1(arifle_MSBS65_UBS_camo_F,six12);
+};
+
+class a3_msbs_grot_sand {
+  WEAPON_MEMBER_0(arifle_MSBS65_sand_F);
+  WEAPON_MEMBER_1(arifle_MSBS65_GL_sand_F,msbs_gp);
+  WEAPON_MEMBER_1(arifle_MSBS65_UBS_sand_F,six12);
+};

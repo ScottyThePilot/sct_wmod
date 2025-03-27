@@ -11,9 +11,12 @@ WEAPON_COMPONENT_NAMED(m203,PGVAR(component_m203),PCSTRING(component_m203));
 WEAPON_COMPONENT_NAMED(m320,PGVAR(component_m320),PCSTRING(component_m320));
 WEAPON_COMPONENT_NAMED_NODETACH(dovetail_rail,PGVAR(component_dovetail_rail),PCSTRING(component_dovetail_rail));
 //WEAPON_COMPONENT_NAMED_NODETACH(picatinny_rail,PGVAR(component_picatinny_rail),PCSTRING(component_picatinny_rail));
+WEAPON_COMPONENT_NAMED_TOOL_FAKE_NOATTACH(shotgun_barrel,PCSTRING(component_shotgun_barrel),QPATHTO(data\tools\hacksaw.paa),saw);
 
 // A3 Components
 WEAPON_COMPONENT_NAMED(3gl,PGVAR(component_3gl),PCSTRING(component_3gl));
+WEAPON_COMPONENT_NAMED(six12,PGVAR(component_six12),PCSTRING(component_six12));
+WEAPON_COMPONENT_NAMED(msbs_gp,PGVAR(component_msbs_gp),PCSTRING(component_msbs_gp));
 
 // LXWS Components
 WEAPON_COMPONENT_NAMED(fal_gl,PGVAR(component_fal_gl),PCSTRING(component_fal_gl));
