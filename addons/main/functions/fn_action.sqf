@@ -11,7 +11,7 @@ private _weaponSlot = (_loadout select [0, 3]) findIf {
 if (_weaponSlot == -1) then { throw "player is not holding a weapon" };
 (_loadout select _weaponSlot) set [0, _weaponTo];
 
-[_player, _extendedLoadout, true] call CBA_fnc_setLoadout;
+[_player, _extendedLoadout] call CBA_fnc_setLoadout;
 
 private _itemsToInventory = [];
 if (_component isNotEqualTo QCLASS_COMPONENT_ITEM_FAKE) then {
