@@ -9,8 +9,8 @@ private _componentsNamesAttach = _componentsAttach apply { (_componentsData get 
 private _componentsNamesDetach = _componentsDetach apply { (_componentsData get _x) select 1 };
 
 switch (_mode) do {
-  case "attach": { format [localize _templateAttach, _componentsNamesAttach call PFUNC(textList)] };
-  case "detach": { format [localize _templateDetach, _componentsNamesDetach call PFUNC(textList)] };
+  case "attach": { format [localize _templateAttach, _componentsNamesAttach call RFUNC(textList)] };
+  case "detach": { format [localize _templateDetach, _componentsNamesDetach call RFUNC(textList)] };
   case "swap": { format [localize _templateSwap, _componentsNamesDetach select 0, _componentsNamesAttach select 0] };
   case "convert": {
     private _weaponNameFrom = getTextRaw (configFile >> "CfgWeapons" >> _weaponFrom >> "displayName");

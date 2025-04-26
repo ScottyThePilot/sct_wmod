@@ -6,7 +6,7 @@ private _weaponComponentsMap = [
   missionNamespace,
   QVAR_WEAPON_COMPONENTS_MAP,
   { createHashMap }
-] call PFUNC(getCached);
+] call RFUNC(getCached);
 
 _weaponComponentsMap getOrDefaultCall [_weapon, {
   private _groupsData = GET_FRAMEWORK_DATA_GROUPS;
@@ -28,5 +28,5 @@ _weaponComponentsMap getOrDefaultCall [_weapon, {
   (_weaponComponents apply {
     private _componentConfig = _componentsData get _x;
     getText (_componentConfig >> "displayName")
-  }) call PFUNC(textList)
+  }) call RFUNC(textList)
 }, true]

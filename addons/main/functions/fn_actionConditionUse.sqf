@@ -2,10 +2,10 @@
 
 params ["_player", "_mode", "_weaponFrom", "_weaponTo", "_componentsAttach", "_componentsDetach", "_toolsRequired"];
 
-private _missingComponentsRequired = [_player, _componentsAttach] call PFUNC(getMissingComponentsRequired);
+private _missingComponentsRequired = [_player, _componentsAttach] call RFUNC(getMissingComponentsRequired);
 if (_missingComponentsRequired isNotEqualTo []) exitWith { false };
 
-private _missingToolsRequired = [_player, _toolsRequired] call PFUNC(getMissingToolsRequired);
+private _missingToolsRequired = [_player, _toolsRequired] call RFUNC(getMissingToolsRequired);
 if (_missingToolsRequired isNotEqualTo []) exitWith { false };
 
-_this call PFUNC(actionCondition)
+_this call RFUNC(actionCondition)

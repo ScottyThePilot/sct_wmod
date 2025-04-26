@@ -15,8 +15,8 @@ if (_weaponSlot isEqualTo -1) then { throw "player is not holding a weapon" };
 
 {
   _player removeItem _x;
-} forEach ([_player, _componentsAttach, "attach"] call PFUNC(getComponentsItems));
-private _itemsToInventory = [_player, _componentsDetach, "detach"] call PFUNC(getComponentsItems);
+} forEach ([_player, _componentsAttach, "attach"] call RFUNC(getComponentsItems));
+private _itemsToInventory = [_player, _componentsDetach, "detach"] call RFUNC(getComponentsItems);
 
 // compare the player's previous weapon attachments with their current ones to
 // figure out which ones fell off in the process and need to go back into the inventory
@@ -40,4 +40,4 @@ for "_i" from 1 to 6 do {
 ([
   ACTION_MESSAGE_TEMPLATES(notify_success),
   [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
-] call PFUNC(actionMessageText)) call CBA_fnc_notify;
+] call RFUNC(actionMessageText)) call CBA_fnc_notify;

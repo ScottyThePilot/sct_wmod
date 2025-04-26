@@ -17,37 +17,37 @@ class CfgPatches {
     };
     units[] = {};
     weapons[] = {
-      QPGVAR(component_3gl),
-      QPGVAR(component_b13),
-      QPGVAR(component_b33),
-      QPGVAR(component_carryhandle),
-      QPGVAR(component_gp25),
-      QPGVAR(component_m14_rail),
-      QPGVAR(component_m14_ris),
-      QPGVAR(component_m21_rail),
-      QPGVAR(component_m203),
-      QPGVAR(component_m320),
-      QPGVAR(component_npz),
-      QPGVAR(component_zenit),
-      QPGVAR(component_mtk),
-      QPGVAR(component_fal_rail),
-      QPGVAR(component_hk_ris1),
-      QPGVAR(component_hk_ris2),
-      QPGVAR(component_hk_tac),
-      QPGVAR(component_ag_c),
-      QPGVAR(component_sig_ris),
-      QPGVAR(component_sig_tac),
-      QPGVAR(component_dovetail_rail),
-      QPGVAR(component_picatinny_rail),
-      QPGVAR(component_eglm),
-      QPGVAR(component_kv04),
-      QPGVAR(component_pk_ris),
-      QPGVAR(component_fal_gl),
-      QPGVAR(component_six12),
-      QPGVAR(component_msbs_gp),
-      QPGVAR(component_masterkey),
-      QPGVAR(component_afg),
-      QPGVAR(component_vfg)
+      QRGVAR(component_3gl),
+      QRGVAR(component_b13),
+      QRGVAR(component_b33),
+      QRGVAR(component_carryhandle),
+      QRGVAR(component_gp25),
+      QRGVAR(component_m14_rail),
+      QRGVAR(component_m14_ris),
+      QRGVAR(component_m21_rail),
+      QRGVAR(component_m203),
+      QRGVAR(component_m320),
+      QRGVAR(component_npz),
+      QRGVAR(component_zenit),
+      QRGVAR(component_mtk),
+      QRGVAR(component_fal_rail),
+      QRGVAR(component_hk_ris1),
+      QRGVAR(component_hk_ris2),
+      QRGVAR(component_hk_tac),
+      QRGVAR(component_ag_c),
+      QRGVAR(component_sig_ris),
+      QRGVAR(component_sig_tac),
+      QRGVAR(component_dovetail_rail),
+      QRGVAR(component_picatinny_rail),
+      QRGVAR(component_eglm),
+      QRGVAR(component_kv04),
+      QRGVAR(component_pk_ris),
+      QRGVAR(component_fal_gl),
+      QRGVAR(component_six12),
+      QRGVAR(component_msbs_gp),
+      QRGVAR(component_masterkey),
+      QRGVAR(component_afg),
+      QRGVAR(component_vfg)
     };
   };
 
@@ -101,28 +101,28 @@ class CfgFunctions {
 
 class Extended_PreInit_EventHandlers {
   class ADDON {
-    init = QUOTE(call PFUNC(initSettings));
+    init = QUOTE(call RFUNC(initSettings));
   };
 };
 
 class ace_arsenal_stats {
   class statBase;
 
-  class PGVAR(weapon_components): statBase {
+  class RGVAR(weapon_components): statBase {
     scope = 2;
-    displayName = PCSTRING(arsenal_components);
+    displayName = RCSTRING(arsenal_components);
     priority = 1.15;
     showText = 1;
-    textStatement = QUOTE((configName (_this select 1) call PFUNC(getWeaponComponentsNames)));
+    textStatement = QUOTE((configName (_this select 1) call RFUNC(getWeaponComponentsNames)));
     tabs[] = { { 0, 1, 2 }, {} };
   };
 
-  class PGVAR(compatible_weapons): statBase {
+  class RGVAR(compatible_weapons): statBase {
     scope = 2;
-    displayName = PCSTRING(arsenal_compatible_weapons);
+    displayName = RCSTRING(arsenal_compatible_weapons);
     priority = 1.16;
     showText = 1;
-    textStatement = QUOTE((configName (_this select 1) call PFUNC(getCompatibleWeaponsNames)));
+    textStatement = QUOTE((configName (_this select 1) call RFUNC(getCompatibleWeaponsNames)));
     tabs[] = { { 0, 1, 2 }, {} };
   };
 };

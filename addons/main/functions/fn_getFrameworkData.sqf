@@ -184,7 +184,7 @@ private _actions = [];
       private _canAttach = _componentsAttach findIf { !((_components get _x) select 4) } isEqualTo -1;
       private _canDetach = _componentsDetach findIf { !((_components get _x) select 5) } isEqualTo -1;
       if (_componentsCount >= 1 && _componentsCount <= 3 && _canAttach && _canDetach) then {
-        private _id = QPGVAR(action) + "_" + _weaponFrom + "_to_" + _weaponTo;
+        private _id = QRGVAR(action) + "_" + _weaponFrom + "_to_" + _weaponTo;
         private _mode = switch (true) do {
           case (_componentsDetach isEqualTo []): { "attach" };
           case (_componentsAttach isEqualTo []): { "detach" };

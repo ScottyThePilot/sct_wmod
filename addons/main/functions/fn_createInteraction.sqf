@@ -30,34 +30,34 @@ private _toolsRequired = _toolsRequired arrayIntersect _toolsRequired;
   [
     ACTION_MESSAGE_TEMPLATES(interaction),
     [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
-  ] call PFUNC(actionMessageText),
+  ] call RFUNC(actionMessageText),
   _picture,
   {
     private _args = [_this select 1] + (_this select 2);
     _args params ["_player", "_mode", "_weaponFrom", "_weaponTo", "_componentsAttach", "_componentsDetach", "_toolsRequired"];
 
-    if (_args call PFUNC(actionConditionUse)) then {
+    if (_args call RFUNC(actionConditionUse)) then {
       private _componentsCount = count _componentsAttach + count _componentsDetach;
 
       private _barText = [
         ACTION_MESSAGE_TEMPLATES(progressbar),
         [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
-      ] call PFUNC(actionMessageText);
+      ] call RFUNC(actionMessageText);
 
       [VAR_ACTION_LENGTH * _componentsCount, _args, {
-        (_this select 0) call PFUNC(action)
+        (_this select 0) call RFUNC(action)
       }, {
-        (_this select 0) call PFUNC(actionFail)
+        (_this select 0) call RFUNC(actionFail)
       }, _barText, {
-        (_this select 0) call PFUNC(actionConditionUse)
+        (_this select 0) call RFUNC(actionConditionUse)
       }] call ace_common_fnc_progressBar;
     } else {
-      _args call PFUNC(actionFail);
+      _args call RFUNC(actionFail);
     };
   },
   {
     private _args = [_this select 1] + (_this select 2);
-    _args call PFUNC(actionCondition)
+    _args call RFUNC(actionCondition)
   },
   {},
   [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach, _toolsRequired]

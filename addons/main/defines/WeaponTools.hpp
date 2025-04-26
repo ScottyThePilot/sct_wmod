@@ -1,1 +1,1 @@
-WEAPON_TOOL_1(saw,PCSTRING(tool_saw),PGVAR(tool_hacksaw));
+WEAPON_TOOL_1(saw,RCSTRING(tool_saw),RGVAR(tool_hacksaw));

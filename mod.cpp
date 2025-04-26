@@ -1,8 +1,8 @@
 name = "Scotty's ACE Weapon Modification";
 author = "ScottyThePilot";
-logoSmall = "\sct_wmod\main\data\logo_small_ca.paa";
-logo = "\sct_wmod\main\data\logo_ca.paa";
-logoOver = "\sct_wmod\main\data\logo_ca.paa";
+logoSmall = "\x\sct_wmod\addons\main\data\logo_small_ca.paa";
+logo = "\x\sct_wmod\addons\main\data\logo_ca.paa";
+logoOver = "\x\sct_wmod\addons\main\data\logo_ca.paa";
 actionName = "GitHub";
 action = "https://github.com/ScottyThePilot/sct_wmod";
 dlcColor[] = { 0.88, 0.88, 0.88, 1 };
