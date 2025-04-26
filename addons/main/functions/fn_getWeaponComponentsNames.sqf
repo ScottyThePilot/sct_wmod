@@ -9,7 +9,9 @@ private _weaponComponentsMap = [
 ] call PFUNC(getCached);
 
 _weaponComponentsMap getOrDefaultCall [_weapon, {
-  ([] call PFUNC(getFrameworkDataCached)) params ["_actions", "_groups", "_components"];
+  private _groupsData = GET_FRAMEWORK_DATA_GROUPS;
+  private _componentsData = GET_FRAMEWORK_DATA_COMPONENTS;
+
   private _weaponComponents = [];
 
   {
@@ -21,14 +23,10 @@ _weaponComponentsMap getOrDefaultCall [_weapon, {
       _groupEntryWeapon params ["_groupEntryWeaponKey", "_groupEntryWeaponComponents"];
       _weaponComponents insert [-1, _groupEntryWeaponComponents, true];
     };
-  } forEach _groups;
+  } forEach _groupsData;
 
-  if (_weaponComponents isEqualTo []) then {
-    localize PLSTRING(None)
-  } else {
-    (_weaponComponents apply {
-      private _componentConfig = _components get _x;
-      getText (_componentConfig >> "displayName")
-    }) joinString ", "
-  }
+  (_weaponComponents apply {
+    private _componentConfig = _componentsData get _x;
+    getText (_componentConfig >> "displayName")
+  }) call PFUNC(textList)
 }, true]

@@ -5,7 +5,21 @@ workshop = [
   # ACE
   "463939057",
   # 3den Enhanced
-  "623475643",
+  "623475643"
+]
+
+[aegis]
+extends = "default"
+workshop = [
+  # Arma 3 Aegis
+  "949252631",
+  # Western Sahara
+  "2636962953"
+]
+
+[rhs]
+extends = "default"
+workshop = [
   # RHSUSAF
   "843577117",
   # RHSAFRF

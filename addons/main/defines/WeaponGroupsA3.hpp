@@ -53,25 +53,25 @@ class a3_hunter_shotgun {
 };
 
 class a3_msbs_grot {
-  WEAPON_MEMBER_0(arifle_MSBS65_F);
+  WEAPON_MEMBER_1(arifle_MSBS65_F,vfg);
   WEAPON_MEMBER_1(arifle_MSBS65_GL_F,msbs_gp);
   WEAPON_MEMBER_1(arifle_MSBS65_UBS_F,six12);
 };
 
 class a3_msbs_grot_black {
-  WEAPON_MEMBER_0(arifle_MSBS65_black_F);
+  WEAPON_MEMBER_1(arifle_MSBS65_black_F,vfg);
   WEAPON_MEMBER_1(arifle_MSBS65_GL_black_F,msbs_gp);
   WEAPON_MEMBER_1(arifle_MSBS65_UBS_black_F,six12);
 };
 
 class a3_msbs_grot_camo {
-  WEAPON_MEMBER_0(arifle_MSBS65_camo_F);
+  WEAPON_MEMBER_1(arifle_MSBS65_camo_F,vfg);
   WEAPON_MEMBER_1(arifle_MSBS65_GL_camo_F,msbs_gp);
   WEAPON_MEMBER_1(arifle_MSBS65_UBS_camo_F,six12);
 };
 
 class a3_msbs_grot_sand {
-  WEAPON_MEMBER_0(arifle_MSBS65_sand_F);
+  WEAPON_MEMBER_1(arifle_MSBS65_sand_F,vfg);
   WEAPON_MEMBER_1(arifle_MSBS65_GL_sand_F,msbs_gp);
   WEAPON_MEMBER_1(arifle_MSBS65_UBS_sand_F,six12);
 };

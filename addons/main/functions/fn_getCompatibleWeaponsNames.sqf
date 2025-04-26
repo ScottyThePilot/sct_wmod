@@ -9,7 +9,8 @@ private _compatibleWeaponsMap = [
 ] call PFUNC(getCached);
 
 _compatibleWeaponsMap getOrDefaultCall [_weapon, {
-  ([] call PFUNC(getFrameworkDataCached)) params ["_actions", "_groups", "_components"];
+  private _groupsData = GET_FRAMEWORK_DATA_GROUPS;
+
   private _compatibleWeapons = [];
 
   {
@@ -18,11 +19,11 @@ _compatibleWeaponsMap getOrDefaultCall [_weapon, {
     if (_groupEntries findIf { (_x select 0) isEqualTo _weapon } isNotEqualTo -1) then {
       _compatibleWeapons insert [-1, _groupEntries apply { _x select 0 }, true];
     };
-  } forEach _groups;
+  } forEach _groupsData;
 
   private _compatibleWeapons = _compatibleWeapons - [_weapon];
   if (_compatibleWeapons isEqualTo []) then {
-    localize PLSTRING(None)
+    localize PLSTRING(list0)
   } else {
     ((_compatibleWeapons - [_weapon]) apply {
       getText (configFile >> "CfgWeapons" >> _x >> "displayName")

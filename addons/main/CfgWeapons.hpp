@@ -190,13 +190,13 @@ class PGVAR(component_dovetail_rail): PGVAR(ccore) {
   scope = 2;
 };
 
-//class PGVAR(component_picatinny_rail): PGVAR(ccore) {
-//  author = "ScottyThePilot";
-//  displayName = PCSTRING(component_picatinny_rail_full);
-//  picture = QPATHTO(data\components\picatinny_rail.paa);
-//  descriptionShort = PCSTRING(component_description_picatinny_rail);
-//  scope = 2;
-//};
+class PGVAR(component_picatinny_rail): PGVAR(ccore) {
+  author = "ScottyThePilot";
+  displayName = PCSTRING(component_picatinny_rail_full);
+  picture = QPATHTO(data\components\picatinny_rail.paa);
+  descriptionShort = PCSTRING(component_description_picatinny_rail);
+  scope = 2;
+};
 
 class PGVAR(component_eglm): PGVAR(ccore) {
   author = "ScottyThePilot";
@@ -243,5 +243,27 @@ class PGVAR(component_msbs_gp): PGVAR(ccore) {
   displayName = PCSTRING(component_msbs_gp);
   picture = QPATHTO(data\components\msbs_gp.paa);
   descriptionShort = PCSTRING(component_description_msbs_gp);
+  scope = 2;
+};
+
+class PGVAR(component_masterkey): PGVAR(ccore) {
+  uthor = "ScottyThePilot";
+  displayName = PCSTRING(component_masterkey);
+  picture = QPATHTO(data\components\masterkey.paa);
+  descriptionShort = PCSTRING(component_description_masterkey);
+  scope = 2;
+};
+
+class PGVAR(component_afg): PGVAR(ccore) {
+  uthor = "ScottyThePilot";
+  displayName = PCSTRING(component_afg_full);
+  picture = QPATHTO(data\components\afg.paa);
+  scope = 2;
+};
+
+class PGVAR(component_vfg): PGVAR(ccore) {
+  uthor = "ScottyThePilot";
+  displayName = PCSTRING(component_vfg_full);
+  picture = QPATHTO(data\components\vfg.paa);
   scope = 2;
 };

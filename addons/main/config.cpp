@@ -42,7 +42,12 @@ class CfgPatches {
       QPGVAR(component_eglm),
       QPGVAR(component_kv04),
       QPGVAR(component_pk_ris),
-      QPGVAR(component_fal_gl)
+      QPGVAR(component_fal_gl),
+      QPGVAR(component_six12),
+      QPGVAR(component_msbs_gp),
+      QPGVAR(component_masterkey),
+      QPGVAR(component_afg),
+      QPGVAR(component_vfg)
     };
   };
 
@@ -58,6 +63,11 @@ class CfgSettings {
     class Versioning {
       class ADDON {
         main_addon = QUOTE(ADDON_MAIN);
+
+        class dependencies {
+          CBA[] = { "cba_main", { 3, 18, 0 }, "(true)" };
+          ACE[] = { "ace_main", { 3, 18, 0 }, "(true)" };
+        };
       };
     };
   };
@@ -71,21 +81,26 @@ class CfgFunctions {
       class actionCondition {};
       class actionConditionUse {};
       class actionFail {};
+      class actionMessageText {};
       class createInteraction {};
+      class createInteractions {};
       class getCached {};
       class getCompatibleWeaponsNames {};
-      class getComponentActions {};
+      class getComponentsItems {};
       class getFrameworkData {};
       class getFrameworkDataCached {};
+      class getMissingComponentsRequired {};
       class getMissingToolsRequired {};
       class getWeaponComponentsNames {};
       class initSettings {};
+      class resetFrameworkDataCache {};
+      class textList {};
     };
   };
 };
 
 class Extended_PreInit_EventHandlers {
-  class PGVAR(init_settings) {
+  class ADDON {
     init = QUOTE(call PFUNC(initSettings));
   };
 };
@@ -95,7 +110,7 @@ class ace_arsenal_stats {
 
   class PGVAR(weapon_components): statBase {
     scope = 2;
-    displayName = PCSTRING(Components);
+    displayName = PCSTRING(arsenal_components);
     priority = 1.15;
     showText = 1;
     textStatement = QUOTE((configName (_this select 1) call PFUNC(getWeaponComponentsNames)));
@@ -104,7 +119,7 @@ class ace_arsenal_stats {
 
   class PGVAR(compatible_weapons): statBase {
     scope = 2;
-    displayName = PCSTRING(CompatibleWeapons);
+    displayName = PCSTRING(arsenal_compatible_weapons);
     priority = 1.16;
     showText = 1;
     textStatement = QUOTE((configName (_this select 1) call PFUNC(getCompatibleWeaponsNames)));
@@ -121,6 +136,10 @@ class CfgWeapons {
 };
 
 class CLASS_DEFINES {
+  // Determines which weapon components are considered 'foregrips' for the purposes of the 'Foregrip Items Needed' setting
+  // (for internal use, this API may change or disappear without warning)
+  foregripComponents[] = { "afg", "vfg", "afg_rhs", "vfg_rhs" };
+
   class WeaponComponents {
     #include "./defines/WeaponComponents.hpp"
   };

@@ -6,5 +6,7 @@ params ["_player", "", "_weaponFrom"];
 // of a weapon (such as the folded RHS weapons) from causing the check to fail
 // Unfortunately, this relies on the weapon being defined correctly
 private _currentWeapon = currentWeapon _player;
-private _currentWeaponBase = getTextRaw (configFile >> "CfgWeapons" >> _currentWeapon >> "baseWeapon");
-_weaponFrom == _currentWeapon || _weaponFrom == _currentWeaponBase
+_weaponFrom isEqualTo _currentWeapon || {
+  private _currentWeaponBase = getTextRaw (configFile >> "CfgWeapons" >> _currentWeapon >> "baseWeapon");
+  _weaponFrom isEqualTo _currentWeaponBase
+}

@@ -9,9 +9,42 @@ WEAPON_COMPONENT_NAMED(carryhandle,PGVAR(component_carryhandle),PCSTRING(compone
 WEAPON_COMPONENT_NAMED(gp25,PGVAR(component_gp25),PCSTRING(component_gp25));
 WEAPON_COMPONENT_NAMED(m203,PGVAR(component_m203),PCSTRING(component_m203));
 WEAPON_COMPONENT_NAMED(m320,PGVAR(component_m320),PCSTRING(component_m320));
-WEAPON_COMPONENT_NAMED_NODETACH(dovetail_rail,PGVAR(component_dovetail_rail),PCSTRING(component_dovetail_rail));
-//WEAPON_COMPONENT_NAMED_NODETACH(picatinny_rail,PGVAR(component_picatinny_rail),PCSTRING(component_picatinny_rail));
-WEAPON_COMPONENT_NAMED_TOOL_FAKE_NOATTACH(shotgun_barrel,PCSTRING(component_shotgun_barrel),QPATHTO(data\tools\hacksaw.paa),saw);
+
+class dovetail_rail {
+  items[] = { QPGVAR(component_dovetail_rail) };
+  displayName = PCSTRING(component_dovetail_rail);
+  disableDetach = 1;
+};
+
+class picatinny_rail {
+  items[] = { QPGVAR(component_picatinny_rail) };
+  displayName = PCSTRING(component_picatinny_rail);
+  disableDetach = 1;
+};
+
+class shotgun_barrel {
+  displayName = PCSTRING(component_shotgun_barrel);
+  picture = QPATHTO(data\tools\hacksaw.paa);
+  toolsRequired[] = { QUOTE(saw) };
+  disableAttach = 1;
+  isFake = 1;
+};
+
+class afg {
+  items[] = {
+    QPGVAR(component_afg)
+  };
+  displayName = PCSTRING(component_afg);
+  picture = QPATHTO(data\components\afg.paa);
+};
+
+class vfg {
+  items[] = {
+    QPGVAR(component_vfg)
+  };
+  displayName = PCSTRING(component_vfg);
+  picture = QPATHTO(data\components\vfg.paa);
+};
 
 // A3 Components
 WEAPON_COMPONENT_NAMED(3gl,PGVAR(component_3gl),PCSTRING(component_3gl));
@@ -30,6 +63,25 @@ WEAPON_COMPONENT_NAMED(m21_rail,PGVAR(component_m21_rail),PCSTRING(component_m21
 WEAPON_COMPONENT_NAMED(pbg40,PGVAR(component_gp25),PCSTRING(component_pbg40));
 WEAPON_COMPONENT_NAMED(npz,PGVAR(component_npz),PCSTRING(component_npz));
 WEAPON_COMPONENT_NAMED(zenit,PGVAR(component_zenit),PCSTRING(component_zenit));
+
+// separate grip component entries are defined for RHS to prioritize using/reclaiming RHS' own
+// grip attachment items during attach/detach actions rather than the afg and vfg from us
+
+class afg_rhs {
+  items[] = {
+    QPGVAR(component_afg)
+  };
+  displayName = PCSTRING(component_afg);
+  picture = QPATHTO(data\components\afg.paa);
+};
+
+class vfg_rhs {
+  items[] = {
+    QPGVAR(component_vfg)
+  };
+  displayName = PCSTRING(component_vfg);
+  picture = QPATHTO(data\components\vfg.paa);
+};
 
 // NIArms Components
 WEAPON_COMPONENT_NAMED(mtk,PGVAR(component_mtk),PCSTRING(component_mtk));

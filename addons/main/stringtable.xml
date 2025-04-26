@@ -1,350 +1,504 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="sct_wmod">
   <Package name="main">
-    <Key ID="STR_sct_wmod_SettingsCategoryName">
-      <Original>Scotty's ACE Weapon Modification</Original>
-      <English>Scotty's ACE Weapon Modification</English>
-    </Key>
-    <Key ID="STR_sct_wmod_EnableModificationSetting">
-      <Original>Enable Weapon Modification</Original>
-      <English>Enable Weapon Modification</English>
-    </Key>
-    <Key ID="STR_sct_wmod_ActionLengthSetting">
-      <Original>Action Duration</Original>
-      <English>Action Duration</English>
-    </Key>
-  </Package>
-  <Package name="interaction">
-    <Key ID="STR_sct_wmod_Components">
-      <Original>Components</Original>
-      <English>Components</English>
-    </Key>
-    <Key ID="STR_sct_wmod_CompatibleWeapons">
-      <Original>Compatible Weapon Systems</Original>
-      <English>Compatible Weapon Systems</English>
-    </Key>
-    <Key ID="STR_sct_wmod_None">
-      <Original>(None)</Original>
-      <English>(None)</English>
-    </Key>
-    <Key ID="STR_sct_wmod_Attach">
-      <Original>Attach %1</Original>
-      <English>Attach %1</English>
-      <Russian>Установить %1</Russian>
-      <Japanese>%1 を取り付け</Japanese>
-      <Spanish>Acoplar %1</Spanish>
-      <French>Fixer %1</French>
-    </Key>
-    <Key ID="STR_sct_wmod_Detach">
-      <Original>Detach %1</Original>
-      <English>Detach %1</English>
-      <Russian>Снять %1</Russian>
-      <Japanese>%1 を外す</Japanese>
-      <Spanish>Desacoplar %1</Spanish>
-      <French>Retirer %1</French>
-    </Key>
-    <Key ID="STR_sct_wmod_Attaching">
-      <Original>Attaching...</Original>
-      <English>Attaching...</English>
-    </Key>
-    <Key ID="STR_sct_wmod_Detaching">
-      <Original>Detaching...</Original>
-      <English>Detaching...</English>
-    </Key>
-    <Key ID="STR_sct_wmod_ComponentNotInInventory">
-      <Original>%1 is not in inventory</Original>
-      <English>%1 is not in inventory</English>
-    </Key>
-    <Key ID="STR_sct_wmod_ToolsNotInInventory">
-      <Original>Missing tool(s): %1</Original>
-      <English>Missing tool(s): %1</English>
-    </Key>
-    <Key ID="STR_sct_wmod_AttachFailure">
-      <Original>Failed to attach %1</Original>
-      <English>Failed to attach %1</English>
-    </Key>
-    <Key ID="STR_sct_wmod_DetachFailure">
-      <Original>Failed to detach %1</Original>
-      <English>Failed to detach %1</English>
-    </Key>
-    <Key ID="STR_sct_wmod_AttachSuccess">
-      <Original>Attached %1</Original>
-      <English>Attached %1</English>
-    </Key>
-    <Key ID="STR_sct_wmod_DetachSuccess">
-      <Original>Detached %1</Original>
-      <English>Detached %1</English>
-    </Key>
-  </Package>
-  <Package name="components">
-    <Key ID="STR_sct_wmod_component_3gl">
-      <Original>3GL</Original>
-      <English>3GL</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_b13">
-      <Original>B-13</Original>
-      <English>B-13</English>
-      <Russian>Б-13</Russian>
-    </Key>
-    <Key ID="STR_sct_wmod_component_b33">
-      <Original>B-33</Original>
-      <English>B-33</English>
-      <Russian>Б-33</Russian>
-    </Key>
-    <Key ID="STR_sct_wmod_component_carryhandle">
-      <Original>M4/M16 Carryhandle</Original>
-      <English>M4/M16 Carryhandle</English>
-      <Spanish>M4/M16 Asa de transporte</Spanish>
-      <Italian>M4/M16 Manico</Italian>
-      <Polish>M4/M16 Rączka</Polish>
-      <Russian>М4/М16 р</Russian>
-      <German>M4/M16 Handgriff</German>
-    </Key>
-    <Key ID="STR_sct_wmod_component_gp25">
-      <Original>GP-25</Original>
-      <English>GP-25</English>
-      <Russian>ГП-25</Russian>
-    </Key>
-    <Key ID="STR_sct_wmod_component_m14_rail">
-      <Original>M14 Rail</Original>
-      <English>M14 Rail</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_m14_ris">
-      <Original>M14 RIS Unit</Original>
-      <English>M14 RIS Unit</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_m21_rail">
-      <Original>M21 Zastava Rail</Original>
-      <English>M21 Zastava Rail</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_m203">
-      <Original>M203</Original>
-      <English>M203</English>
-      <Russian>М203</Russian>
-    </Key>
-    <Key ID="STR_sct_wmod_component_m320">
-      <Original>M320</Original>
-      <English>M320</English>
-      <Russian>М320</Russian>
-    </Key>
-    <Key ID="STR_sct_wmod_component_npz">
-      <Original>NPZ</Original>
-      <English>NPZ</English>
-      <Russian>НПЗ</Russian>
-    </Key>
-    <Key ID="STR_sct_wmod_component_pbg40">
-      <Original>PBG-40 (GP-25)</Original>
-      <English>PBG-40 (GP-25)</English>
-      <Russian>ПБГ-40 (ГП-25)</Russian>
-    </Key>
-    <Key ID="STR_sct_wmod_component_zenit">
-      <Original>Zenit</Original>
-      <English>Zenit</English>
-      <Russian>Зенит</Russian>
-    </Key>
-    <Key ID="STR_sct_wmod_component_mtk">
-      <Original>MTK</Original>
-      <English>MTK</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_fal_rail">
-      <Original>FN FAL Rail</Original>
-      <English>FN FAL Rail</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_hk_ris1">
-      <Original>HK G3 RIS Unit 1</Original>
-      <English>HK G3 RIS Unit 1</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_hk_ris2">
-      <Original>HK G3 RIS Unit 2</Original>
-      <English>HK G3 RIS Unit 2</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_hk_tac">
-      <Original>HK MP5 TAC Handguard</Original>
-      <English>HK MP5 TAC Handguard</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_ag_c">
-      <Original>AG-C</Original>
-      <English>AG-C</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_agc_full">
-      <Original>AG-C/EGLM</Original>
-      <English>AG-C/EGLM</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_sig_ris">
-      <Original>SIG SG 550 RIS Unit</Original>
-      <English>SIG SG 550 RIS Unit</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_sig_tac">
-      <Original>SIG SG 550 TAC Handguard</Original>
-      <English>SIG SG 550 TAC Handguard</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_dovetail_rail">
-      <Original>Dovetail Rail</Original>
-      <English>Dovetail Rail</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_dovetail_rail_full">
-      <Original>Dovetail Rail Kit</Original>
-      <English>Dovetail Rail Kit</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_picatinny_rail">
-      <Original>Picatinny Rail</Original>
-      <English>Picatinny Rail</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_picatinny_rail_full">
-      <Original>Picatinny Rail Kit</Original>
-      <English>Picatinny Rail Kit</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_eglm">
-      <Original>EGLM</Original>
-      <English>EGLM</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_eglm_full">
-      <Original>FN40GL</Original>
-      <English>FN40GL</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_kv04">
-      <Original>KV-04 S</Original>
-      <English>KV-04 S</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_gp34">
-      <Original>GP-34</Original>
-      <English>GP-34</English>
-      <Russian>ГП-34</Russian>
-    </Key>
-    <Key ID="STR_sct_wmod_component_ag36">
-      <Original>AG36</Original>
-      <English>AG36</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_pk_ris">
-      <Original>PK RIS Mount</Original>
-      <English>PK RIS Mount</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_pk_ris_full">
-      <Original>PKM/PKP RIS Mount</Original>
-      <English>PKM/PKP RIS Mount</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_fal_gl">
-      <Original>FN FAL Grenade Launcher Adapter</Original>
-      <English>FN FAL Grenade Launcher Adapter</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_shotgun_barrel">
-      <Original>Shotgun Barrel</Original>
-      <English>Shotgun Barrel</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_six12">
-      <Original>SIX12</Original>
-      <English>SIX12</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_msbs_gp">
-      <Original>MSBS GP</Original>
-      <English>MSBS GP</English>
-    </Key>
-  </Package>
-  <Package name="components_descriptions">
-    <Key ID="STR_sct_wmod_component_description_3gl">
-      <Original>A 40mm underbarrel grenade launcher for the MX</Original>
-      <English>A 40mm underbarrel grenade launcher for the MX</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_rail_side_ak">
-      <Original>A side-mounted picatinny rail adapter for the AK family of rifles</Original>
-      <English>A side-mounted picatinny rail adapter for the AK family of rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_rail_top_ak">
-      <Original>A reciever cover with integrated picatinny rail for the AK family of rifles</Original>
-      <English>A reciever cover with integrated picatinny rail for the AK family of rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_rail_handguard_ak">
-      <Original>A picatinny rail adapter handguard for the AK family of rifles</Original>
-      <English>A picatinny rail adapter handguard for the AK family of rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_carryhandle">
-      <Original>A carryhandle unit with integrated sight designed for the M4 and M16 series of rifles</Original>
-      <English>A carryhandle unit with integrated sight designed for the M4 and M16 series of rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_gp25">
-      <Original>A 40mm underbarrel grenade launcher for the AK family of rifles</Original>
-      <English>A 40mm underbarrel grenade launcher for the AK family of rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_m14_rail">
-      <Original>A side-mounted picatinny rail adapter for the M14</Original>
-      <English>A side-mounted picatinny rail adapter for the M14</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_m14_ris">
-      <Original>A top-mounted picatinny rail system for the M14</Original>
-      <English>A top-mounted picatinny rail system for the M14</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_m21_rail">
-      <Original>A side-mounted picatinny rail adapter for the M21 Zastava</Original>
-      <English>A side-mounted picatinny rail adapter for the M21 Zastava</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_m4_gl">
-      <Original>A 40mm underbarrel grenade launcher, compatible with a large variety of rifles, including the M4 and M16</Original>
-      <English>A 40mm underbarrel grenade launcher, compatible with a large variety of rifles, including the M4 and M16</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_fal_rail">
-      <Original>A picatinny optic rail mount for the FN FAL</Original>
-      <English>A picatinny optic rail mount for the FN FAL</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_hk_ris">
-      <Original>A picatinny optic rail mount for the HK G3 family of rifles</Original>
-      <English>A picatinny optic rail mount for the HK G3 family of rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_hk_tac">
-      <Original>A picatinny rail adapter handguard for the HK MP5 rifles</Original>
-      <English>A picatinny rail adapter handguard for the HK MP5 rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_ag_c">
-      <Original>A 40mm underbarrel grenade launcher, from which the M320 is derived</Original>
-      <English>A 40mm underbarrel grenade launcher, from which the M320 is derived</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_sig_ris">
-      <Original>A picatinny optic rail mount for the SIG SG 550 family of rifles</Original>
-      <English>A picatinny optic rail mount for the SIG SG 550 family of rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_sig_tac">
-      <Original>A picatinny rail adapter handguard for the SIG SG 550 family of rifles</Original>
-      <English>A picatinny rail adapter handguard for the SIG SG 550 family of rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_dovetail_rail">
-      <Original>An optic mounting rail kit for the AK family of rifles (non-removable)</Original>
-      <English>An optic mounting rail kit for the AK family of rifles (non-removable)</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_picatinny_rail">
-      <Original>A picatinny rail kit for many kinds of weapons (non-removable)</Original>
-      <English>A picatinny rail kit for many kinds of weapons (non-removable)</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_eglm">
-      <Original>A 40mm underbarrel grenade launcher for the FN SCAR, Remington ACR, and similar rifles</Original>
-      <English>A 40mm underbarrel grenade launcher for the FN SCAR, Remington ACR, and similar rifles</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_pk_ris">
-      <Original>A picatinny optic rail mount for the PKM, PKP, and other Klashnikov machine guns</Original>
-      <English>A picatinny optic rail mount for the PKM, PKP, and other Klashnikov machine guns</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_fal_gl">
-      <Original>An adapter for the barrel of the FN FAL rifle allowing the firing of rifle grenades</Original>
-      <English>An adapter for the barrel of the FN FAL rifle allowing the firing of rifle grenades</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_six12">
-      <Original>A six-round double-action revolving underbarrel shotgun</Original>
-      <English>A six-round double-action revolving underbarrel shotgun</English>
-    </Key>
-    <Key ID="STR_sct_wmod_component_description_msbs_gp">
-      <Original>A 40mm underbarrel grenade launcher for the MSBS series of rifles</Original>
-      <English>A 40mm underbarrel grenade launcher for the MSBS series of rifles</English>
-    </Key>
-  </Package>
-  <Package name="tools">
-    <Key ID="STR_sct_wmod_tool_saw">
-      <Original>Saw</Original>
-    </Key>
-    <Key ID="STR_sct_wmod_tool_hacksaw">
-      <Original>Hacksaw</Original>
-    </Key>
-  </Package>
-  <Package name="tools_descriptions">
-    <Key ID="STR_sct_wmod_tool_description_hacksaw">
-      <Original>A handheld saw for cutting metal. Can be used to shorten the barrels of shotguns.</Original>
-    </Key>
+    <Container name="settings">
+      <Key ID="STR_sct_wmod_settings_category_name">
+        <Original>Scotty's ACE Weapon Modification</Original>
+        <English>Scotty's ACE Weapon Modification</English>
+      </Key>
+      <Key ID="STR_sct_wmod_setting_modificationEnabled_name">
+        <Original>Enable Weapon Modification</Original>
+        <English>Enable Weapon Modification</English>
+      </Key>
+      <Key ID="STR_sct_wmod_setting_modificationEnabled_description">
+        <Original>When unchecked, this mod will cease all functionality</Original>
+        <English>When unchecked, this mod will cease all functionality</English>
+      </Key>
+      <Key ID="STR_sct_wmod_setting_actionLength_name">
+        <Original>Action Duration</Original>
+        <English>Action Duration</English>
+      </Key>
+      <Key ID="STR_sct_wmod_setting_actionLength_description">
+        <Original>The duration it takes to attach or detach items, in seconds</Original>
+        <English>The duration it takes to attach or detach items, in seconds</English>
+      </Key>
+      <Key ID="STR_sct_wmod_setting_needForegripItems_name">
+        <Original>Foregrip Items Needed</Original>
+        <English>Foregrip Items Needed</English>
+      </Key>
+      <Key ID="STR_sct_wmod_setting_needForegripItems_description">
+        <Original>When unchecked, foregrips may be swapped on and off of applicable weapons without needing the respective items in the player's inventory</Original>
+        <English>When unchecked, foregrips may be swapped on and off of applicable weapons without needing the respective items in the player's inventory</English>
+      </Key>
+      <Key ID="STR_sct_wmod_setting_mergeM320Family_name">
+        <Original>Make M320 and AG-C interchangeable</Original>
+        <English>Make M320 and AG-C interchangeable</English>
+      </Key>
+      <Key ID="STR_sct_wmod_setting_mergeM320Family_description">
+        <Original>When checked, the AG-C and M320 grenade launcher items will be treated interchangeably</Original>
+        <English>When checked, the AG-C and M320 grenade launcher items will be treated interchangeably</English>
+      </Key>
+    </Container>
+    <Container name="arsenal">
+      <Key ID="STR_sct_wmod_arsenal_components">
+        <Original>Components</Original>
+        <English>Components</English>
+      </Key>
+      <Key ID="STR_sct_wmod_arsenal_compatible_weapons">
+        <Original>Compatible Weapon Systems</Original>
+        <English>Compatible Weapon Systems</English>
+      </Key>
+    </Container>
+    <Container name="interaction">
+      <Key ID="STR_sct_wmod_interaction_components">
+        <Original>Components</Original>
+        <English>Components</English>
+      </Key>
+      <Key ID="STR_sct_wmod_interaction_attach">
+        <Original>Attach %1</Original>
+        <English>Attach %1</English>
+        <Russian>Установить %1</Russian>
+        <Japanese>%1 を取り付け</Japanese>
+        <Spanish>Acoplar %1</Spanish>
+        <French>Fixer %1</French>
+      </Key>
+      <Key ID="STR_sct_wmod_interaction_detach">
+        <Original>Detach %1</Original>
+        <English>Detach %1</English>
+        <Russian>Снять %1</Russian>
+        <Japanese>%1 を外す</Japanese>
+        <Spanish>Desacoplar %1</Spanish>
+        <French>Retirer %1</French>
+      </Key>
+      <Key ID="STR_sct_wmod_interaction_swap">
+        <Original>Swap %1 for %2</Original>
+        <English>Swap %1 for %2</English>
+      </Key>
+      <Key ID="STR_sct_wmod_interaction_convert">
+        <Original>Convert %1 into %2</Original>
+        <English>Convert %1 into %2</English>
+      </Key>
+      <Key ID="STR_sct_wmod_progressbar_attach">
+        <Original>Attaching...</Original>
+        <English>Attaching...</English>
+      </Key>
+      <Key ID="STR_sct_wmod_progressbar_detach">
+        <Original>Detaching...</Original>
+        <English>Detaching...</English>
+      </Key>
+      <Key ID="STR_sct_wmod_progressbar_swap">
+        <Original>Swapping...</Original>
+        <English>Swapping...</English>
+      </Key>
+      <Key ID="STR_sct_wmod_progressbar_convert">
+        <Original>Converting weapon...</Original>
+        <English>Converting weapon...</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_missing_components">
+        <Original>Missing component(s): %1</Original>
+        <English>Missing component(s): %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_missing_tools">
+        <Original>Missing tool(s): %1</Original>
+        <English>Missing tool(s): %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_failure_attach">
+        <Original>Failed to attach %1</Original>
+        <English>Failed to attach %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_failure_detach">
+        <Original>Failed to detach %1</Original>
+        <English>Failed to detach %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_failure_swap">
+        <Original>Failed to swap %1 for %2</Original>
+        <English>Failed to swap %1 for %2</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_failure_convert">
+        <Original>Failed to convert %1 into %2</Original>
+        <English>Failed to convert %1 into %2</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_success_attach">
+        <Original>Attached %1</Original>
+        <English>Attached %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_success_detach">
+        <Original>Detached %1</Original>
+        <English>Detached %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_success_swap">
+        <Original>Swapped %1 for %2</Original>
+        <English>Swapped %1 for %2</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_success_convert">
+        <Original>Converted %1 into %2</Original>
+        <English>Converted %1 into %2</English>
+      </Key>
+    </Container>
+    <Container name="components">
+      <Key ID="STR_sct_wmod_component_3gl">
+        <Original>3GL</Original>
+        <English>3GL</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_b13">
+        <Original>B-13</Original>
+        <English>B-13</English>
+        <Russian>Б-13</Russian>
+      </Key>
+      <Key ID="STR_sct_wmod_component_b33">
+        <Original>B-33</Original>
+        <English>B-33</English>
+        <Russian>Б-33</Russian>
+      </Key>
+      <Key ID="STR_sct_wmod_component_carryhandle">
+        <Original>M4/M16 Carryhandle</Original>
+        <English>M4/M16 Carryhandle</English>
+        <Spanish>M4/M16 Asa de transporte</Spanish>
+        <Italian>M4/M16 Manico</Italian>
+        <Polish>M4/M16 Rączka</Polish>
+        <Russian>М4/М16 р</Russian>
+        <German>M4/M16 Handgriff</German>
+      </Key>
+      <Key ID="STR_sct_wmod_component_gp25">
+        <Original>GP-25</Original>
+        <English>GP-25</English>
+        <Russian>ГП-25</Russian>
+      </Key>
+      <Key ID="STR_sct_wmod_component_m14_rail">
+        <Original>M14 Rail</Original>
+        <English>M14 Rail</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_m14_ris">
+        <Original>M14 RIS Unit</Original>
+        <English>M14 RIS Unit</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_m21_rail">
+        <Original>M21 Zastava Rail</Original>
+        <English>M21 Zastava Rail</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_m203">
+        <Original>M203</Original>
+        <English>M203</English>
+        <Russian>М203</Russian>
+      </Key>
+      <Key ID="STR_sct_wmod_component_m320">
+        <Original>M320</Original>
+        <English>M320</English>
+        <Russian>М320</Russian>
+      </Key>
+      <Key ID="STR_sct_wmod_component_npz">
+        <Original>NPZ</Original>
+        <English>NPZ</English>
+        <Russian>НПЗ</Russian>
+      </Key>
+      <Key ID="STR_sct_wmod_component_pbg40">
+        <Original>PBG-40 (GP-25)</Original>
+        <English>PBG-40 (GP-25)</English>
+        <Russian>ПБГ-40 (ГП-25)</Russian>
+      </Key>
+      <Key ID="STR_sct_wmod_component_zenit">
+        <Original>Zenit</Original>
+        <English>Zenit</English>
+        <Russian>Зенит</Russian>
+      </Key>
+      <Key ID="STR_sct_wmod_component_mtk">
+        <Original>MTK</Original>
+        <English>MTK</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_fal_rail">
+        <Original>FN FAL Rail</Original>
+        <English>FN FAL Rail</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_hk_ris1">
+        <Original>HK G3 RIS Unit 1</Original>
+        <English>HK G3 RIS Unit 1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_hk_ris2">
+        <Original>HK G3 RIS Unit 2</Original>
+        <English>HK G3 RIS Unit 2</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_hk_tac">
+        <Original>HK MP5 TAC Handguard</Original>
+        <English>HK MP5 TAC Handguard</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_ag_c">
+        <Original>AG-C</Original>
+        <English>AG-C</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_agc_full">
+        <Original>AG-C/EGLM</Original>
+        <English>AG-C/EGLM</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_sig_ris">
+        <Original>SIG SG 550 RIS Unit</Original>
+        <English>SIG SG 550 RIS Unit</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_sig_tac">
+        <Original>SIG SG 550 TAC Handguard</Original>
+        <English>SIG SG 550 TAC Handguard</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_dovetail_rail">
+        <Original>Dovetail Rail</Original>
+        <English>Dovetail Rail</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_dovetail_rail_full">
+        <Original>Dovetail Rail Kit</Original>
+        <English>Dovetail Rail Kit</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_picatinny_rail">
+        <Original>Picatinny Rail</Original>
+        <English>Picatinny Rail</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_picatinny_rail_full">
+        <Original>Picatinny Rail Kit</Original>
+        <English>Picatinny Rail Kit</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_eglm">
+        <Original>EGLM</Original>
+        <English>EGLM</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_eglm_full">
+        <Original>FN40GL</Original>
+        <English>FN40GL</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_kv04">
+        <Original>KV-04 S</Original>
+        <English>KV-04 S</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_gp34">
+        <Original>GP-34</Original>
+        <English>GP-34</English>
+        <Russian>ГП-34</Russian>
+      </Key>
+      <Key ID="STR_sct_wmod_component_ag36">
+        <Original>AG36</Original>
+        <English>AG36</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_pk_ris">
+        <Original>PK RIS Mount</Original>
+        <English>PK RIS Mount</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_pk_ris_full">
+        <Original>PKM/PKP RIS Mount</Original>
+        <English>PKM/PKP RIS Mount</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_fal_gl">
+        <Original>FN FAL Grenade Launcher Adapter</Original>
+        <English>FN FAL Grenade Launcher Adapter</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_shotgun_barrel">
+        <Original>Shotgun Barrel</Original>
+        <English>Shotgun Barrel</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_six12">
+        <Original>SIX12</Original>
+        <English>SIX12</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_msbs_gp">
+        <Original>MSBS GP</Original>
+        <English>MSBS GP</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_masterkey">
+        <Original>Masterkey</Original>
+        <English>Masterkey</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_afg_full">
+        <Original>Angled Foregrip</Original>
+        <English>Angled Foregrip</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_afg">
+        <Original>AFG</Original>
+        <English>AFG</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_vfg_full">
+        <Original>Vertical Foregrip</Original>
+        <English>Vertical Foregrip</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_vfg">
+        <Original>VFG</Original>
+        <English>VFG</English>
+      </Key>
+    </Container>
+    <Container name="components_descriptions">
+      <Key ID="STR_sct_wmod_component_description_3gl">
+        <Original>A 40mm underbarrel grenade launcher for the MX</Original>
+        <English>A 40mm underbarrel grenade launcher for the MX</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_rail_side_ak">
+        <Original>A side-mounted picatinny rail adapter for the AK family of rifles</Original>
+        <English>A side-mounted picatinny rail adapter for the AK family of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_rail_top_ak">
+        <Original>A reciever cover with integrated picatinny rail for the AK family of rifles</Original>
+        <English>A reciever cover with integrated picatinny rail for the AK family of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_rail_handguard_ak">
+        <Original>A picatinny rail adapter handguard for the AK family of rifles</Original>
+        <English>A picatinny rail adapter handguard for the AK family of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_carryhandle">
+        <Original>A carryhandle unit with integrated sight designed for the M4 and M16 series of rifles</Original>
+        <English>A carryhandle unit with integrated sight designed for the M4 and M16 series of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_gp25">
+        <Original>A 40mm underbarrel grenade launcher for the AK family of rifles</Original>
+        <English>A 40mm underbarrel grenade launcher for the AK family of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_m14_rail">
+        <Original>A side-mounted picatinny rail adapter for the M14</Original>
+        <English>A side-mounted picatinny rail adapter for the M14</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_m14_ris">
+        <Original>A top-mounted picatinny rail system for the M14</Original>
+        <English>A top-mounted picatinny rail system for the M14</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_m21_rail">
+        <Original>A side-mounted picatinny rail adapter for the M21 Zastava</Original>
+        <English>A side-mounted picatinny rail adapter for the M21 Zastava</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_m4_gl">
+        <Original>A 40mm underbarrel grenade launcher, compatible with a large variety of rifles, including the M4 and M16</Original>
+        <English>A 40mm underbarrel grenade launcher, compatible with a large variety of rifles, including the M4 and M16</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_fal_rail">
+        <Original>A picatinny optic rail mount for the FN FAL</Original>
+        <English>A picatinny optic rail mount for the FN FAL</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_hk_ris">
+        <Original>A picatinny optic rail mount for the HK G3 family of rifles</Original>
+        <English>A picatinny optic rail mount for the HK G3 family of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_hk_tac">
+        <Original>A picatinny rail adapter handguard for the HK MP5 rifles</Original>
+        <English>A picatinny rail adapter handguard for the HK MP5 rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_ag_c">
+        <Original>A 40mm underbarrel grenade launcher, from which the M320 is derived</Original>
+        <English>A 40mm underbarrel grenade launcher, from which the M320 is derived</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_sig_ris">
+        <Original>A picatinny optic rail mount for the SIG SG 550 family of rifles</Original>
+        <English>A picatinny optic rail mount for the SIG SG 550 family of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_sig_tac">
+        <Original>A picatinny rail adapter handguard for the SIG SG 550 family of rifles</Original>
+        <English>A picatinny rail adapter handguard for the SIG SG 550 family of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_dovetail_rail">
+        <Original>An optic mounting rail kit for the AK family of rifles (non-removable)</Original>
+        <English>An optic mounting rail kit for the AK family of rifles (non-removable)</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_picatinny_rail">
+        <Original>A picatinny rail kit for many kinds of weapons (non-removable)</Original>
+        <English>A picatinny rail kit for many kinds of weapons (non-removable)</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_eglm">
+        <Original>A 40mm underbarrel grenade launcher for the FN SCAR, Remington ACR, and similar rifles</Original>
+        <English>A 40mm underbarrel grenade launcher for the FN SCAR, Remington ACR, and similar rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_pk_ris">
+        <Original>A picatinny optic rail mount for the PKM, PKP, and other Klashnikov machine guns</Original>
+        <English>A picatinny optic rail mount for the PKM, PKP, and other Klashnikov machine guns</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_fal_gl">
+        <Original>An adapter for the barrel of the FN FAL rifle allowing the firing of rifle grenades</Original>
+        <English>An adapter for the barrel of the FN FAL rifle allowing the firing of rifle grenades</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_six12">
+        <Original>A six-round double-action revolving underbarrel shotgun</Original>
+        <English>A six-round double-action revolving underbarrel shotgun</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_msbs_gp">
+        <Original>A 40mm underbarrel grenade launcher for the MSBS series of rifles</Original>
+        <English>A 40mm underbarrel grenade launcher for the MSBS series of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_masterkey">
+        <Original>A three-round pump-action underbarrel shotgun, compatible with a large variety of rifles</Original>
+        <English>A three-round pump-action underbarrel shotgun, compatible with a large variety of rifles</English>
+      </Key>
+    </Container>
+    <Container name="tools">
+      <Key ID="STR_sct_wmod_tool_saw">
+        <Original>Saw</Original>
+      </Key>
+      <Key ID="STR_sct_wmod_tool_hacksaw">
+        <Original>Hacksaw</Original>
+      </Key>
+    </Container>
+    <Container name="tools_descriptions">
+      <Key ID="STR_sct_wmod_tool_description_hacksaw">
+        <Original>A handheld saw for cutting metal. Can be used to shorten the barrels of shotguns.</Original>
+      </Key>
+    </Container>
+    <Container name="list">
+      <Key ID="STR_sct_wmod_list0">
+        <Original>(None)</Original>
+        <English>(None)</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list1">
+        <Original>%1</Original>
+        <English>%1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list2">
+        <Original>%1 and %2</Original>
+        <English>%1 and %2</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list3">
+        <Original>%1, %2 and %3</Original>
+        <English>%1, %2 and %3</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list4">
+        <Original>%1, %2, %3 and %4</Original>
+        <English>%1, %2, %3 and %4</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list5">
+        <Original>%1, %2, %3, %4 and %5</Original>
+        <English>%1, %2, %3, %4 and %5</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list6">
+        <Original>%1, %2, %3, %4, %5 and %6</Original>
+        <English>%1, %2, %3, %4, %5 and %6</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list7">
+        <Original>%1, %2, %3, %4, %5, %6 and %7</Original>
+        <English>%1, %2, %3, %4, %5, %6 and %7</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list8">
+        <Original>%1, %2, %3, %4, %5, %6, %7 and %8</Original>
+        <English>%1, %2, %3, %4, %5, %6, %7 and %8</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list9">
+        <Original>%1, %2, %3, %4, %5, %6, %7, %8 and %9</Original>
+        <English>%1, %2, %3, %4, %5, %6, %7, %8 and %9</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list10">
+        <Original>%1, %2, %3, %4, %5, %6, %7, %8, %9 and %10</Original>
+        <English>%1, %2, %3, %4, %5, %6, %7, %8, %9 and %10</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list11">
+        <Original>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10 and %11</Original>
+        <English>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10 and %11</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list12">
+        <Original>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11 and %12</Original>
+        <English>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11 and %12</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list13">
+        <Original>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12 and %13</Original>
+        <English>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12 and %13</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list14">
+        <Original>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13 and %14</Original>
+        <English>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13 and %14</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list15">
+        <Original>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14 and %15</Original>
+        <English>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14 and %15</English>
+      </Key>
+      <Key ID="STR_sct_wmod_list16">
+        <Original>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14, %15 and %16</Original>
+        <English>%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14, %15 and %16</English>
+      </Key>
+    </Container>
   </Package>
 </Project>

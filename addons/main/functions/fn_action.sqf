@@ -1,29 +1,22 @@
 #include "..\script_component.hpp"
 
 // Performs the action of attaching/detaching a component from a player's weapon
-params ["_player", "_mode", "", "_weaponTo", "_component", "_componentName"];
+params ["_player", "_mode", "_weaponFrom", "_weaponTo", "_componentsAttach", "_componentsDetach", "_toolsRequired"];
 private _extendedLoadout = [_player] call CBA_fnc_getLoadout;
 private _loadout = _extendedLoadout select 0;
 private _weaponSlot = (_loadout select [0, 3]) findIf {
-  _x select 0 == currentWeapon _player
+  (_x select 0) isEqualTo currentWeapon _player
 };
 
-if (_weaponSlot == -1) then { throw "player is not holding a weapon" };
+if (_weaponSlot isEqualTo -1) then { throw "player is not holding a weapon" };
 (_loadout select _weaponSlot) set [0, _weaponTo];
 
 [_player, _extendedLoadout] call CBA_fnc_setLoadout;
 
-private _itemsToInventory = [];
-if (_component isNotEqualTo QCLASS_COMPONENT_ITEM_FAKE) then {
-  switch (_mode) do {
-    case "attach": {
-      _player removeItem _component;
-    };
-    case "detach": {
-      _itemsToInventory pushBack _component;
-    };
-  };
-};
+{
+  _player removeItem _x;
+} forEach ([_player, _componentsAttach, "attach"] call PFUNC(getComponentsItems));
+private _itemsToInventory = [_player, _componentsDetach, "detach"] call PFUNC(getComponentsItems);
 
 // compare the player's previous weapon attachments with their current ones to
 // figure out which ones fell off in the process and need to go back into the inventory
@@ -32,7 +25,7 @@ private _currentWeaponItems = (weaponsItems _player) select _weaponSlot;
 for "_i" from 1 to 6 do {
   private _previousItem = _previousWeaponItems select _i;
   if ((_currentWeaponItems select _i) isNotEqualTo _previousItem) then {
-    //if (_previousItem isEqualTo "") then { throw "error" };
+    assert (_previousItem isNotEqualTo "");
     _itemsToInventory pushBack _previousItem;
   };
 };
@@ -44,7 +37,7 @@ for "_i" from 1 to 6 do {
 
 
 
-(format [localize (switch (_mode) do {
-  case "attach": { PLSTRING(AttachSuccess) };
-  case "detach": { PLSTRING(DetachSuccess) };
-}), _componentName]) call CBA_fnc_notify;
+([
+  ACTION_MESSAGE_TEMPLATES(notify_success),
+  [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
+] call PFUNC(actionMessageText)) call CBA_fnc_notify;
