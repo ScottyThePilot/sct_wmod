@@ -1,7 +1,5 @@
 // Weapon Groups for RHS USAF, AFRF, GREF and SAF
 
-// TODO: MK17/SCAR
-
 class rhs_ak103 {
   WEAPON_MEMBER_0(rhs_weap_ak103);
   WEAPON_MEMBER_1(rhs_weap_ak103_gp25,gp25);
@@ -127,6 +125,11 @@ class rhs_asval_grip {
   WEAPON_MEMBER_1(rhs_weap_asval_grip_npz,npz);
 };
 
+class rhs_g36c {
+  WEAPON_MEMBER_0(rhs_weap_g36kv);
+  WEAPON_MEMBER_1(rhs_weap_g36kv_ag36,agc);
+};
+
 class rhs_hk416_d10 {
   WEAPON_MEMBER_0(rhs_weap_hk416d10);
   WEAPON_MEMBER_1(rhs_weap_hk416d10_m320,m320);
@@ -184,20 +187,28 @@ class rhs_m21s {
   WEAPON_MEMBER_1(rhs_weap_m21s_pr,m21_rail);
 };
 
+class rhs_m27_iar {
+  WEAPON_MEMBER_0(rhs_weap_m27iar);
+  WEAPON_MEMBER_1(rhs_weap_m27iar_grip,vfg);
+};
+
 class rhs_m4 {
   WEAPON_MEMBER_0(rhs_weap_m4);
   WEAPON_MEMBER_1(rhs_weap_m4_m203s,m203);
   WEAPON_MEMBER_1(rhs_weap_m4_m320,m320);
   WEAPON_MEMBER_1(rhs_weap_m4_carryhandle,carryhandle);
   WEAPON_MEMBER_2(rhs_weap_m4_carryhandle_m203,carryhandle,m203);
+  WEAPON_MEMBER_2(rhs_weap_m4_carryhandle_m203S,carryhandle,m203_alt_rhs);
 };
 
 class rhs_m4a1 {
   WEAPON_MEMBER_0(rhs_weap_m4a1);
-  WEAPON_MEMBER_1(rhs_weap_m4a1_m203s,m203);
+  WEAPON_MEMBER_1(rhs_weap_m4a1_m203,m203);
+  WEAPON_MEMBER_1(rhs_weap_m4a1_m203s,m203_alt_rhs);
   WEAPON_MEMBER_1(rhs_weap_m4a1_m320,m320);
   WEAPON_MEMBER_1(rhs_weap_m4a1_carryhandle,carryhandle);
   WEAPON_MEMBER_2(rhs_weap_m4a1_carryhandle_m203,carryhandle,m203);
+  WEAPON_MEMBER_2(rhs_weap_m4a1_carryhandle_m203S,carryhandle,m203_alt_rhs);
 };
 
 class rhs_m4a1_pip_desert {

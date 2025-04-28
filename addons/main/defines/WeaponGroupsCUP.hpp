@@ -1,5 +1,7 @@
 // Weapon Groups for CUP Weapons
 
+// TODO: Revise, add AFGs and VFGs
+
 class cup_acr_black_556 {
   WEAPON_MEMBER_0(CUP_arifle_ACR_blk_556);
   WEAPON_MEMBER_1(CUP_arifle_ACR_EGLM_blk_556,eglm);

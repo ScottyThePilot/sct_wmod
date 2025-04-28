@@ -8,13 +8,47 @@ workshop = [
   "623475643"
 ]
 
-[aegis]
+[western_sahara]
 extends = "default"
+workshop = [
+  # Western Sahara
+  "2636962953"
+]
+
+[aegis]
+extends = "western_sahara"
 workshop = [
   # Arma 3 Aegis
   "949252631",
-  # Western Sahara
-  "2636962953"
+  # Arma 3 Atlas
+  "2225873516",
+  # Arma 3 Atlas - Opposing Forces
+  "1873244913"
+]
+
+[cup]
+extends = "default"
+workshop = [
+  # CUP Weapons
+  "497660133"
+]
+
+[jca]
+extends = "default"
+workshop = [
+  # JCA - Infantry Arsenal
+  "3333302397",
+  # JCA - Infantry Arsenal Compat ACE3
+  "3337555434"
+]
+
+[niarms]
+extends = "default"
+workshop = [
+  # NIArms AIO
+  "2595680138",
+  # NIArms AIO Compat ACE3
+  "1400566170"
 ]
 
 [rhs]

@@ -26,7 +26,6 @@ _weaponComponentsMap getOrDefaultCall [_weapon, {
   } forEach _groupsData;
 
   (_weaponComponents apply {
-    private _componentConfig = _componentsData get _x;
-    getText (_componentConfig >> "displayName")
+    (_componentsData get _x) select 1
   }) call RFUNC(textList)
 }, true]

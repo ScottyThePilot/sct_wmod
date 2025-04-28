@@ -147,6 +147,7 @@ class CLASS_DEFINES {
   class WeaponGroups {
     #include "./defines/WeaponGroupsA3.hpp"
     #include "./defines/WeaponGroupsAegis.hpp"
+    #include "./defines/WeaponGroupsAtlas.hpp"
     #include "./defines/WeaponGroupsCUP.hpp"
     #include "./defines/WeaponGroupsJCA.hpp"
     #include "./defines/WeaponGroupsLXWS.hpp"

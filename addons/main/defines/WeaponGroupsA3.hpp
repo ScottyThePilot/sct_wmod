@@ -16,17 +16,17 @@ class a3_ak12_lush {
 };
 
 class a3_mx {
-  WEAPON_MEMBER_0(arifle_MX_F);
+  WEAPON_MEMBER_1(arifle_MX_F,afg);
   WEAPON_MEMBER_1(arifle_MX_GL_F,3gl);
 };
 
 class a3_mx_black {
-  WEAPON_MEMBER_0(arifle_MX_Black_F);
+  WEAPON_MEMBER_1(arifle_MX_Black_F,afg);
   WEAPON_MEMBER_1(arifle_MX_GL_Black_F,3gl);
 };
 
 class a3_mx_khaki {
-  WEAPON_MEMBER_0(arifle_MX_khk_F);
+  WEAPON_MEMBER_1(arifle_MX_khk_F,afg);
   WEAPON_MEMBER_1(arifle_MX_GL_khk_F,3gl);
 };
 

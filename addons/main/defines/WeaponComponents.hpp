@@ -1,6 +1,6 @@
 // Note:
 // Multiple components can exist pointing to the same item, the item will work correctly for both.
-// The only reason you'd want to do this is if a component has a different designation for the
+// The main reason you'd want to do this is if a component has a different designation for the
 // weapon it's being used with. For example, the PBG-40 grenade launcher is functionally identical
 // to the GP-25, so that's the way I've defined it here.
 
@@ -32,7 +32,10 @@ class shotgun_barrel {
 
 class afg {
   items[] = {
-    QRGVAR(component_afg)
+    QRGVAR(component_afg),
+    "rhsusf_acc_grip2",
+    "rhsusf_acc_grip2_tan",
+    "rhsusf_acc_grip2_wd"
   };
   displayName = RCSTRING(component_afg);
   picture = QPATHTO(data\components\afg.paa);
@@ -40,7 +43,11 @@ class afg {
 
 class vfg {
   items[] = {
-    QRGVAR(component_vfg)
+    QRGVAR(component_vfg),
+    "rhsusf_acc_kac_grip",
+    "rhsusf_acc_grip3",
+    "rhsusf_acc_grip3_tan",
+    "rhsusf_acc_grip1"
   };
   displayName = RCSTRING(component_vfg);
   picture = QPATHTO(data\components\vfg.paa);
@@ -64,11 +71,23 @@ WEAPON_COMPONENT_NAMED(pbg40,RGVAR(component_gp25),RCSTRING(component_pbg40));
 WEAPON_COMPONENT_NAMED(npz,RGVAR(component_npz),RCSTRING(component_npz));
 WEAPON_COMPONENT_NAMED(zenit,RGVAR(component_zenit),RCSTRING(component_zenit));
 
+// a separate m203 component is made that shadows the main m203 component, and is non-attachable
+// to account for weapon variants in RHS that have a long and short variant of the m203
+
+class m203_alt_rhs {
+  items[] = { QRGVAR(component_m203) };
+  displayName = RCSTRING(component_m203);
+  disableAttach = 1;
+};
+
 // separate grip component entries are defined for RHS to prioritize using/reclaiming RHS' own
 // grip attachment items during attach/detach actions rather than the afg and vfg from us
 
 class afg_rhs {
   items[] = {
+    "rhsusf_acc_grip2",
+    "rhsusf_acc_grip2_tan",
+    "rhsusf_acc_grip2_wd",
     QRGVAR(component_afg)
   };
   displayName = RCSTRING(component_afg);
@@ -77,6 +96,10 @@ class afg_rhs {
 
 class vfg_rhs {
   items[] = {
+    "rhsusf_acc_kac_grip",
+    "rhsusf_acc_grip3",
+    "rhsusf_acc_grip3_tan",
+    "rhsusf_acc_grip1",
     QRGVAR(component_vfg)
   };
   displayName = RCSTRING(component_vfg);

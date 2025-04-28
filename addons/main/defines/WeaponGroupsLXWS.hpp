@@ -16,7 +16,7 @@ class lxws_xms {
   WEAPON_MEMBER_1(arifle_XMS_Shot_lxWS,six12);
 };
 
-class lxws_gray {
+class lxws_xms_gray {
   WEAPON_MEMBER_0(arifle_XMS_Gray_lxWS);
   WEAPON_MEMBER_1(arifle_XMS_GL_Gray_lxWS,ag36);
   WEAPON_MEMBER_1(arifle_XMS_Shot_Gray_lxWS,six12);

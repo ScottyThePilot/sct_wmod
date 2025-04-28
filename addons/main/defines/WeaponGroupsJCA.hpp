@@ -1,3 +1,5 @@
+// Weapon Groups for JCA Infantry Arsenal and related mods
+
 class jca_m16a4_black {
   WEAPON_MEMBER_0(JCA_arifle_M16A4_black_F);
   WEAPON_MEMBER_1(JCA_arifle_M16A4_FG_black_F,vfg);
