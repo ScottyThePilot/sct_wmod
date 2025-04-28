@@ -28,10 +28,8 @@
   class ID { items[] = { #I1, #I2, #I3, #I4 }; displayName = NAME; }
 
 #define CLASS_DEFINES RGVAR(defines)
-#define CLASS_COMPONENT_ITEM_FAKE @FAKE_COMPONENT@
 
 #define QCLASS_DEFINES QUOTE(CLASS_DEFINES)
-#define QCLASS_COMPONENT_ITEM_FAKE QUOTE(CLASS_COMPONENT_ITEM_FAKE)
 
 #define VAR_MODIFICATION_ENABLED RGVAR(modificationEnabled)
 #define VAR_ACTION_LENGTH RGVAR(actionLength)

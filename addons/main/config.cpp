@@ -92,7 +92,6 @@ class CfgFunctions {
       class getMissingComponentsRequired {};
       class getMissingToolsRequired {};
       class getWeaponComponentsNames {};
-      class initSettings {};
       class resetFrameworkDataCache {};
       class textList {};
     };
@@ -101,7 +100,7 @@ class CfgFunctions {
 
 class Extended_PreInit_EventHandlers {
   class ADDON {
-    init = QUOTE(call RFUNC(initSettings));
+    init = QUOTE(call COMPILE_SCRIPT(PATHTO(XEH_preInit.sqf)));
   };
 };
 
