@@ -28,7 +28,7 @@ private _toolsRequired = _toolsRequired arrayIntersect _toolsRequired;
 [
   _id,
   [
-    ACTION_MESSAGE_TEMPLATES(interaction),
+    "interaction",
     [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
   ] call RFUNC(actionMessageText),
   _picture,
@@ -40,7 +40,7 @@ private _toolsRequired = _toolsRequired arrayIntersect _toolsRequired;
       private _componentsCount = count _componentsAttach + count _componentsDetach;
 
       private _barText = [
-        ACTION_MESSAGE_TEMPLATES(progressbar),
+        "progressbar",
         [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
       ] call RFUNC(actionMessageText);
 

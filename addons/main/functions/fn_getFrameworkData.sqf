@@ -99,7 +99,8 @@ private _components = createHashMapFromArray (_components apply {
     _toolsRequired,
     _enableAttach,
     _enableDetach,
-    _isFake
+    _isFake,
+    _y >> "MessageTemplates"
   ]]
 } select {
   _x params ["_componentKey", "_componentData"];
@@ -110,7 +111,8 @@ private _components = createHashMapFromArray (_components apply {
     "_toolsRequired",
     "_enableAttach",
     "_enableDetach",
-    "_isFake"
+    "_isFake",
+    "_messageTemplatesConfig"
   ];
 
   // filter out any entries with an empty item list that are not fake

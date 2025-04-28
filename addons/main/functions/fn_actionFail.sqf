@@ -20,7 +20,9 @@ if (_missingToolsRequired isNotEqualTo []) exitWith {
   ]) call CBA_fnc_notify;
 };
 
-([
-  ACTION_MESSAGE_TEMPLATES(notify_failure),
-  [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
-] call RFUNC(actionMessageText)) call CBA_fnc_notify;
+if (!(_this call RFUNC(actionCondition))) exitWith {
+  ([
+    "notify_failure",
+    [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
+  ] call RFUNC(actionMessageText)) call CBA_fnc_notify;
+};

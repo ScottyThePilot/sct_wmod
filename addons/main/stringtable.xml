@@ -62,6 +62,14 @@
         <Spanish>Acoplar %1</Spanish>
         <French>Fixer %1</French>
       </Key>
+      <Key ID="STR_sct_wmod_interaction_attach_install">
+        <Original>Install %1</Original>
+        <English>Install %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_interaction_attach_apply">
+        <Original>Apply %1</Original>
+        <English>Apply %1</English>
+      </Key>
       <Key ID="STR_sct_wmod_interaction_detach">
         <Original>Detach %1</Original>
         <English>Detach %1</English>
@@ -69,6 +77,18 @@
         <Japanese>%1 を外す</Japanese>
         <Spanish>Desacoplar %1</Spanish>
         <French>Retirer %1</French>
+      </Key>
+      <Key ID="STR_sct_wmod_interaction_detach_uninstall">
+        <Original>Uninstall %1</Original>
+        <English>Uninstall %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_interaction_detach_remove">
+        <Original>Remove %1</Original>
+        <English>Remove %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_interaction_detach_sawoff">
+        <Original>Saw-off %1</Original>
+        <English>Saw-off %1</English>
       </Key>
       <Key ID="STR_sct_wmod_interaction_swap">
         <Original>Swap %1 for %2</Original>
@@ -82,9 +102,29 @@
         <Original>Attaching...</Original>
         <English>Attaching...</English>
       </Key>
+      <Key ID="STR_sct_wmod_progressbar_attach_install">
+        <Original>Installing...</Original>
+        <English>Installing...</English>
+      </Key>
+      <Key ID="STR_sct_wmod_progressbar_attach_apply">
+        <Original>Applying...</Original>
+        <English>Applying...</English>
+      </Key>
       <Key ID="STR_sct_wmod_progressbar_detach">
         <Original>Detaching...</Original>
         <English>Detaching...</English>
+      </Key>
+      <Key ID="STR_sct_wmod_progressbar_detach_uninstall">
+        <Original>Uninstalling...</Original>
+        <English>Uninstalling...</English>
+      </Key>
+      <Key ID="STR_sct_wmod_progressbar_detach_remove">
+        <Original>Removing...</Original>
+        <English>Removing...</English>
+      </Key>
+      <Key ID="STR_sct_wmod_progressbar_detach_sawoff">
+        <Original>Sawing...</Original>
+        <English>Sawing...</English>
       </Key>
       <Key ID="STR_sct_wmod_progressbar_swap">
         <Original>Swapping...</Original>
@@ -94,21 +134,33 @@
         <Original>Converting weapon...</Original>
         <English>Converting weapon...</English>
       </Key>
-      <Key ID="STR_sct_wmod_notify_missing_components">
-        <Original>Missing component(s): %1</Original>
-        <English>Missing component(s): %1</English>
-      </Key>
-      <Key ID="STR_sct_wmod_notify_missing_tools">
-        <Original>Missing tool(s): %1</Original>
-        <English>Missing tool(s): %1</English>
-      </Key>
       <Key ID="STR_sct_wmod_notify_failure_attach">
         <Original>Failed to attach %1</Original>
         <English>Failed to attach %1</English>
       </Key>
+      <Key ID="STR_sct_wmod_notify_failure_attach_install">
+        <Original>Failed to install %1</Original>
+        <English>Failed to install %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_failure_attach_apply">
+        <Original>Failed to apply %1</Original>
+        <English>Failed to apply %1</English>
+      </Key>
       <Key ID="STR_sct_wmod_notify_failure_detach">
         <Original>Failed to detach %1</Original>
         <English>Failed to detach %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_failure_detach_uninstall">
+        <Original>Failed to uninstall %1</Original>
+        <English>Failed to uninstall %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_failure_detach_remove">
+        <Original>Failed to remove %1</Original>
+        <English>Failed to remove %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_failure_detach_sawoff">
+        <Original>Failed to saw-off %1</Original>
+        <English>Failed to saw-off %1</English>
       </Key>
       <Key ID="STR_sct_wmod_notify_failure_swap">
         <Original>Failed to swap %1 for %2</Original>
@@ -122,9 +174,29 @@
         <Original>Attached %1</Original>
         <English>Attached %1</English>
       </Key>
+      <Key ID="STR_sct_wmod_notify_success_attach_install">
+        <Original>Installed %1</Original>
+        <English>Installed %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_success_attach_apply">
+        <Original>Applied %1</Original>
+        <English>Applied %1</English>
+      </Key>
       <Key ID="STR_sct_wmod_notify_success_detach">
         <Original>Detached %1</Original>
         <English>Detached %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_success_detach_uninstall">
+        <Original>Uninstalled %1</Original>
+        <English>Uninstalled %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_success_detach_remove">
+        <Original>Removed %1</Original>
+        <English>Removed %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_success_detach_sawoff">
+        <Original>Sawed %1 off</Original>
+        <English>Sawed %1 off</English>
       </Key>
       <Key ID="STR_sct_wmod_notify_success_swap">
         <Original>Swapped %1 for %2</Original>
@@ -133,6 +205,14 @@
       <Key ID="STR_sct_wmod_notify_success_convert">
         <Original>Converted %1 into %2</Original>
         <English>Converted %1 into %2</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_missing_components">
+        <Original>Missing component(s): %1</Original>
+        <English>Missing component(s): %1</English>
+      </Key>
+      <Key ID="STR_sct_wmod_notify_missing_tools">
+        <Original>Missing tool(s): %1</Original>
+        <English>Missing tool(s): %1</English>
       </Key>
     </Container>
     <Container name="components">

@@ -14,12 +14,34 @@ class dovetail_rail {
   items[] = { QRGVAR(component_dovetail_rail) };
   displayName = RCSTRING(component_dovetail_rail);
   disableDetach = 1;
+
+  class MessageTemplates {
+    interaction_attach = RCSTRING(interaction_attach_install);
+    interaction_detach = RCSTRING(interaction_detach_uninstall);
+    progressbar_attach = RCSTRING(progressbar_attach_install);
+    progressbar_detach = RCSTRING(progressbar_detach_uninstall);
+    notify_failure_attach = RCSTRING(notify_failure_attach_install);
+    notify_failure_detach = RCSTRING(notify_failure_detach_uninstall);
+    notify_success_attach = RCSTRING(notify_success_attach_install);
+    notify_success_detach = RCSTRING(notify_success_detach_uninstall);
+  };
 };
 
 class picatinny_rail {
   items[] = { QRGVAR(component_picatinny_rail) };
   displayName = RCSTRING(component_picatinny_rail);
   disableDetach = 1;
+
+  class MessageTemplates {
+    interaction_attach = RCSTRING(interaction_attach_install);
+    interaction_detach = RCSTRING(interaction_detach_uninstall);
+    progressbar_attach = RCSTRING(progressbar_attach_install);
+    progressbar_detach = RCSTRING(progressbar_detach_uninstall);
+    notify_failure_attach = RCSTRING(notify_failure_attach_install);
+    notify_failure_detach = RCSTRING(notify_failure_detach_uninstall);
+    notify_success_attach = RCSTRING(notify_success_attach_install);
+    notify_success_detach = RCSTRING(notify_success_detach_uninstall);
+  };
 };
 
 class shotgun_barrel {
@@ -28,6 +50,13 @@ class shotgun_barrel {
   toolsRequired[] = { QUOTE(saw) };
   disableAttach = 1;
   isFake = 1;
+
+  class MessageTemplates {
+    interaction_detach = RCSTRING(interaction_detach_sawoff);
+    progressbar_detach = RCSTRING(progressbar_detach_sawoff);
+    notify_failure_detach = RCSTRING(notify_failure_detach_sawoff);
+    notify_success_detach = RCSTRING(notify_success_detach_sawoff);
+  };
 };
 
 class afg {

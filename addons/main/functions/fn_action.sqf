@@ -38,6 +38,6 @@ for "_i" from 1 to 6 do {
 
 
 ([
-  ACTION_MESSAGE_TEMPLATES(notify_success),
+  "notify_success",
   [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
 ] call RFUNC(actionMessageText)) call CBA_fnc_notify;

@@ -139,6 +139,25 @@ class CLASS_DEFINES {
   // (for internal use, this API may change or disappear without warning)
   foregripComponents[] = { "afg", "vfg", "afg_rhs", "vfg_rhs" };
 
+  class DefaultMessageTemplates {
+    interaction_attach = RCSTRING(interaction_attach);
+    interaction_detach = RCSTRING(interaction_detach);
+    interaction_swap = RCSTRING(interaction_swap);
+    interaction_convert = RCSTRING(interaction_convert);
+    progressbar_attach = RCSTRING(progressbar_attach);
+    progressbar_detach = RCSTRING(progressbar_detach);
+    progressbar_swap = RCSTRING(progressbar_swap);
+    progressbar_convert = RCSTRING(progressbar_convert);
+    notify_failure_attach = RCSTRING(notify_failure_attach);
+    notify_failure_detach = RCSTRING(notify_failure_detach);
+    notify_failure_swap = RCSTRING(notify_failure_swap);
+    notify_failure_convert = RCSTRING(notify_failure_convert);
+    notify_success_attach = RCSTRING(notify_success_attach);
+    notify_success_detach = RCSTRING(notify_success_detach);
+    notify_success_swap = RCSTRING(notify_success_swap);
+    notify_success_convert = RCSTRING(notify_success_convert);
+  };
+
   class WeaponComponents {
     #include "./defines/WeaponComponents.hpp"
   };
