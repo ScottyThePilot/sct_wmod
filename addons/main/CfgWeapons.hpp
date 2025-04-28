@@ -17,6 +17,7 @@ class RGVAR(tool_hacksaw): CBA_MiscItem {
 };
 
 class RGVAR(ccore): CBA_MiscItem {
+  RGVAR(isWeaponComponentItem) = 1;
   class ItemInfo: CBA_MiscItem_ItemInfo {
     mass = 2;
   };

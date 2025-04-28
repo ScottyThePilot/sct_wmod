@@ -41,8 +41,8 @@
     </Container>
     <Container name="arsenal">
       <Key ID="STR_sct_wmod_arsenal_components">
-        <Original>Components</Original>
-        <English>Components</English>
+        <Original>Weapon Components</Original>
+        <English>Weapon Components</English>
       </Key>
       <Key ID="STR_sct_wmod_arsenal_compatible_weapons">
         <Original>Compatible Weapon Systems</Original>
