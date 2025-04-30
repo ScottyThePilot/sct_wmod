@@ -4,6 +4,21 @@
 
 // TODO: Rifles with Ghillies
 
+class niarms_ai_awm_black {
+  WEAPON_MEMBER_0(hlc_rifle_awmagnum_BL);
+  WEAPON_MEMBER_1(hlc_rifle_awMagnum_BL_ghillie,rifle_ghillie);
+};
+
+class niarms_ai_awm_fde {
+  WEAPON_MEMBER_0(hlc_rifle_awmagnum_FDE);
+  WEAPON_MEMBER_1(hlc_rifle_awMagnum_FDE_ghillie,rifle_ghillie);
+};
+
+class niarms_ai_awm_od {
+  WEAPON_MEMBER_0(hlc_rifle_awmagnum);
+  WEAPON_MEMBER_1(hlc_rifle_awMagnum_OD_ghillie,rifle_ghillie);
+};
+
 class niarms_ak12 {
   WEAPON_MEMBER_0(hlc_rifle_ak12);
   WEAPON_MEMBER_1(hlc_rifle_ak12GL,gp25);
@@ -53,9 +68,24 @@ class niarms_colt_m4a1 {
   WEAPON_MEMBER_1(hlc_rifle_m4m203,m203);
 };
 
-class niarms_colt_ro727 {
+class niarms_colt_727 {
+  WEAPON_MEMBER_0(hlc_wp_mod727);
+  WEAPON_MEMBER_1(hlc_wp_mod727_M203,m203);
+};
+
+class niarms_colt_727_old {
   WEAPON_MEMBER_0(hlc_rifle_Colt727);
   WEAPON_MEMBER_1(hlc_rifle_Colt727_GL,m203);
+};
+
+class niarms_diemaco_c7 {
+  WEAPON_MEMBER_0(hlc_wp_C7);
+  WEAPON_MEMBER_1(hlc_wp_C7_M203,m203);
+};
+
+class niarms_diemaco_c8 {
+  WEAPON_MEMBER_0(hlc_wp_C8);
+  WEAPON_MEMBER_1(hlc_wp_C8_M203,m203);
 };
 
 class niarms_fal_sa58_osw {
@@ -72,6 +102,44 @@ class niarms_fal_5061 {
   WEAPON_MEMBER_0(hlc_rifle_FAL5061);
   WEAPON_MEMBER_1(hlc_rifle_FAL5061Rail,fal_rail);
 };
+
+class niarms_scar_h_cqc {
+  WEAPON_MEMBER_0(hlc_WP_SCARH_CQC);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_cqc_EGLM,eglm);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_CQC_SRX,pws_srx);
+};
+
+class niarms_scar_h_cqc_black {
+  WEAPON_MEMBER_0(hlc_wp_SCARH_CQC_Blk);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_CQC_EGLM_Blk,eglm);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_CQC_SRX_Blk,pws_srx);
+};
+
+class niarms_scar_h_cqc_camo {
+  WEAPON_MEMBER_0(hlc_wp_SCARH_CQC_camo);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_CQC_EGLM_camo,eglm);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_CQC_SRX_camo,pws_srx);
+};
+
+class niarms_scar_h_std {
+  WEAPON_MEMBER_0(hlc_wp_SCARH_STD);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_STD_EGLM,eglm);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_STD_SRX,pws_srx);
+};
+
+class niarms_scar_h_std_black {
+  WEAPON_MEMBER_0(hlc_wp_SCARH_STD_Blk);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_STD_EGLM_Blk,eglm);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_STD_SRX_Blk,pws_srx);
+};
+
+class niarms_scar_h_std_camo {
+  WEAPON_MEMBER_0(hlc_wp_SCARH_STD_camo);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_STD_EGLM_camo,eglm);
+  WEAPON_MEMBER_1(hlc_wp_SCARH_STD_SRX_camo,pws_srx);
+};
+
+
 
 class niarms_g3sg1 {
   WEAPON_MEMBER_0(hlc_rifle_g3sg1);

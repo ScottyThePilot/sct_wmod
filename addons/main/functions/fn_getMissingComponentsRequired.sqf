@@ -22,6 +22,8 @@ _componentsRequired apply {
   if (_isFake) then {
     false
   } else {
-    _componentItems findIf { _x in items _unit } isEqualTo -1
+    _componentItems findIf {
+      [_x, _unit] call RFUNC(hasItem)
+    } isEqualTo -1
   }
 }

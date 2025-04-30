@@ -145,6 +145,22 @@ WEAPON_COMPONENT_NAMED(ag_c,RGVAR(component_ag_c),RCSTRING(component_ag_c));
 WEAPON_COMPONENT_NAMED(sig_ris,RGVAR(component_sig_ris),RCSTRING(component_sig_ris));
 WEAPON_COMPONENT_NAMED(sig_tac,RGVAR(component_sig_tac),RCSTRING(component_sig_tac));
 
+class rifle_ghillie {
+  items[] = { QRGVAR(component_rifle_ghillie) };
+  displayName = RCSTRING(component_rifle_ghillie);
+
+  class MessageTemplates {
+    interaction_attach = RCSTRING(interaction_attach_apply);
+    interaction_detach = RCSTRING(interaction_detach_remove);
+    progressbar_attach = RCSTRING(progressbar_attach_apply);
+    progressbar_detach = RCSTRING(progressbar_detach_remove);
+    notify_failure_attach = RCSTRING(notify_failure_attach_apply);
+    notify_failure_detach = RCSTRING(notify_failure_detach_remove);
+    notify_success_attach = RCSTRING(notify_success_attach_apply);
+    notify_success_detach = RCSTRING(notify_success_detach_remove);
+  };
+};
+
 // CUP Components
 WEAPON_COMPONENT_NAMED(eglm,RGVAR(component_eglm),RCSTRING(component_eglm));
 WEAPON_COMPONENT_NAMED(kv04,RGVAR(component_kv04),RCSTRING(component_kv04));

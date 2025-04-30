@@ -92,6 +92,7 @@ class CfgFunctions {
       class getMissingComponentsRequired {};
       class getMissingToolsRequired {};
       class getWeaponComponentsNames {};
+      class hasItem {};
       class resetFrameworkDataCache {};
       class textList {};
     };

@@ -22,7 +22,7 @@ _componentsRequired apply {
   ];
 
   private _componentItemIndex = switch (_mode) do {
-    case "attach": { _componentItems findIf { _x in items _unit } };
+    case "attach": { _componentItems findIf { [_x, _unit] call RFUNC(hasItem) } };
     case "detach": { 0 };
     default { -1 };
   };

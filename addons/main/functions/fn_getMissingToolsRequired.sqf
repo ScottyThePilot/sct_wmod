@@ -11,5 +11,7 @@ _toolsRequired apply {
 } select {
   _x params ["_toolItems", "_displayName"];
 
-  _toolItems findIf { _x in items _unit } isEqualTo -1
+  _toolItems findIf {
+    [_x, _unit] call RFUNC(hasItem)
+  } isEqualTo -1
 }

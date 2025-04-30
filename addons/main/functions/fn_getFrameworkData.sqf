@@ -14,7 +14,7 @@ private _collectConfigs = {
   { _missionConfig = _missionConfig >> _x } forEach _this;
 
   private _map = createHashMap;
-  private _f = { _map set [configName _x, _x] };
+  private _f = { _map set [toLowerANSI configName _x, _x] };
   _f forEach ("true" configClasses _config);
   _f forEach ("true" configClasses _campaignConfig);
   _f forEach ("true" configClasses _missionConfig);
@@ -127,8 +127,8 @@ private _groups = createHashMapFromArray (_groups apply {
   [_groupKey, ("true" configClasses _y) select {
     isClass (configFile >> "CfgWeapons" >> configName _x)
   } apply {
-    private _groupEntryKey = configName _x;
-    private _groupEntryComponents = getArray (_x >> "components");
+    private _groupEntryKey = toLowerANSI configName _x;
+    private _groupEntryComponents = getArray (_x >> "components") apply { toLowerANSI _x };
     private _unknownComponent = _groupEntryComponents findIf { !(_x in _components) };
     if (_unknownComponent isNotEqualTo -1) then {
       private _unknownComponentName = _groupEntryComponents select _unknownComponent;
@@ -147,14 +147,14 @@ private _foregripComponents = [];
 _foregripComponents insert [-1, getArray (configFile >> QCLASS_DEFINES >> "foregripComponents"), true];
 _foregripComponents insert [-1, getArray (campaignConfigFile >> QCLASS_DEFINES >> "foregripComponents"), true];
 _foregripComponents insert [-1, getArray (missionConfigFile >> QCLASS_DEFINES >> "foregripComponents"), true];
-private _foregripComponents = _foregripComponents select { _x in _components };
+private _foregripComponents = _foregripComponents select { toLowerANSI _x in _components };
 
 INFO_1("foregrip components: %1",str _foregripComponents);
 
 // When 'Foregrip Items Needed' is disabled, all foregrip items according to `foregripComponents[]` will be made fake
 {
   private _isFake = !VAR_NEED_FOREGRIP_ITEMS;
-  (_components get _x) set [6, _isFake];
+  (_components get toLowerANSI _x) set [6, _isFake];
 } forEach _foregripComponents;
 
 // Merge component items list for M320 and AG-C when
@@ -178,7 +178,7 @@ private _actions = [];
     {
       _x params ["_weaponTo", "_componentsWeaponTo"];
 
-      if (_weaponFrom isEqualTo _weaponTo) then { continue };
+      if (_weaponFrom == _weaponTo) then { continue };
 
       private _componentsAttach = _componentsWeaponTo - _componentsWeaponFrom;
       private _componentsDetach = _componentsWeaponFrom - _componentsWeaponTo;

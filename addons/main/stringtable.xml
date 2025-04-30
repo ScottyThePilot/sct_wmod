@@ -317,6 +317,10 @@
         <Original>SIG SG 550 TAC Handguard</Original>
         <English>SIG SG 550 TAC Handguard</English>
       </Key>
+      <Key ID="STR_sct_wmod_component_rifle_ghillie">
+        <Original>Rifle Ghillie Wrap</Original>
+        <English>Rifle Ghillie Wrap</English>
+      </Key>
       <Key ID="STR_sct_wmod_component_dovetail_rail">
         <Original>Dovetail Rail</Original>
         <English>Dovetail Rail</English>
@@ -463,6 +467,10 @@
       <Key ID="STR_sct_wmod_component_description_sig_tac">
         <Original>A picatinny rail adapter handguard for the SIG SG 550 family of rifles</Original>
         <English>A picatinny rail adapter handguard for the SIG SG 550 family of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_rifle_ghillie">
+        <Original>A ghillie netting wrap to be applied to a rifle</Original>
+        <English>A ghillie netting wrap to be applied to a rifle</English>
       </Key>
       <Key ID="STR_sct_wmod_component_description_dovetail_rail">
         <Original>An optic mounting rail kit for the AK family of rifles (non-removable)</Original>

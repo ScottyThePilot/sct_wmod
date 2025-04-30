@@ -8,6 +8,7 @@ private _weaponComponentsMap = [
   { createHashMap }
 ] call RFUNC(getCached);
 
+private _weapon = toLowerANSI _weapon;
 _weaponComponentsMap getOrDefaultCall [_weapon, {
   private _groupsData = GET_FRAMEWORK_DATA_GROUPS;
   private _componentsData = GET_FRAMEWORK_DATA_COMPONENTS;
@@ -17,7 +18,7 @@ _weaponComponentsMap getOrDefaultCall [_weapon, {
   {
     private _groupKey = _x;
     private _groupEntries = _y;
-    private _groupEntryWeaponIndex = _groupEntries findIf { (_x select 0) isEqualTo _weapon };
+    private _groupEntryWeaponIndex = _groupEntries findIf { (_x select 0) == _weapon };
     if (_groupEntryWeaponIndex isNotEqualTo -1) then {
       private _groupEntryWeapon = _groupEntries select _groupEntryWeaponIndex;
       _groupEntryWeapon params ["_groupEntryWeaponKey", "_groupEntryWeaponComponents"];

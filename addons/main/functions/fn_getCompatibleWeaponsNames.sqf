@@ -8,6 +8,7 @@ private _compatibleWeaponsMap = [
   { createHashMap }
 ] call RFUNC(getCached);
 
+private _weapon = toLowerANSI _weapon;
 _compatibleWeaponsMap getOrDefaultCall [_weapon, {
   private _groupsData = GET_FRAMEWORK_DATA_GROUPS;
 
@@ -16,7 +17,7 @@ _compatibleWeaponsMap getOrDefaultCall [_weapon, {
   {
     private _groupKey = _x;
     private _groupEntries = _y;
-    if (_groupEntries findIf { (_x select 0) isEqualTo _weapon } isNotEqualTo -1) then {
+    if (_groupEntries findIf { (_x select 0) == _weapon } isNotEqualTo -1) then {
       _compatibleWeapons insert [-1, _groupEntries apply { _x select 0 }, true];
     };
   } forEach _groupsData;

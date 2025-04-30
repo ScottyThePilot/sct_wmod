@@ -159,6 +159,14 @@ class RGVAR(component_hk_tac): RGVAR(ccore) {
   scope = 2;
 };
 
+class RGVAR(component_rifle_ghillie): RGVAR(ccore) {
+  author = "ScottyThePilot";
+  displayName = RCSTRING(component_rifle_ghillie);
+  picture = QPATHTO(data\components\rifle_ghillie.paa);
+  descriptionShort = RCSTRING(component_description_rifle_ghillie);
+  scope = 2;
+};
+
 class RGVAR(component_ag_c): RGVAR(ccore) {
   author = "ScottyThePilot";
   displayName = RCSTRING(component_agc_full);

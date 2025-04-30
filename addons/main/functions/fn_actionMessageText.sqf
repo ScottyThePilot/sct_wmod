@@ -4,7 +4,6 @@ params ["_templateBase", "_args"];
 _args params ["_mode", "_weaponFrom", "_weaponTo", "_componentsAttach", "_componentsDetach"];
 
 private _componentsData = GET_FRAMEWORK_DATA_COMPONENTS;
-private _componentsAll = _componentsAttach + _componentsDetach;
 private _componentsNamesAttach = _componentsAttach apply { (_componentsData get _x) select 1 };
 private _componentsNamesDetach = _componentsDetach apply { (_componentsData get _x) select 1 };
 

@@ -5,7 +5,7 @@ params ["_player", "_mode", "_weaponFrom", "_weaponTo", "_componentsAttach", "_c
 private _extendedLoadout = [_player] call CBA_fnc_getLoadout;
 private _loadout = _extendedLoadout select 0;
 private _weaponSlot = (_loadout select [0, 3]) findIf {
-  (_x select 0) isEqualTo currentWeapon _player
+  (_x select 0) == currentWeapon _player
 };
 
 if (_weaponSlot isEqualTo -1) then { throw "player is not holding a weapon" };
