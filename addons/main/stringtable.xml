@@ -2,6 +2,7 @@
 <Project name="sct_wmod">
   <Package name="main">
     <Container name="settings">
+      <!-- The strings below are shown in the CBA settings menu -->
       <Key ID="STR_sct_wmod_settings_category_name">
         <Original>Scotty's ACE Weapon Modification</Original>
         <English>Scotty's ACE Weapon Modification</English>
@@ -35,11 +36,12 @@
         <English>Make M320 and AG-C interchangeable</English>
       </Key>
       <Key ID="STR_sct_wmod_setting_mergeM320Family_description">
-        <Original>When checked, the AG-C and M320 grenade launcher items will be treated interchangeably</Original>
-        <English>When checked, the AG-C and M320 grenade launcher items will be treated interchangeably</English>
+        <Original>When checked, the AG-C and M320 grenade launcher items will be made interchangeable</Original>
+        <English>When checked, the AG-C and M320 grenade launcher items will be made interchangeable</English>
       </Key>
     </Container>
     <Container name="arsenal">
+      <!-- The strings below are shown in the arsenal stats readout -->
       <Key ID="STR_sct_wmod_arsenal_components">
         <Original>Weapon Components</Original>
         <English>Weapon Components</English>
@@ -50,10 +52,15 @@
       </Key>
     </Container>
     <Container name="interaction">
+      <!--
+        This string is shown in the ACE interaction menu,
+        and contains all other weapon component manupulation actions
+      -->
       <Key ID="STR_sct_wmod_interaction_components">
         <Original>Components</Original>
         <English>Components</English>
       </Key>
+      <!-- The strings below are shown in the ACE interaction menu for actions that attach components -->
       <Key ID="STR_sct_wmod_interaction_attach">
         <Original>Attach %1</Original>
         <English>Attach %1</English>
@@ -70,6 +77,7 @@
         <Original>Apply %1</Original>
         <English>Apply %1</English>
       </Key>
+      <!-- The strings below are shown in the ACE interaction menu for actions that detach components -->
       <Key ID="STR_sct_wmod_interaction_detach">
         <Original>Detach %1</Original>
         <English>Detach %1</English>
@@ -90,6 +98,7 @@
         <Original>Saw-off %1</Original>
         <English>Saw-off %1</English>
       </Key>
+      <!-- The strings below are shown in the ACE interaction menu for swap or convert actions -->
       <Key ID="STR_sct_wmod_interaction_swap">
         <Original>Swap %1 for %2</Original>
         <English>Swap %1 for %2</English>
@@ -98,6 +107,7 @@
         <Original>Convert %1 into %2</Original>
         <English>Convert %1 into %2</English>
       </Key>
+      <!-- The strings below are shown on a loading bar when an attach action is performed -->
       <Key ID="STR_sct_wmod_progressbar_attach">
         <Original>Attaching...</Original>
         <English>Attaching...</English>
@@ -110,6 +120,7 @@
         <Original>Applying...</Original>
         <English>Applying...</English>
       </Key>
+      <!-- The strings below are shown on a loading bar when a detach action are performed -->
       <Key ID="STR_sct_wmod_progressbar_detach">
         <Original>Detaching...</Original>
         <English>Detaching...</English>
@@ -126,6 +137,7 @@
         <Original>Sawing...</Original>
         <English>Sawing...</English>
       </Key>
+      <!-- The strings below are shown on a loading bar for swap or convert actions -->
       <Key ID="STR_sct_wmod_progressbar_swap">
         <Original>Swapping...</Original>
         <English>Swapping...</English>
@@ -134,6 +146,7 @@
         <Original>Converting weapon...</Original>
         <English>Converting weapon...</English>
       </Key>
+      <!-- The strings below are shown as a notification message when an attach action fails -->
       <Key ID="STR_sct_wmod_notify_failure_attach">
         <Original>Failed to attach %1</Original>
         <English>Failed to attach %1</English>
@@ -146,6 +159,7 @@
         <Original>Failed to apply %1</Original>
         <English>Failed to apply %1</English>
       </Key>
+      <!-- The strings below are shown as a notification message when a detach action fails -->
       <Key ID="STR_sct_wmod_notify_failure_detach">
         <Original>Failed to detach %1</Original>
         <English>Failed to detach %1</English>
@@ -162,6 +176,7 @@
         <Original>Failed to saw-off %1</Original>
         <English>Failed to saw-off %1</English>
       </Key>
+      <!-- The strings below are shown as a notification message when a swap or convert action fails -->
       <Key ID="STR_sct_wmod_notify_failure_swap">
         <Original>Failed to swap %1 for %2</Original>
         <English>Failed to swap %1 for %2</English>
@@ -170,6 +185,7 @@
         <Original>Failed to convert %1 into %2</Original>
         <English>Failed to convert %1 into %2</English>
       </Key>
+      <!-- The strings below are shown as a notification message when an attach action succeeds -->
       <Key ID="STR_sct_wmod_notify_success_attach">
         <Original>Attached %1</Original>
         <English>Attached %1</English>
@@ -182,6 +198,7 @@
         <Original>Applied %1</Original>
         <English>Applied %1</English>
       </Key>
+      <!-- The strings below are shown as a notification message when a detach action succeeds -->
       <Key ID="STR_sct_wmod_notify_success_detach">
         <Original>Detached %1</Original>
         <English>Detached %1</English>
@@ -198,6 +215,7 @@
         <Original>Sawed %1 off</Original>
         <English>Sawed %1 off</English>
       </Key>
+      <!-- The strings below are shown as a notification message when a swap or convert action succeeds -->
       <Key ID="STR_sct_wmod_notify_success_swap">
         <Original>Swapped %1 for %2</Original>
         <English>Swapped %1 for %2</English>
@@ -206,10 +224,12 @@
         <Original>Converted %1 into %2</Original>
         <English>Converted %1 into %2</English>
       </Key>
+      <!-- This string is shown when an action fails because required components are not in the player's inventory -->
       <Key ID="STR_sct_wmod_notify_missing_components">
         <Original>Missing component(s): %1</Original>
         <English>Missing component(s): %1</English>
       </Key>
+      <!-- This string is shown when an action fails because required tools are not in the player's inventory -->
       <Key ID="STR_sct_wmod_notify_missing_tools">
         <Original>Missing tool(s): %1</Original>
         <English>Missing tool(s): %1</English>
@@ -402,6 +422,14 @@
         <Original>VFG</Original>
         <English>VFG</English>
       </Key>
+      <Key ID="STR_sct_wmod_component_pws_srx_full">
+        <Original>PWS SCAR Rail Extension</Original>
+        <English>PWS SCAR Rail Extension</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_pws_srx">
+        <Original>PWS SRX</Original>
+        <English>PWS SRX</English>
+      </Key>
     </Container>
     <Container name="components_descriptions">
       <Key ID="STR_sct_wmod_component_description_3gl">
@@ -503,6 +531,10 @@
       <Key ID="STR_sct_wmod_component_description_masterkey">
         <Original>A three-round pump-action underbarrel shotgun, compatible with a large variety of rifles</Original>
         <English>A three-round pump-action underbarrel shotgun, compatible with a large variety of rifles</English>
+      </Key>
+      <Key ID="STR_sct_wmod_component_description_pws_srx">
+        <Original>A quad-railed extension rail for the SCAR series of riles.</Original>
+        <English>A quad-railed extension rail for the SCAR series of riles.</English>
       </Key>
     </Container>
     <Container name="tools">

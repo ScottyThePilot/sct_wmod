@@ -232,7 +232,7 @@ class RGVAR(component_pk_ris): RGVAR(ccore) {
 };
 
 class RGVAR(component_fal_gl): RGVAR(ccore) {
-  uthor = "ScottyThePilot";
+  author = "ScottyThePilot";
   displayName = RCSTRING(component_fal_gl);
   picture = QPATHTO(data\components\fal_gl.paa);
   descriptionShort = RCSTRING(component_description_fal_gl);
@@ -240,7 +240,7 @@ class RGVAR(component_fal_gl): RGVAR(ccore) {
 };
 
 class RGVAR(component_six12): RGVAR(ccore) {
-  uthor = "ScottyThePilot";
+  author = "ScottyThePilot";
   displayName = RCSTRING(component_six12);
   picture = QPATHTO(data\components\six12.paa);
   descriptionShort = RCSTRING(component_description_six12);
@@ -248,7 +248,7 @@ class RGVAR(component_six12): RGVAR(ccore) {
 };
 
 class RGVAR(component_msbs_gp): RGVAR(ccore) {
-  uthor = "ScottyThePilot";
+  author = "ScottyThePilot";
   displayName = RCSTRING(component_msbs_gp);
   picture = QPATHTO(data\components\msbs_gp.paa);
   descriptionShort = RCSTRING(component_description_msbs_gp);
@@ -256,7 +256,7 @@ class RGVAR(component_msbs_gp): RGVAR(ccore) {
 };
 
 class RGVAR(component_masterkey): RGVAR(ccore) {
-  uthor = "ScottyThePilot";
+  author = "ScottyThePilot";
   displayName = RCSTRING(component_masterkey);
   picture = QPATHTO(data\components\masterkey.paa);
   descriptionShort = RCSTRING(component_description_masterkey);
@@ -264,15 +264,23 @@ class RGVAR(component_masterkey): RGVAR(ccore) {
 };
 
 class RGVAR(component_afg): RGVAR(ccore) {
-  uthor = "ScottyThePilot";
+  author = "ScottyThePilot";
   displayName = RCSTRING(component_afg_full);
   picture = QPATHTO(data\components\afg.paa);
   scope = 2;
 };
 
 class RGVAR(component_vfg): RGVAR(ccore) {
-  uthor = "ScottyThePilot";
+  author = "ScottyThePilot";
   displayName = RCSTRING(component_vfg_full);
   picture = QPATHTO(data\components\vfg.paa);
+  scope = 2;
+};
+
+class RGVAR(component_pws_srx): RGVAR(ccore) {
+  author = "ScottyThePilot";
+  displayName = RCSTRING(component_pws_srx_full);
+  picture = QPATHTO(data\components\pws_srx.paa);
+  descriptionShort = RCSTRING(component_description_pws_srx);
   scope = 2;
 };

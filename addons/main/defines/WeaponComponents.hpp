@@ -144,6 +144,7 @@ WEAPON_COMPONENT_NAMED(hk_tac,RGVAR(component_hk_tac),RCSTRING(component_hk_tac)
 WEAPON_COMPONENT_NAMED(ag_c,RGVAR(component_ag_c),RCSTRING(component_ag_c));
 WEAPON_COMPONENT_NAMED(sig_ris,RGVAR(component_sig_ris),RCSTRING(component_sig_ris));
 WEAPON_COMPONENT_NAMED(sig_tac,RGVAR(component_sig_tac),RCSTRING(component_sig_tac));
+WEAPON_COMPONENT_NAMED(pws_srx,RGVAR(component_pws_srx),RCSTRING(component_pws_srx));
 
 class rifle_ghillie {
   items[] = { QRGVAR(component_rifle_ghillie) };
