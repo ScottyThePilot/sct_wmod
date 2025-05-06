@@ -27,14 +27,20 @@ private _tools = [QCLASS_DEFINES, "WeaponTools"] call _collectConfigs;
 private _tools = createHashMapFromArray (_tools apply {
   [_x, [
     getArray (_y >> "items") select {
-      !isNull (_x call CBA_fnc_getItemConfig)
+      private _itemConfig = _x call CBA_fnc_getItemConfig;
+
+      if (getNumber (_itemConfig >> "scope") < 2) then {
+        WARNING_1("tool item %1 exists, but is not scope 2",configName _itemConfig);
+      };
+
+      !isNull _itemConfig
     },
     getText (_y >> "displayName")
   ]]
 });
 
-// className: String: CfgWeapon?
-// items: Array<String: CfgWeapon>
+// className: String?
+// items: Array<String>
 // displayName: String
 // picture: String?
 // toolsRequired: Array<String>?
@@ -54,11 +60,19 @@ private _components = createHashMapFromArray (_components apply {
 
   private _componentItems = _componentItems select {
     !isNull (_x call CBA_fnc_getItemConfig)
+  } apply {
+    toLowerANSI _x
   };
 
   private _componentItemConfigs = _componentItems apply {
     _x call CBA_fnc_getItemConfig
   };
+
+  {
+    if (getNumber (_x >> "scope") < 2) then {
+      WARNING_1("component item %1 exists, but is not scope 2",configName _x);
+    };
+  } forEach _componentItemConfigs;
 
   private _displayName = if (isText (_y >> "displayName")) then {
     getText (_y >> "displayName")
@@ -83,7 +97,11 @@ private _components = createHashMapFromArray (_components apply {
   };
 
   private _toolsRequired = if (isArray (_y >> "toolsRequired")) then {
-    getArray (_y >> "toolsRequired") select { _x in _tools }
+    getArray (_y >> "toolsRequired") apply {
+      toLowerANSI _x
+    } select {
+      _x in _tools
+    }
   } else {
     []
   };
@@ -128,26 +146,35 @@ private _groups = createHashMapFromArray (_groups apply {
     isClass (configFile >> "CfgWeapons" >> configName _x)
   } apply {
     private _groupEntryKey = toLowerANSI configName _x;
+    private _groupEntryConfig = configFile >> "CfgWeapons" >> _groupEntryKey;
+    if (getNumber (_groupEntryConfig >> "scope") < 2) then {
+      WARNING_1("group entry weapon item %1 exists, but is not scope 2",configName _groupEntryConfig);
+    };
+
     private _groupEntryComponents = getArray (_x >> "components") apply { toLowerANSI _x };
+    [_groupEntryKey, _groupEntryComponents]
+  } select {
+    _x params ["_groupEntryKey", "_groupEntryComponents"];
+
     private _unknownComponent = _groupEntryComponents findIf { !(_x in _components) };
     if (_unknownComponent isNotEqualTo -1) then {
       private _unknownComponentName = _groupEntryComponents select _unknownComponent;
       WARNING_3("unknown component '%1' found in weapon group entry '%2' on weapon group '%3'",_unknownComponentName,_groupEntryKey,_groupKey);
 
-      _groupEntryComponents = nil;
-    };
-
-    [_groupEntryKey, _groupEntryComponents]
-  } select {
-    !isNil { _x select 1 }
+      false
+    } else {
+      true
+    }
   }]
+} select {
+  (_x select 1) isNotEqualTo []
 });
 
 private _foregripComponents = [];
-_foregripComponents insert [-1, getArray (configFile >> QCLASS_DEFINES >> "foregripComponents"), true];
-_foregripComponents insert [-1, getArray (campaignConfigFile >> QCLASS_DEFINES >> "foregripComponents"), true];
-_foregripComponents insert [-1, getArray (missionConfigFile >> QCLASS_DEFINES >> "foregripComponents"), true];
-private _foregripComponents = _foregripComponents select { toLowerANSI _x in _components };
+_foregripComponents insert [-1, getArray (configFile >> QCLASS_DEFINES >> "foregripComponents") apply { toLowerANSI _x }, true];
+_foregripComponents insert [-1, getArray (campaignConfigFile >> QCLASS_DEFINES >> "foregripComponents") apply { toLowerANSI _x }, true];
+_foregripComponents insert [-1, getArray (missionConfigFile >> QCLASS_DEFINES >> "foregripComponents") apply { toLowerANSI _x }, true];
+private _foregripComponents = _foregripComponents select { _x in _components };
 
 INFO_1("foregrip components: %1",str _foregripComponents);
 
