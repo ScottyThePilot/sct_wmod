@@ -25,6 +25,13 @@ private _componentsFull = _componentsAttach + _componentsDetach;
 private _toolsRequired = flatten (_componentsFull apply { (_componentsData get _x) select 3 });
 private _toolsRequired = _toolsRequired arrayIntersect _toolsRequired;
 
+private _actionLength = 0;
+
+{
+  private _actionLengthMultiplier = (_componentsData get _x) select 8;
+  _actionLength = _actionLength + (VAR_ACTION_LENGTH * _actionLengthMultiplier);
+} forEach _componentsFull;
+
 [
   _id,
   [
@@ -34,7 +41,16 @@ private _toolsRequired = _toolsRequired arrayIntersect _toolsRequired;
   _picture,
   {
     private _args = [_this select 1] + (_this select 2);
-    _args params ["_player", "_mode", "_weaponFrom", "_weaponTo", "_componentsAttach", "_componentsDetach", "_toolsRequired"];
+    _args params [
+      "_player",
+      "_mode",
+      "_weaponFrom",
+      "_weaponTo",
+      "_componentsAttach",
+      "_componentsDetach",
+      "_toolsRequired",
+      "_actionLength"
+    ];
 
     if (_args call RFUNC(actionConditionUse)) then {
       private _componentsCount = count _componentsAttach + count _componentsDetach;
@@ -44,7 +60,7 @@ private _toolsRequired = _toolsRequired arrayIntersect _toolsRequired;
         [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach]
       ] call RFUNC(actionMessageText);
 
-      [VAR_ACTION_LENGTH * _componentsCount, _args, {
+      [_actionLength, _args, {
         (_this select 0) call RFUNC(action)
       }, {
         (_this select 0) call RFUNC(actionFail)
@@ -60,5 +76,5 @@ private _toolsRequired = _toolsRequired arrayIntersect _toolsRequired;
     _args call RFUNC(actionCondition)
   },
   {},
-  [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach, _toolsRequired]
+  [_mode, _weaponFrom, _weaponTo, _componentsAttach, _componentsDetach, _toolsRequired, _actionLength]
 ] call ace_interact_menu_fnc_createAction

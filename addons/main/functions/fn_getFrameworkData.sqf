@@ -110,6 +110,12 @@ private _components = createHashMapFromArray (_components apply {
   private _enableDetach = getNumber (_y >> "disableDetach") isNotEqualTo 1;
   private _isFake = getNumber (_y >> "isFake") isEqualTo 1;
 
+  private _actionLengthMultiplier = if (isNumber (_y >> "actionLengthMultiplier")) then {
+    getNumber (_y >> "actionLengthMultiplier")
+  } else {
+    1.0
+  };
+
   [_componentKey, [
     _componentItems,
     _displayName,
@@ -118,7 +124,8 @@ private _components = createHashMapFromArray (_components apply {
     _enableAttach,
     _enableDetach,
     _isFake,
-    _y >> "MessageTemplates"
+    _y >> "MessageTemplates",
+    _actionLengthMultiplier
   ]]
 } select {
   _x params ["_componentKey", "_componentData"];
@@ -130,7 +137,8 @@ private _components = createHashMapFromArray (_components apply {
     "_enableAttach",
     "_enableDetach",
     "_isFake",
-    "_messageTemplatesConfig"
+    "_messageTemplatesConfig",
+    "_actionLengthMultiplier"
   ];
 
   // filter out any entries with an empty item list that are not fake

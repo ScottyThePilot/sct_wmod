@@ -68,6 +68,7 @@ class afg {
   };
   displayName = RCSTRING(component_afg);
   picture = QPATHTO(data\components\afg.paa);
+  actionLengthMultiplier = 0.5;
 };
 
 class vfg {
@@ -80,6 +81,7 @@ class vfg {
   };
   displayName = RCSTRING(component_vfg);
   picture = QPATHTO(data\components\vfg.paa);
+  actionLengthMultiplier = 0.5;
 };
 
 // A3 Components
@@ -121,6 +123,7 @@ class afg_rhs {
   };
   displayName = RCSTRING(component_afg);
   picture = QPATHTO(data\components\afg.paa);
+  actionLengthMultiplier = 0.5;
 };
 
 class vfg_rhs {
@@ -133,6 +136,7 @@ class vfg_rhs {
   };
   displayName = RCSTRING(component_vfg);
   picture = QPATHTO(data\components\vfg.paa);
+  actionLengthMultiplier = 0.5;
 };
 
 // NIArms Components
@@ -149,6 +153,7 @@ WEAPON_COMPONENT_NAMED(pws_srx,RGVAR(component_pws_srx),RCSTRING(component_pws_s
 class rifle_ghillie {
   items[] = { QRGVAR(component_rifle_ghillie) };
   displayName = RCSTRING(component_rifle_ghillie);
+  actionLengthMultiplier = 0.25;
 
   class MessageTemplates {
     interaction_attach = RCSTRING(interaction_attach_apply);

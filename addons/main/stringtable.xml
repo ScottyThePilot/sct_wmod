@@ -16,12 +16,12 @@
         <English>When unchecked, this mod will cease all functionality</English>
       </Key>
       <Key ID="STR_sct_wmod_setting_actionLength_name">
-        <Original>Action Duration</Original>
-        <English>Action Duration</English>
+        <Original>Action Base Duration</Original>
+        <English>Action Base Duration</English>
       </Key>
       <Key ID="STR_sct_wmod_setting_actionLength_description">
-        <Original>The duration it takes to attach or detach items, in seconds</Original>
-        <English>The duration it takes to attach or detach items, in seconds</English>
+        <Original>The duration it takes to attach or detach items, in seconds; can be affected by component duration multipliers</Original>
+        <English>The duration it takes to attach or detach items, in seconds; can be affected by component duration multipliers</English>
       </Key>
       <Key ID="STR_sct_wmod_setting_needForegripItems_name">
         <Original>Foregrip Items Needed</Original>
